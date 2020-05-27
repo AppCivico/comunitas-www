@@ -1,0 +1,217 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 0.313rem;
+  padding-bottom: 0.313rem;
+  color: inherit;
+  background-color: palette('blue');
+
+  // @media screen and (min-width: breakpoint('tablet')) {
+  //   flex-direction: row;
+  //   height: 5.375rem;
+  //   margin-top: 0;
+  // }
+}
+
+.site-header__logo {
+  display: block;
+  width: 3.188rem;
+  height: 2.438em;
+  margin-right: auto;
+  text-indent: -999em;
+  background-image: image('logo.svg');
+  background-size: contain;
+
+  @media screen and (min-width: breakpoint('tablet')) {
+    margin: 0;
+  }
+}
+
+.site-header .logo--juntos {
+  height: 3rem;
+  background-image: image('logo-juntos.svg');
+  background-position: center;
+}
+
+.site-header .main-nav {
+
+  @media screen and (min-width: breakpoint('tablet')) {
+    margin-left: auto;
+  }
+}
+
+.main-nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: palette('shadow');
+}
+
+.main-nav__overlay--active {
+  display: block;
+  z-index: layer('modal');
+}
+
+.main-nav__hamburguer {
+  position: relative;
+  display: block;
+  width: 1rem;
+  height: 0.3rem;
+  text-indent: -999em;
+  background: palette('blue');
+  border: 0;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    display: block;
+    width: 2em;
+    height: 0.3em;
+    background: palette('blue');
+    content: '';
+  }
+
+  &::after {
+    top: auto;
+    bottom: -8px;
+  }
+}
+
+.main-nav__hamburguer span {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: palette('blue');
+}
+
+.menu-site {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  z-index: layer('modal');
+  flex-direction: column;
+  width: 15rem;
+  height: 100%;
+  padding-top: 1rem;
+  padding-left: 0;
+  margin-top: 0;
+  font-weight: font-weight('bold');
+  font-size: ms(0);
+  list-style: none;
+  background-color: palette('white');
+  border-left: 1px solid palette('gray');
+  transition: right 0.5s;
+
+  @media screen and (min-width: breakpoint('phablet')) {
+    font-size: ms(1);
+  }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    border-left: 0;
+  }
+}
+
+.menu--active {
+  right: 0;
+}
+
+.menu .main-nav__toggle {
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  font-size: 1em;
+  line-height: 0;
+  color: palette('white');
+  background-color: palette('blue');
+  border: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    display: none;
+  }
+}
+
+.menu li {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  color: palette('black');
+  border-bottom: 1px solid palette('gray');
+
+  &:first-child {
+    @media screen and (min-width: breakpoint('desktop')) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    border: 0;
+  }
+}
+
+.menu li a {
+  color: palette('text', 'dark');
+
+  @media screen and (min-width: breakpoint('tablet')) {
+    font-size: ms(0);
+  }
+}
+
+.menu .main-nav__login {
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  min-height: 2.625rem;
+  padding: 0.5rem 2.5rem;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background: palette('blue');
+  border-radius: 6px;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    padding: 0.3rem 2.5rem;
+    margin-left: 1rem;
+  }
+}
+
+.menu .main-nav__login a {
+  color: palette('white');
+}
+
+// .menu li:last-child a {
+//   padding: 0.6em 2em;
+//   color: palette('white');
+//   background-color: palette('blue');
+//   border-radius: 20px;
+// }

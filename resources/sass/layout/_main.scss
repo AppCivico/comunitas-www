@@ -1,0 +1,12 @@
+.container {
+  @include container;
+}
+
+.container--flex {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
