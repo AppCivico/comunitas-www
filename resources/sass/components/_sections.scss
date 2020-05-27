@@ -1,0 +1,109 @@
+// .sections {
+//
+// }
+
+.sections__header {
+  display: flex;
+  align-items: flex-end;
+  height: 10rem;
+  background-size: cover;
+}
+
+.sections__title {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-weight: font-weight('normal');
+  font-size: ms(2);
+  color: palette('white');
+  background-color: palette('black', 'opacity');
+}
+
+.sections__title span {
+  @include container;
+}
+
+.sections__select {
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: ms(0);
+  color: palette('blue');
+  border-bottom: 1px solid palette('gray');
+}
+
+.sections__select strong {
+  display: block;
+  margin-bottom: -1.7rem;
+  font-size: ms(2);
+}
+
+.sections__select select {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 3rem;
+  font-weight: font-weight('bold');
+  font-size: ms(-1);
+  color: inherit;
+  background-image: image('icons/chevron-down.svg');
+  background-position: 95% center;
+  background-size: 16px 10px;
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+
+  &:focus {
+    outline: 2px solid palette('blue');
+    outline-offset: 2px;
+  }
+}
+
+.sections__select option {
+  font-size: ms(0);
+}
+
+.sections__list .section__item {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px palette('shadow');
+}
+
+.sections__image {
+  position: relative;
+  display: flex;
+}
+
+.section__tags {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.section__tags a {
+  display: flex;
+  padding: 0.25rem 0.6rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-left: 0 0.2rem;
+  font-size: ms(-2);
+  color: palette('white');
+  background-color: palette('red', 'violet');
+  border-radius: 33px;
+}
+
+.sections__list-title {
+  padding: 1rem;
+  margin: 0;
+  font-size: ms(1);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: palette('blue');
+  background: transparent;
+}

@@ -1,8 +1,13 @@
 /// Define the element as a container
 /// @author Hugo Giraudel
 @mixin container {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @media screen and (min-width: breakpoint('phablet')) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
 
   @media screen and (min-width: breakpoint('desktop')) {
     width: 100%;
@@ -527,7 +532,7 @@
   @if $overflow {
     overflow: hidden;
 
-    text-indent: 101%;
+    text-indent: 999em;
     white-space: nowrap;
 
     background-repeat: no-repeat;

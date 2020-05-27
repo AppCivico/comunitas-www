@@ -14,10 +14,39 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
+      <div class="site-header__container">
         <a href="/" class="site-header__logo">Rede Juntos</a>
         <button class="site-header__search-button">Abrir busca</button>
-        <section class="search">
+        <button class="main-nav__hamburguer">Menu</button>
+        <ul class="main-nav">
+          <ul>
+            <li>Institucional</li>
+            <li><a href="">Hub</a></li>
+            <li><a href="">Quem Somos</a></li>
+            <li><a href="">Sobre a plataforma</a></li>
+            <li><a href="">Contato</a></li>
+          </ul>
+          <ul>
+            <li>Seções</li>
+            <li><a href="" class="main-nav__paths">Trilhas</a></li>
+            <li><a href="" class="main-nav__podcasts">Podcasts</a></li>
+            <li><a href="" class="main-nav__webnars">Webnários</a></li>
+            <li><a href="" class="main-nav__good-practices">Boas Práticas</a></li>
+            <li><a href="" class="main-nav__interviews">Entrevistas</a></li>
+            <li><a href="" class="main-nav__articles">Artigos</a></li>
+            <li><a href="" class="main-nav__library">Biblioteca</a></li>
+            <li><a href="" class="main-nav__news">Notícias</a></li>
+          </ul>
+          <li><a href="">Entrar</a></li>
+          <ul class="main-nav__localization">
+            <li><a href="">Português</a></li>
+            <li><a href="">Espanhol</a></li>
+            <li><a href="">Inglês</a></li>
+          </ul>
+        </ul>
+      </div>
+      <section class="search">
+        <div class="container">
           <h1>Encontre o que te interessa</h1>
           <form action="">
             <input type="text" placeholder>
@@ -28,40 +57,14 @@
             </select>
             <button type="submit">Pesquisar</button>
           </form>
-        </section>
-        <ul class="menu-site">
-          <ul>
-            <li>Institucional</li>
-            <li><a href="">Hub</a></li>
-            <li><a href="">Quem Somos</a></li>
-            <li><a href="">Sobre a plataforma</a></li>
-            <li><a href="">Contato</a></li>
-          </ul>
-          <ul>
-            <li>Seções</li>
-            <li><a href="" class="menu-site__paths">Trilhas</a></li>
-            <li><a href="" class="menu-site__podcasts">Podcasts</a></li>
-            <li><a href="" class="menu-site__webnars">Webnários</a></li>
-            <li><a href="" class="menu-site__good-practices">Boas Práticas</a></li>
-            <li><a href="" class="menu-site__interviews">Entrevistas</a></li>
-            <li><a href="" class="menu-site__articles">Artigos</a></li>
-            <li><a href="" class="menu-site__library">Biblioteca</a></li>
-            <li><a href="" class="menu-site__news">Notícias</a></li>
-          </ul>
-          <li><a href="">Entrar</a></li>
-          <ul class="menu-site__localization">
-            <li><a href="">Português</a></li>
-            <li><a href="">Espanhol</a></li>
-            <li><a href="">Inglês</a></li>
-          </ul>
-        </ul>
-      </div>
+        </div>
+      </section>
     </header>
     <main class="sections">
-        <header class="sections__header">
-          <div class="container">
-            <h1>Webnários</h1>
-          </div>
+        <header class="sections__header" style="background-image: url('https://www.placecage.com/600/300')">
+          <h1 class="sections__title">
+            <span>Webnários</span>
+          </h1>
         </header>
         <div class="container">
           <form action="" class="sections__select">
@@ -71,18 +74,20 @@
             </select>
           </form>
           <div class="sections__list">
-            @for ($i = 0; $i < 10; $i++)
-              <article>
+            @for ($i = 0; $i < 6; $i++)
+              <article class="section__item">
                 <div class="sections__image">
                   <img src="https://www.placecage.com/400/300" alt="placecage">
                   <div class="section__tags">
-                    <a href="">Gestão de pessoas</a>
+                    @for ($a = 0; $a < 3; $a++)
+                      <a href="">Gestão de pessoas</a>
+                    @endfor
                   </div>
                 </div>
-                <h2 class="sections__title">Inovação na Gestão de Pessoas | Renata Vilhena</h2>
+                <h2 class="sections__list-title">Inovação na Gestão de Pessoas | Renata Vilhena</h2>
               </article>
             @endfor
-            <button class="sections__load-more">Carregar mais</button>
+            <button class="button button--big sections__load-more">Carregar mais</button>
             <article class="sections__text">
               <h1>O conhecimento que criamos é gerado com base em experiências.</h1>
               <p>
@@ -101,13 +106,13 @@
           </div>
         </div>
     </main>
-    <footer>
+    <footer class="site-footer">
       <div class="container">
-        <ul class="menu-footer">
+        <ul class="footer-nav">
           <li><a href="">Sobre a Plataforma</a></li>
           <li><a href="">Contato</a></li>
         </ul>
-        <article class="about">
+        <article class="footer__about">
           <h1>A comunitas</h1>
           <p>A Comunitas é uma organização da sociedade civil brasileira que tem como objetivo contribuir para o aprimoramento dos investimentos sociais corporativos e estimular a participação da iniciativa privada no desenvolvimento social e econômico do país. Saiba mais sobre a Comunitas em nosso site institucional. </p>
         </article>
@@ -119,6 +124,19 @@
             Exceto onde indicado de outra forma, todos os conteúdos disponibilizados neste website estão licenciados com uma Licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional
           </p>
         </div>
+        <div class="footer__logo"></div>
+        <div class="footer__social">
+          <strong>Siga-nos</strong>
+          <ul>
+            <li><a class="footer__facebook" href="">Facebook</a></li>
+            <li><a class="footer__twitter" href="">Twitter</a></li>
+            <li><a class="footer__instagram" href="">Instagram</a></li>
+            <li><a class="footer__youtube" href="">YouTube</a></li>
+          </ul>
+        </div>
+        <span class="footer__by">
+          desenvolvido por <a href="https://appcivico.com">APPCÍVICO</a>
+        </span>
       </div>
     </footer>
   </body>
