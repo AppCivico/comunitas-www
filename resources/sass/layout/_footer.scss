@@ -4,6 +4,7 @@
   padding-bottom: 1.5rem;
   padding-left: 0;
   font-weight: font-weight('bold');
+  font-family: $orkney-bold-font-stack;
   text-align: center;
   text-transform: uppercase;
   list-style: none;
@@ -22,6 +23,7 @@
 .footer-nav a {
   font-size: ms(1);
   line-height: 1.5;
+  font-family: $orkney-bold-font-stack;
   color: palette('blue');
 }
 
@@ -32,6 +34,7 @@
 
 .footer__about h1 {
   font-size: ms(0);
+  text-transform: uppercase;
 }
 
 .footer__copyleft {

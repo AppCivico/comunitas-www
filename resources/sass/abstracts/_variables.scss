@@ -133,7 +133,7 @@ $palette: (
   'black': (
     'base': rgb(0, 0, 0),
     'lighter': rgb(51, 51, 51),
-    'opacity': rgba(0, 0, 0, 0.4),
+    'opacity': rgba(0, 0, 0, 0.7),
   ),
   'cerise': rgb(193, 16, 115),
   'gradient': (
@@ -271,6 +271,7 @@ $max-width--narrow: 40.75em; // 668 px
 $layers: (
   'modal': 5000,
   'dropdown': 4000,
+  'overlay': 4000,
   'upward': 2,
   'default': 1,
   'below': -1,

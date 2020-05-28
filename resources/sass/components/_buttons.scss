@@ -8,6 +8,12 @@
   border-radius: 5px;
 }
 
+.button--secondary {
+  background-color: palette('red', 'violet');
+}
+
 .button--big {
+  display: inline-flex;
+  justify-content: center;
   width: 100%;
 }

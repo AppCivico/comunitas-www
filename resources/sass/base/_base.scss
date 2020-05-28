@@ -103,6 +103,10 @@ html {
   tab-size: 4;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /**
  * 1. Set sticky footer
  * 2. Prevents IE10-11 flex container bug

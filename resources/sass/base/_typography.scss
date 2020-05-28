@@ -18,7 +18,7 @@ body {
   font-weight: font-weight('text');
   font-size: $body-font-size;
   line-height: $leading;
-  font-family: $text-font-stack;
+  font-family: $open-sans-font-stack;
 
   color: palette('text', 'dark');
 }
@@ -40,7 +40,7 @@ legend,
 caption,
 details > summary {
   font-weight: font-weight('heading');
-  font-family: $ibm-font-stack;
+  font-family: $orkney-font-stack;
   font-feature-settings: 'case' 1, 'cpsp' 1, 'cswh' 1, 'liga' 1, 'locl' 1, 'lnum' 1, 'pnum' 1, 'titl' 1, 'zero' 1;
 
   break-after: avoid;

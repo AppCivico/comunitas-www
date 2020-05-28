@@ -125,6 +125,10 @@ html {
        tab-size: 4;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /**
  * 1. Set sticky footer
  * 2. Prevents IE10-11 flex container bug
@@ -368,7 +372,7 @@ img::before {
   overflow: hidden;
   text-align: center;
   text-overflow: ellipsis;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "\F127" " Broken Image of " attr(alt);
   box-sizing: border-box;
 }
@@ -377,7 +381,7 @@ img::after {
   display: block;
   font-size: small;
   color: #e6e6e6;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "(url: " attr(src) ")";
 }
 
@@ -474,6 +478,22 @@ pre {
   background-color: #212121;
 }
 
+@font-face {
+  src: url("/fonts/orkney-regular-webfont.eot");
+  src: url("/fonts/orkney-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/orkney-regular-webfont.woff") format("woff"), url("/fonts/orkney-regular-webfont.ttf") format("truetype"), url("/fonts/orkney-regular-webfont.svg#orkneyregular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-family: "orkneyregular";
+}
+
+@font-face {
+  src: url("/fonts/orkney-bold-webfont.eot");
+  src: url("/fonts/orkney-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/orkney-bold-webfont.woff") format("woff"), url("/fonts/orkney-bold-webfont.ttf") format("truetype"), url("/fonts/orkney-bold-webfont.svg#orkneybold") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-family: "orkneybold";
+}
+
 /**
  * 1. Add text decoration inheritance in all browsers (opinionated).
  * 2. Add vertical alignment inheritence in all browsers (opinionated).
@@ -497,7 +517,7 @@ body {
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #212121;
 }
 
@@ -519,7 +539,7 @@ legend,
 caption,
 details > summary {
   font-weight: 600;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "orkneyregular", sans-serif;
   font-feature-settings: "case" 1, "cpsp" 1, "cswh" 1, "liga" 1, "locl" 1, "lnum" 1, "pnum" 1, "titl" 1, "zero" 1;
   -moz-column-break-after: avoid;
        break-after: avoid;
@@ -881,7 +901,6 @@ img:not([src$=".png"]):not([src$=".gif"]):not([src$=".svg"]),
 embed,
 [aria-busy=true] > body,
 [aria-busy=true]:not(html) {
-  background-image: url("/images/loading.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -1043,8 +1062,10 @@ html {
 }
 
 .site-header {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5000;
   color: inherit;
   background-color: #015295;
 }
@@ -1056,6 +1077,8 @@ html {
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 30em) {
@@ -1115,25 +1138,160 @@ html {
   border: 0;
 }
 
-@media screen and (min-width: 48em) {
-  .site-header .main-nav {
-    margin-left: auto;
-  }
-}
-
 .main-nav__overlay {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.26);
+  height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: height 0s 0.5s, opacity 0.5s 0s;
 }
 
 .main-nav__overlay--active {
-  display: block;
+  z-index: 4000;
+  height: 100%;
+  opacity: 1;
+  transition: height 0s 0s, opacity 0.5s 0s;
+}
+
+.main-nav__links {
+  position: fixed;
+  top: 3.438rem;
+  right: -100%;
+  display: flex;
   z-index: 5000;
+  flex-direction: column;
+  width: 80%;
+  height: calc(100% - 3.438rem);
+  max-width: 25rem;
+  padding-left: 0;
+  margin-top: 0;
+  overflow: auto;
+  font-weight: 600;
+  font-size: 1em;
+  list-style: none;
+  background-color: white;
+  border-left: 1px solid #e6e6e6;
+  transition: right 0.5s;
+}
+
+@media screen and (min-width: 30em) {
+  .main-nav__links {
+    font-size: 1.125em;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .main-nav__links {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    border-left: 0;
+  }
+}
+
+.main-nav ul ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 2.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-family: "orkneyregular", sans-serif;
+  text-align: right;
+  list-style: none;
+  border-top: 1px solid #f43e7f;
+}
+
+.main-nav ul ul:first-child {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.main-nav li {
+  line-height: 2rem;
+}
+
+.main-nav li:first-child {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.125em;
+  font-family: "orkneybold", sans-serif;
+  text-transform: uppercase;
+  color: #f43e7f;
+}
+
+.main-nav a {
+  letter-spacing: 0.1rem;
+  color: #015295;
+}
+
+.main-nav__link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-nav__link-icon::before {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-right: 0.2rem;
+  background-position: center;
+  background-size: contain;
+  content: "";
+}
+
+.main-nav__paths::before {
+  background-image: url("/images/icons/nav/paths.svg");
+}
+
+.main-nav__podcasts::before {
+  background-image: url("/images/icons/nav/podcasts.svg");
+}
+
+.main-nav__webinars::before {
+  background-image: url("/images/icons/nav/webinars.svg");
+}
+
+.main-nav__good-practices::before {
+  background-image: url("/images/icons/nav/good-practices.svg");
+}
+
+.main-nav__interviews::before {
+  background-image: url("/images/icons/nav/interviews.svg");
+}
+
+.main-nav__articles::before {
+  background-image: url("/images/icons/nav/articles.svg");
+}
+
+.main-nav__library::before {
+  background-image: url("/images/icons/nav/library.svg");
+}
+
+.main-nav__news::before {
+  background-image: url("/images/icons/nav/news.svg");
+}
+
+.main-nav__button {
+  margin: 0 1rem;
+}
+
+.main-nav__button a {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: white;
 }
 
 .main-nav__hamburguer {
@@ -1175,47 +1333,6 @@ html {
   width: 100%;
   height: 0.2rem;
   background-color: white;
-}
-
-.main-nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  display: flex;
-  z-index: 5000;
-  flex-direction: column;
-  width: 15rem;
-  height: 100%;
-  padding-top: 1rem;
-  padding-left: 0;
-  margin-top: 0;
-  font-weight: 600;
-  font-size: 1em;
-  list-style: none;
-  background-color: white;
-  border-left: 1px solid #e6e6e6;
-  transition: right 0.5s;
-}
-
-@media screen and (min-width: 30em) {
-  .main-nav {
-    font-size: 1.125em;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  .main-nav {
-    position: relative;
-    top: auto;
-    right: auto;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 0;
-    border-left: 0;
-  }
 }
 
 .menu--active {
@@ -1276,31 +1393,45 @@ html {
   }
 }
 
-.menu .main-nav__login {
-  display: inline-flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  min-height: 2.625rem;
-  padding: 0.5rem 2.5rem;
-  margin-top: auto;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  background: #015295;
-  border-radius: 6px;
-}
-
-@media screen and (min-width: 64em) {
-  .menu .main-nav__login {
-    padding: 0.3rem 2.5rem;
-    margin-left: 1rem;
-  }
-}
-
 .menu .main-nav__login a {
   color: white;
+}
+
+.main-nav .main-nav__localization {
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-top: 0;
+}
+
+.main-nav__localization li:first-child {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.main-nav__localization a {
+  overflow: hidden;
+  text-indent: 999em;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
+  width: 1.8rem;
+  height: 0.9rem;
+  background-size: contain;
+}
+
+.main-nav__pt-flag {
+  background-image: url("/images/flags/brazil.svg");
+}
+
+.main-nav__es-flag {
+  background-image: url("/images/flags/spain.svg");
+}
+
+.main-nav__gb-flag {
+  background-image: url("/images/flags/united-kingdom.svg");
 }
 
 .footer-nav {
@@ -1309,6 +1440,7 @@ html {
   padding-bottom: 1.5rem;
   padding-left: 0;
   font-weight: 600;
+  font-family: "orkneybold", sans-serif;
   text-align: center;
   text-transform: uppercase;
   list-style: none;
@@ -1327,6 +1459,7 @@ html {
 .footer-nav a {
   font-size: 1.125em;
   line-height: 1.5;
+  font-family: "orkneybold", sans-serif;
   color: #015295;
 }
 
@@ -1337,6 +1470,7 @@ html {
 
 .footer__about h1 {
   font-size: 1em;
+  text-transform: uppercase;
 }
 
 .footer__copyleft {
@@ -1442,12 +1576,82 @@ html {
   border-radius: 5px;
 }
 
+.button--secondary {
+  background-color: #f43e7f;
+}
+
 .button--big {
+  display: inline-flex;
+  justify-content: center;
   width: 100%;
 }
 
 .search {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.search--active {
+  max-height: 20rem;
+}
+
+.search__container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(-180deg, rgba(51, 51, 51, 0.35) 0%, rgba(0, 0, 0, 0.93) 100%), url("/images/search-bg.jpg");
+  background-size: cover;
+  background-color: white;
+}
+
+.search h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6018066406em;
+  line-height: 1.3;
+  text-align: center;
+  color: white;
+}
+
+.search input,
+.search select {
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.search select {
+  background-image: url("/images/icons/chevron-down-white.svg");
+  background-position: 95% center;
+  background-size: 0.875rem;
+}
+
+.search ::-moz-placeholder {
+  color: white;
+}
+
+.search :-ms-input-placeholder {
+  color: white;
+}
+
+.search ::-ms-input-placeholder {
+  color: white;
+}
+
+.search ::placeholder {
+  color: white;
+}
+
+.search option {
+  color: black;
 }
 
 .sections__header {
@@ -1465,7 +1669,7 @@ html {
   font-weight: 400;
   font-size: 1.265625em;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .sections__title span {
@@ -1506,6 +1710,7 @@ html {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1em;
+  font-family: "orkneybold", sans-serif;
   color: #015295;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1523,6 +1728,7 @@ html {
   height: 3rem;
   font-weight: 600;
   font-size: 0.8888888889em;
+  font-family: "orkneybold", sans-serif;
   color: inherit;
   background-image: url("/images/icons/chevron-down.svg");
   background-position: 95% center;
@@ -1543,8 +1749,8 @@ html {
   font-size: 1em;
 }
 
-.sections__list .section__item {
-  margin-bottom: 2rem;
+.section__item {
+  margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.26);
@@ -1557,19 +1763,24 @@ html {
 
 .section__tags {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.2rem;
+  padding-left: 1rem;
   margin-right: -0.5rem;
   margin-left: -0.5rem;
+  font-family: "orkneyregular", sans-serif;
+  background-image: linear-gradient(-180deg, rgba(51, 51, 51, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .section__tags a {
   display: flex;
   padding: 0.25rem 0.6rem;
   margin-right: 0.2rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
   margin-left: 0 0.2rem;
   font-size: 0.7901234568em;
   color: white;
@@ -1582,6 +1793,7 @@ html {
   margin: 0;
   font-size: 1.125em;
   line-height: 1.2;
+  font-family: "orkneybold", sans-serif;
   text-transform: uppercase;
   color: #015295;
   background: transparent;

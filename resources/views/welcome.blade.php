@@ -6,60 +6,63 @@
 
     <title>Laravel</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" >
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <header class="site-header">
       <div class="site-header__container">
         <a href="/" class="site-header__logo">Rede Juntos</a>
-        <button class="site-header__search-button">Abrir busca</button>
-        <button class="main-nav__hamburguer">Menu</button>
-        <ul class="main-nav">
-          <ul>
-            <li>Institucional</li>
-            <li><a href="">Hub</a></li>
-            <li><a href="">Quem Somos</a></li>
-            <li><a href="">Sobre a plataforma</a></li>
-            <li><a href="">Contato</a></li>
-          </ul>
-          <ul>
-            <li>Seções</li>
-            <li><a href="" class="main-nav__paths">Trilhas</a></li>
-            <li><a href="" class="main-nav__podcasts">Podcasts</a></li>
-            <li><a href="" class="main-nav__webnars">Webnários</a></li>
-            <li><a href="" class="main-nav__good-practices">Boas Práticas</a></li>
-            <li><a href="" class="main-nav__interviews">Entrevistas</a></li>
-            <li><a href="" class="main-nav__articles">Artigos</a></li>
-            <li><a href="" class="main-nav__library">Biblioteca</a></li>
-            <li><a href="" class="main-nav__news">Notícias</a></li>
-          </ul>
-          <li><a href="">Entrar</a></li>
-          <ul class="main-nav__localization">
-            <li><a href="">Português</a></li>
-            <li><a href="">Espanhol</a></li>
-            <li><a href="">Inglês</a></li>
-          </ul>
-        </ul>
+        <button class="site-header__search-button js-search-toggle">Abrir busca</button>
+        <button class="main-nav__hamburguer js-main-nav-toggle">Menu</button>
       </div>
-      <section class="search">
-        <div class="container">
-          <h1>Encontre o que te interessa</h1>
-          <form action="">
-            <input type="text" placeholder>
-            <select>
-              <option value="area">Área</option>
-              <option value="area">Área</option>
-              <option value="area">Área</option>
-            </select>
-            <button type="submit">Pesquisar</button>
-          </form>
-        </div>
-      </section>
     </header>
+    <section class="search" id="js-search">
+      <div class="container search__container">
+        <h1>Encontre o que te interessa</h1>
+        <form action="">
+          <input type="text" placeholder="Tema, temática, termo">
+          <select>
+            <option value="area">Área</option>
+            <option value="area">Área</option>
+            <option value="area">Área</option>
+          </select>
+          <button type="submit" class="button button--big">Pesquisar</button>
+        </form>
+      </div>
+    </section>
+    <nav class="main-nav">
+      <div class="main-nav__overlay js-overlay js-main-nav-toggle"></div>
+      <ul class="main-nav__links" id="js-menu">
+        <ul>
+          <li>Institucional</li>
+          <li><a href="">Hub</a></li>
+          <li><a href="">Quem Somos</a></li>
+          <li><a href="">Sobre a plataforma</a></li>
+          <li><a href="">Contato</a></li>
+        </ul>
+        <ul>
+          <li>Seções</li>
+          <li><a href="" class="main-nav__link-icon main-nav__paths"><span>Trilhas</span></a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__podcasts"><span>Podcasts</span></a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__webinars"><span>Webnários</span></a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__good-practices"><span>Boas</span> Práticas</a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__interviews"><span>Entrevistas</span></a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__articles"><span>Artigos</span></a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__library"><span>Biblioteca</span></a></li>
+          <li><a href="" class="main-nav__link-icon main-nav__news"><span>Notícias</span></a></li>
+        </ul>
+        <li class="main-nav__button"><a href="" class="button button--secondary button--big">Entrar</a></li>
+        <ul class="main-nav__localization">
+          <li><a class="main-nav__pt-flag" href="">Português</a></li>
+          <li><a class="main-nav__es-flag" href="">Espanhol</a></li>
+          <li><a class="main-nav__gb-flag" href="">Inglês</a></li>
+        </ul>
+      </ul>
+    </nav>
     <main class="sections">
         <header class="sections__header" style="background-image: url('https://www.placecage.com/600/300')">
           <h1 class="sections__title">
@@ -139,5 +142,7 @@
         </span>
       </div>
     </footer>
+
+    <script src="{{ mix('js/app.js') }}"></script>
   </body>
 </html>

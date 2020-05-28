@@ -1,3 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+// sass-lint:disable-block no-duplicate-properties
+@font-face {
+  src: url('/fonts/orkney-regular-webfont.eot');
+  src: url('/fonts/orkney-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/orkney-regular-webfont.woff') format('woff'),
+  url('/fonts/orkney-regular-webfont.ttf') format('truetype'),
+  url('/fonts/orkney-regular-webfont.svg#orkneyregular') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'orkneyregular';
+}
+
+@font-face {
+  src: url('/fonts/orkney-bold-webfont.eot');
+  src: url('/fonts/orkney-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/orkney-bold-webfont.woff') format('woff'),
+  url('/fonts/orkney-bold-webfont.ttf') format('truetype'),
+  url('/fonts/orkney-bold-webfont.svg#orkneybold') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'orkneybold';
+}
