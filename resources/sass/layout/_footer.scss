@@ -10,10 +10,21 @@
   list-style: none;
   border-top: 1px solid palette('gray');
   border-bottom: 1px solid palette('gray');
+
+  @media screen and (min-width: breakpoint('phablet')) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .footer-nav li {
   margin-bottom: 0.5rem;
+
+
+  @media screen and (min-width: breakpoint('phablet')) {
+    margin-bottom: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;

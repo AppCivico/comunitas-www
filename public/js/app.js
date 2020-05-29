@@ -145,6 +145,10 @@ function initSearchToggle() {
   buttons.forEach(function (item) {
     return item.addEventListener('click', function () {
       search.classList.toggle('search--active');
+
+      if (search.classList.contains('search--active')) {
+        window.scrollTo(0, 0);
+      }
     });
   });
 }

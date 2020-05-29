@@ -38,8 +38,8 @@
   border-left: 1px solid palette('gray');
   transition: right 0.5s;
 
-  @media screen and (min-width: breakpoint('phablet')) {
-    font-size: ms(1);
+  @media screen and (min-width: breakpoint('tablet')) {
+    top: 4.75rem;
   }
 
   @media screen and (min-width: breakpoint('desktop')) {

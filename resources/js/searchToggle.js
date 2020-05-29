@@ -4,5 +4,8 @@ export default function initSearchToggle() {
 
   buttons.forEach(item => item.addEventListener('click', () => {
     search.classList.toggle('search--active');
+    if (search.classList.contains('search--active')) {
+      window.scrollTo(0, 0)
+    }
   }));
 }

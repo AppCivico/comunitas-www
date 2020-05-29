@@ -32,7 +32,8 @@
   background-size: contain;
 
   @media screen and (min-width: breakpoint('tablet')) {
-    margin: 0;
+    width: 4.75rem;
+    height: 3.75rem;
   }
 }
 

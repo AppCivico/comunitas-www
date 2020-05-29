@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html
+  @if (App::environment('local'))
+    class="grid"
+  @endif
+  lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +20,7 @@
     <header class="site-header">
       <div class="site-header__container">
         <a href="/" class="site-header__logo">Rede Juntos</a>
-        <button class="site-header__search-button js-search-toggle">Abrir busca</button>
+        <a href="#site-header" class="site-header__search-button js-search-toggle">Abrir busca</a>
         <button class="main-nav__hamburguer js-main-nav-toggle">Menu</button>
       </div>
     </header>
@@ -80,7 +84,15 @@
             @for ($i = 0; $i < 6; $i++)
               <article class="section__item">
                 <div class="sections__image">
-                  <img src="https://www.placecage.com/400/300" alt="placecage">
+                  <img
+                    srcset="https://www.placecage.com/300/200.jpg,
+                      https://www.placecage.com/450/300.jpg 1.5x,
+                      https://www.placecage.com/600/400.jpg 2x"
+                    src="https://www.placecage.com/450/350"
+                    sizes="(max-width: 400px) 480px,
+                    800px"
+                    alt="placecage"
+                  >
                   <div class="section__tags">
                     @for ($a = 0; $a < 3; $a++)
                       <a href="">Gestão de pessoas</a>
