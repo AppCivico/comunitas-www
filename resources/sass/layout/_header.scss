@@ -5,11 +5,68 @@
   color: inherit;
   background-color: palette('blue');
 
-  // @media screen and (min-width: breakpoint('tablet')) {
-  //   flex-direction: row;
-  //   height: 5.375rem;
-  //   margin-top: 0;
-  // }
+  @media screen and (min-width: breakpoint('desktop')) {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.site-header__institutional {
+  display: none;
+  max-height: 4rem;
+  transition: max-height 0.3s;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    display: block;
+    background-color: palette('white');
+  }
+}
+
+.site-header--small .site-header__institutional {
+  @media screen and (min-width: breakpoint('desktop')) {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.site-header__institutional .container {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.site-header__institutional ul {
+  display: flex;
+  margin: 0;
+  margin-left: -3rem;
+  list-style: none;
+}
+
+.site-header__institutional li {
+  margin-right: 3rem;
+  font-weight: bold;
+
+  &:first-child {
+    display: none;
+  }
+}
+
+.site-header__institutional .site-header__search-button {
+  display: block;
+  margin-left: auto;
+  background-image: image('icons/magnifying-glass-blue.svg');
+}
+
+.site-header__institutional ul a {
+  font-size: ms(-1);
+  color: palette('blue');
+}
+
+.site-header__institutional .button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 2rem;
 }
 
 .site-header__container {
@@ -20,6 +77,12 @@
   justify-content: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    justify-content: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .site-header__logo {
@@ -30,11 +93,22 @@
   text-indent: -999em;
   background-image: image('logo.svg');
   background-size: contain;
+  transition: height 0.3s;
 
   @media screen and (min-width: breakpoint('tablet')) {
     width: 4.75rem;
     height: 3.75rem;
   }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    width: 6.1rem;
+    height: 4.625rem;
+    margin-right: 2rem;
+  }
+}
+
+.site-header--small .site-header__logo {
+  height: 2rem;
 }
 
 .site-header__search-button {
@@ -44,4 +118,8 @@
   background-image: image('icons/magnifying-glass.svg');
   background-color: transparent;
   border: 0;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    display: none;
+  }
 }

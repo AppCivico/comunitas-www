@@ -12,6 +12,10 @@
   @media screen and (min-width: breakpoint('phablet')) {
     height: 20rem;
   }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    height: 25rem;
+  }
 }
 
 .sections__title {
@@ -23,10 +27,19 @@
   font-size: ms(2);
   color: palette('white');
   background-color: palette('black', 'opacity');
+
+  @media screen and (min-width: breakpoint('phablet')) {
+    font-size: ms(3);
+  }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    font-size: ms(5);
+  }
 }
 
 .sections__title span {
   @include container;
+  display: block;
 }
 
 .sections__select {
@@ -37,6 +50,11 @@
   font-family: $orkney-bold-font-stack;
   color: palette('blue');
   border-bottom: 1px solid palette('gray');
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    font-size: ms(3);
+  }
+
 }
 
 .sections__select strong {
@@ -147,4 +165,12 @@ $sections-list-tablet-margin: 1rem;
   text-transform: uppercase;
   color: palette('blue');
   background: transparent;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    min-height: 4.6rem;
+  }
+}
+
+.sections__load-more {
+  margin-top: 2rem;
 }

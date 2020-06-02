@@ -16,4 +16,24 @@
   display: inline-flex;
   justify-content: center;
   width: 100%;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    max-width: 51rem;
+  }
+}
+
+.sections__text {
+  @media screen and (min-width: breakpoint('desktop')) {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    column-fill: balance;
+    columns: 2;
+  }
+}
+
+.sections__text h1 {
+  @media screen and (min-width: breakpoint('desktop')) {
+    max-width: 35rem;
+    margin-top: 0;
+  }
 }
