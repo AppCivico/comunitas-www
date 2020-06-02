@@ -130,6 +130,10 @@ body {
   > * {
     flex-shrink: 0; /* 1 */
   }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    padding-top: 9.8rem;
+  }
 }
 
 

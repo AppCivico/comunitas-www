@@ -150,6 +150,12 @@ body > * {
   /* 1 */
 }
 
+@media screen and (min-width: 64em) {
+  body {
+    padding-top: 9.8rem;
+  }
+}
+
 /**
  * 1. Set sticky footer
  */
