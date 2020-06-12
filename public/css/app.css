@@ -1812,24 +1812,6 @@ html {
   }
 }
 
-@media screen and (min-width: 64em) {
-  .sections__text {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    -moz-column-fill: balance;
-         column-fill: balance;
-    -moz-columns: 2;
-         columns: 2;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  .sections__text h1 {
-    max-width: 35rem;
-    margin-top: 0;
-  }
-}
-
 .search {
   max-height: 0;
   overflow: hidden;
@@ -2126,5 +2108,26 @@ html {
 
 .sections__load-more {
   margin-top: 2rem;
+}
+
+.sections__text {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 64em) {
+  .sections__text h1 {
+    max-width: 35rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .sections__text-description {
+    -moz-column-fill: balance;
+         column-fill: balance;
+    -moz-columns: 2;
+         columns: 2;
+  }
 }
 

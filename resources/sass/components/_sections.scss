@@ -174,3 +174,29 @@ $sections-list-tablet-margin: 1rem;
 .sections__load-more {
   margin-top: 2rem;
 }
+
+.sections__text {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.sections__text h1 {
+  @media screen and (min-width: breakpoint('desktop')) {
+    max-width: 35rem;
+    margin-top: 0;
+  }
+}
+
+.sections__text-description {
+  @media screen and (min-width: breakpoint('desktop')) {
+    column-fill: balance;
+    columns: 2;
+  }
+}
+
+
+
+
+
+
+
