@@ -33,6 +33,7 @@
             <h2 class="sections__list-title">{{ $content->title }}</h2>
           </article>
         @endforeach
+
         <button class="button button--big sections__load-more">Carregar mais</button>
         <article class="sections__text">
           <h1>{{ $page_info->title }}</h1>
