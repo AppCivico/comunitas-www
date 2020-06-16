@@ -12,7 +12,7 @@ class WebinarController extends Controller
     {
         // ->simplePaginate(1);
         $contents  = Content::webinar()->get();
-        $page_info = Webinar::firstOrFail();
+        $page_info = Webinar::first();
 
         // return $page_info;
         // return view('content', ['contents' => $contents]);
