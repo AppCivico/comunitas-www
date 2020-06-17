@@ -3,12 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Content;
+use App\Webinar;
 
 class Category extends Model
 {
     public function contents()
     {
-        return $this->belongsToMany(Content::class);
+        return $this->belongsToMany(Webinar::class);
     }
 }

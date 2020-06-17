@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateTypesTable extends Migration {
+class CreateCategoryWebinarTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,11 @@ class CreateTypesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('types', function(Blueprint $table)
+		Schema::create('category_webinar', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('order')->default(1);
-			$table->string('name');
-			$table->string('slug')->unique('categories_slug_unique');
+			$table->integer('category_id');
+			$table->integer('webinar_id');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +29,7 @@ class CreateTypesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('types');
+		Schema::drop('category_webinar');
 	}
 
 }

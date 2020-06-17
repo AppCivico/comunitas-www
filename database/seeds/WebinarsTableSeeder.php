@@ -12,27 +12,79 @@ class WebinarsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('webinars')->delete();
-        
+
         \DB::table('webinars')->insert(array (
-            0 => 
+            0 =>
             array (
-                'id' => 2,
-                'title' => 'O conhecimento que criamos é gerado com base em experiências.',
-                'body' => '<p style="background-repeat: no-repeat; box-sizing: inherit; tab-size: inherit; line-height: 1.5; text-decoration-line: inherit; vertical-align: inherit; padding: 0px; margin-top: 0px; margin-bottom: 1em; max-width: 35em; orphans: 3; widows: 3; color: #212121; font-family: \'Open Sans\', sans-serif; font-size: 16.0016px;">"Ter uma pol&iacute;tica de conhecimento aberto significa ter uma s&eacute;rie de normas, processos e protocolos definidos, envolvendo todas as &aacute;reas da organiza&ccedil;&atilde;o, n&atilde;o somente a produ&ccedil;&atilde;o de conhecimento&rdquo;</p>
-<p style="background-repeat: no-repeat; box-sizing: inherit; tab-size: inherit; line-height: 1.5; text-decoration-line: inherit; vertical-align: inherit; padding: 0px; margin-top: 0px; margin-bottom: 1em; max-width: 35em; orphans: 3; widows: 3; color: #212121; font-family: \'Open Sans\', sans-serif; font-size: 16.0016px;">&middot; Com a licen&ccedil;a Creative Commons da Rede Juntos, a Comunitas &eacute; a primeira organiza&ccedil;&atilde;o social brasileira a implementar uma pol&iacute;tica de educa&ccedil;&atilde;o aberta;</p>
-<p style="background-repeat: no-repeat; box-sizing: inherit; tab-size: inherit; line-height: 1.5; text-decoration-line: inherit; vertical-align: inherit; padding: 0px; margin-top: 0px; margin-bottom: 1em; max-width: 35em; orphans: 3; widows: 3; color: #212121; font-family: \'Open Sans\', sans-serif; font-size: 16.0016px;">&middot; A rede juntos em 2018 recebeu quase 70 mil acessos e mais de 20 mil servidores buscaram conte&uacute;do na plataforma;</p>
-<p style="background-repeat: no-repeat; box-sizing: inherit; tab-size: inherit; line-height: 1.5; text-decoration-line: inherit; vertical-align: inherit; padding: 0px; margin-top: 0px; margin-bottom: 1em; max-width: 35em; orphans: 3; widows: 3; color: #212121; font-family: \'Open Sans\', sans-serif; font-size: 16.0016px;">&middot; Al&eacute;m de v&iacute;deos e podcasts (baixados mais de 700 vezes), a Rede Juntos conta, ainda, com a realiza&ccedil;&atilde;o de webin&aacute;rios e mini-cursos com especialistas na &aacute;rea.</p>',
-                'image' => 'webinars-page/June2020/v2XIQXsxY9xNvUpa5O2o.jpg',
-                'meta_description' => 'Descrição de SEO',
-                'created_at' => '2020-06-12 22:38:01',
-                'updated_at' => '2020-06-12 22:38:01',
-                'seo_title' => 'Título de SEO',
+                'id' => 1,
+                'author_id' => 1,
+                'category_id' => NULL,
+                'title' => 'Meu primeiro webinário',
+                'seo_title' => 'Conheça meu primeiro webinário',
+                'excerpt' => 'Esse é o resumo que vai aparecer na listagem dos webinários lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et',
+                'body' => '<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>
+<p>&nbsp;</p>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>',
+                'image' => 'webinars/June2020/dZGlT0emt5TUeaTK4gLu.jpg',
+                'slug' => 'meu-primeiro-webinario',
+                'meta_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim.',
+                'meta_keywords' => NULL,
+                'status' => 'DRAFT',
+                'featured' => 0,
+                'created_at' => '2020-06-11 20:17:53',
+                'updated_at' => '2020-06-12 23:17:32',
+                'order' => 2,
+                'image_alt' => NULL,
+            ),
+            1 =>
+            array (
+                'id' => 3,
+                'author_id' => 1,
+                'category_id' => NULL,
+                'title' => 'Meu segundo webinário',
+                'seo_title' => 'Conheça meu primeiro webinário',
+                'excerpt' => 'Esse é o resumo que vai aparecer na listagem dos webinários lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et',
+                'body' => '<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>
+<p>&nbsp;</p>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam etlorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et</p>',
+                'image' => 'webinars/June2020/dZGlT0emt5TUeaTK4gLu.jpg',
+                'slug' => 'meu-segundo-webinario',
+                'meta_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et fermentum dui. Ut orci quam, ornare sed lorem sed, hendrerit auctor dolor. Nulla viverra, nibh quis ultrices malesuada, ligula ipsum vulputate diam, aliquam egestas nibh ante vel dui. Sed in tellus interdum eros vulputate placerat sed non enim.',
+                'meta_keywords' => NULL,
+                'status' => 'DRAFT',
+                'featured' => 0,
+                'created_at' => '2020-06-11 20:17:53',
+                'updated_at' => '2020-06-12 23:18:03',
+                'order' => 1,
+                'image_alt' => 'Show do barões da pisadinha',
+            ),
+            2 =>
+            array (
+                'id' => 4,
+                'author_id' => 1,
+                'category_id' => NULL,
+                'title' => 'Perferendis expedita',
+                'seo_title' => 'Veniam officiis har',
+                'excerpt' => 'Elit et voluptatibu',
+                'body' => '<p>Sed vel ab cupiditat.</p>',
+                'image' => 'webinars/June2020/b774uRK5RaOPn1fWVnLc.jpg',
+                'slug' => 'Aliquam ut earum dol',
+                'meta_description' => 'Laborum sint officia',
+                'meta_keywords' => NULL,
+                'status' => 'PUBLISHED',
+                'featured' => 0,
+                'created_at' => '2020-06-15 22:46:17',
+                'updated_at' => '2020-06-15 22:46:17',
+                'order' => NULL,
+                'image_alt' => 'Veniam numquam illo',
             ),
         ));
-        
-        
     }
 }
