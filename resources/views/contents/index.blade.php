@@ -16,19 +16,21 @@
         @foreach($contents as $content)
           <article class="section__item">
             <div class="sections__image">
-              <img
-                src="{{ Voyager::image($content->image) }}"
-                srcset="{{ Voyager::image($content->thumbnail('small')) }},
-                {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
-                {{ Voyager::image( $content->image ) }} 2x"
-                sizes="(max-width: 400px) 480px, 800px"
-                alt="{{ $content->image_alt }}"
+              <a href="{{ $content->slug }}">
+                <img
+                  src="{{ Voyager::image($content->image) }}"
+                  srcset="{{ Voyager::image($content->thumbnail('small')) }},
+                  {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
+                  {{ Voyager::image( $content->image ) }} 2x"
+                  sizes="(max-width: 400px) 480px, 800px"
+                  alt="{{ $content->image_alt }}"
                 >
-                <div class="section__tags">
-                  @foreach($content->categories as $category)
-                    <a href="">{{ $category->name }}</a>
-                  @endforeach
-                </div>
+              </a>
+              <div class="section__tags">
+                @foreach($content->categories as $category)
+                  <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
+                @endforeach
+              </div>
             </div>
             <h2 class="sections__list-title">{{ $content->title }}</h2>
           </article>

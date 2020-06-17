@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/webinarios', 'WebinarController@index');
+Route::get('/webinarios/{webinar:slug}', 'WebinarController@show');
 
 
 Route::group(['prefix' => 'admin'], function () {
