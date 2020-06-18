@@ -105,6 +105,27 @@ $sections-list-tablet-margin: 1rem;
   }
 }
 
+.sections__list--smaller-cards {
+  @media screen and (min-width: breakpoint('desktop')) {
+    justify-content: flex-start;
+  }
+}
+
+.sections__list--smaller-cards .sections__list-section-title {
+  width: 100%;
+
+  @media screen and (min-width: breakpoint('tablet')) {
+    margin: 0 1rem;
+  }
+}
+
+.sections__list--smaller-cards .section__item {
+  @media screen and (min-width: breakpoint('tablet')) {
+    width: calc(33.333% - (2 * #{$sections-list-tablet-margin}));
+    margin: $sections-list-tablet-margin;
+  }
+}
+
 .section__item {
   width: 100%;
   margin-bottom: 1rem;

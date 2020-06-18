@@ -1026,6 +1026,10 @@ textarea[aria-busy=true] {
   }
 }
 
+.color-blue {
+  color: #015295;
+}
+
 .container {
   padding-right: 1rem;
   padding-left: 1rem;
@@ -2038,6 +2042,29 @@ html {
   }
 }
 
+@media screen and (min-width: 64em) {
+  .sections__list--smaller-cards {
+    justify-content: flex-start;
+  }
+}
+
+.sections__list--smaller-cards .sections__list-section-title {
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  .sections__list--smaller-cards .sections__list-section-title {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .sections__list--smaller-cards .section__item {
+    width: calc(33.333% - (2 * 1rem));
+    margin: 1rem;
+  }
+}
+
 .section__item {
   width: 100%;
   margin-bottom: 1rem;
@@ -2146,11 +2173,13 @@ html {
   font-style: normal;
   font-weight: bold;
   font-size: 0.8888888889em;
+  text-transform: uppercase;
   color: #575757;
 }
 
 .section-intern__author time {
   font-style: normal;
+  text-transform: lowercase;
 }
 
 .section-intern__tags {
@@ -2173,5 +2202,162 @@ html {
   color: white;
   background-color: #f43e7f;
   border-radius: 33px;
+}
+
+.section-intern__address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-style: normal;
+  border-top: 1px solid #e6e6e6;
+}
+
+@media screen and (min-width: 64em) {
+  .section-intern__address {
+    justify-content: flex-start;
+  }
+}
+
+.section-intern__address img {
+  max-width: 6.875em;
+}
+
+@media screen and (min-width: 64em) {
+  .section-intern__address img {
+    max-width: 12.5rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .section-intern__text {
+    max-width: 45rem;
+    margin-left: 1rem;
+  }
+}
+
+.section-intern__address-name {
+  width: 100%;
+  font-size: 1.265625em;
+  text-align: center;
+}
+
+@media screen and (min-width: 64em) {
+  .section-intern__address-name {
+    width: 45rem;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.section-intern__footer-bio {
+  font-size: 0.8888888889em;
+  text-align: center;
+}
+
+@media screen and (min-width: 64em) {
+  .section-intern__footer-bio {
+    text-align: left;
+  }
+}
+
+.section-intern span {
+  font-weight: 600;
+}
+
+.section-intern__share {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 1.5rem 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.section-intern__share h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.7901234568em;
+  color: #015295;
+}
+
+.section-intern__text .social-icons {
+  justify-content: center;
+}
+
+@media screen and (min-width: 64em) {
+  .section-intern__text .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+.section-intern__related {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-intern__related h2 {
+  width: 100%;
+  color: #015295;
+}
+
+.social-icons {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.social-icons a {
+  overflow: hidden;
+  text-indent: 999em;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
+  width: 1.562rem;
+  height: 1.562rem;
+  margin-right: 1rem;
+  background-position: center;
+}
+
+.social-icons__facebook {
+  background-image: url("/images/icons/social/facebook.svg");
+}
+
+.social-icons__twitter {
+  background-image: url("/images/icons/social/twitter.svg");
+}
+
+.social-icons__linkedin {
+  background-image: url("/images/icons/social/linkedin.svg");
+}
+
+.social-icons__youtube {
+  background-image: url("/images/icons/social/youtube.svg");
+}
+
+.social-icons__instagram {
+  background-image: url("/images/icons/social/instagram.svg");
+}
+
+.social-icons--red .social-icons__facebook {
+  background-image: url("/images/icons/social/facebook-red.svg");
+}
+
+.social-icons--red .social-icons__linkedin {
+  background-image: url("/images/icons/social/linkedin-red.svg");
+}
+
+.social-icons--red .social-icons__twitter {
+  background-image: url("/images/icons/social/twitter-red.svg");
+}
+
+.social-icons--red .social-icons__youtube {
+  background-image: url("/images/icons/social/youtube-red.svg");
+}
+
+.social-icons--red .social-icons__instagram {
+  background-image: url("/images/icons/social/instagram-red.svg");
 }
 

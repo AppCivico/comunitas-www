@@ -128,12 +128,12 @@ class DataTypesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 9,
-                'name' => 'contents',
-                'slug' => 'contents',
-                'display_name_singular' => 'Conteúdo',
-                'display_name_plural' => 'Conteúdos',
+                'name' => 'webinars',
+                'slug' => 'webinars',
+                'display_name_singular' => 'Webinário',
+                'display_name_plural' => 'Webinários',
                 'icon' => 'voyager-news',
-                'model_name' => 'App\\Content',
+                'model_name' => 'App\\Webinar',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
@@ -141,7 +141,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-12 23:17:17',
+                'updated_at' => '2020-06-17 22:04:01',
             ),
             7 => 
             array (
@@ -164,12 +164,12 @@ class DataTypesTableSeeder extends Seeder
             8 => 
             array (
                 'id' => 12,
-                'name' => 'webinars',
-                'slug' => 'webinars-page',
+                'name' => 'webinar_contents',
+                'slug' => 'webinar-contents',
                 'display_name_singular' => 'Webinário',
                 'display_name_plural' => 'Webinários',
                 'icon' => NULL,
-                'model_name' => 'App\\Webinar',
+                'model_name' => 'App\\WebinarContent',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,

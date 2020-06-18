@@ -1,0 +1,56 @@
+.social-icons {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.social-icons a {
+  @include image-replacement;
+  display: block;
+  width: 1.562rem;
+  height: 1.562rem;
+  margin-right: 1rem;
+  background-position: center;
+}
+
+.social-icons__facebook {
+  background-image: image('icons/social/facebook.svg');
+}
+
+.social-icons__twitter {
+  background-image: image('icons/social/twitter.svg');
+}
+
+.social-icons__linkedin {
+  background-image: image('icons/social/linkedin.svg');
+}
+
+.social-icons__youtube {
+  background-image: image('icons/social/youtube.svg');
+}
+
+.social-icons__instagram {
+  background-image: image('icons/social/instagram.svg');
+}
+
+
+.social-icons--red .social-icons__facebook {
+  background-image: image('icons/social/facebook-red.svg');
+}
+
+.social-icons--red .social-icons__linkedin {
+  background-image: image('icons/social/linkedin-red.svg');
+}
+
+.social-icons--red .social-icons__twitter {
+  background-image: image('icons/social/twitter-red.svg');
+}
+
+.social-icons--red .social-icons__youtube {
+  background-image: image('icons/social/youtube-red.svg');
+}
+
+.social-icons--red .social-icons__instagram {
+  background-image: image('icons/social/instagram-red.svg');
+}

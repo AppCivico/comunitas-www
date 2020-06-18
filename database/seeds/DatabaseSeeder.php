@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FailedJobsTableSeeder::class);
         $this->call(MenusTableSeeder::class);
         $this->call(MenuItemsTableSeeder::class);
-        $this->call(MigrationsTableSeeder::class);
         $this->call(PagesTableSeeder::class);
         $this->call(UserRolesTableSeeder::class);
         $this->call(RolesTableSeeder::class);
@@ -32,5 +31,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TranslationsTableSeeder::class);
         $this->call(WebinarsTableSeeder::class);
         $this->call(WebinarContentsTableSeeder::class);
+        $this->call(AuthorsTableSeeder::class);
     }
 }

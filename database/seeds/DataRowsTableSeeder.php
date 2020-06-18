@@ -1022,7 +1022,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"slugify":{"origin":"title","forceUpdate":true},"validation":{"rule":"unique:posts,slug"}}',
+                'details' => '{"slugify":{"origin":"title","forceUpdate":true},"validation":{"rule":"unique:webinars,slug"}}',
                 'order' => 11,
             ),
             63 => 
@@ -1235,57 +1235,9 @@ class DataRowsTableSeeder extends Seeder
             ),
             76 => 
             array (
-                'id' => 81,
-                'data_type_id' => 10,
-                'field' => 'type_hasmany_content_relationship',
-                'type' => 'relationship',
-                'display_name' => 'contents',
-                'required' => 0,
-                'browse' => 0,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'details' => '{"model":"App\\\\Type","table":"contents","type":"hasMany","column":"type_id","key":"id","label":"title","pivot_table":"categories","pivot":"0","taggable":"0"}',
-                'order' => 8,
-            ),
-            77 => 
-            array (
-                'id' => 82,
-                'data_type_id' => 9,
-                'field' => 'type_id',
-                'type' => 'number',
-                'display_name' => 'Type Id',
-                'required' => 1,
-                'browse' => 0,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{}',
-                'order' => 19,
-            ),
-            78 => 
-            array (
-                'id' => 83,
-                'data_type_id' => 9,
-                'field' => 'content_belongsto_type_relationship',
-                'type' => 'relationship',
-                'display_name' => 'Tipo de conteúdo',
-                'required' => 0,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Type","table":"types","type":"belongsTo","column":"type_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
-                'order' => 1,
-            ),
-            79 => 
-            array (
                 'id' => 85,
                 'data_type_id' => 9,
-                'field' => 'content_belongstomany_category_relationship',
+                'field' => 'webinar_belongstomany_category_relationship',
                 'type' => 'relationship',
                 'display_name' => 'categories',
                 'required' => 0,
@@ -1294,26 +1246,26 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"model":"App\\\\Category","table":"categories","type":"belongsToMany","column":"id","key":"id","label":"name","pivot_table":"category_content","pivot":"1","taggable":"on"}',
+                'details' => '{"model":"App\\\\Category","table":"categories","type":"belongsToMany","column":"id","key":"id","label":"name","pivot_table":"category_webinar","pivot":"1","taggable":"on"}',
                 'order' => 20,
             ),
-            80 => 
+            77 => 
             array (
                 'id' => 86,
                 'data_type_id' => 4,
-                'field' => 'category_belongstomany_content_relationship',
+                'field' => 'category_belongstomany_webinar_relationship',
                 'type' => 'relationship',
-                'display_name' => 'contents',
+                'display_name' => 'webinars',
                 'required' => 0,
                 'browse' => 1,
                 'read' => 1,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"model":"App\\\\Content","table":"contents","type":"belongsToMany","column":"id","key":"id","label":"title","pivot_table":"category_content","pivot":"1","taggable":"0"}',
+                'details' => '{"model":"App\\{"model":"App\\\\Webinar","table":"webinars","type":"belongsToMany","column":"id","key":"id","label":"title","pivot_table":"category_webinar","pivot":"1","taggable":"0"}',
                 'order' => 8,
             ),
-            81 => 
+            78 => 
             array (
                 'id' => 87,
                 'data_type_id' => 12,
@@ -1329,7 +1281,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            82 => 
+            79 => 
             array (
                 'id' => 88,
                 'data_type_id' => 12,
@@ -1345,7 +1297,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 2,
             ),
-            83 => 
+            80 => 
             array (
                 'id' => 89,
                 'data_type_id' => 12,
@@ -1361,7 +1313,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            84 => 
+            81 => 
             array (
                 'id' => 90,
                 'data_type_id' => 12,
@@ -1377,7 +1329,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"resize":{"width":"1000","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}',
                 'order' => 4,
             ),
-            85 => 
+            82 => 
             array (
                 'id' => 91,
                 'data_type_id' => 12,
@@ -1393,7 +1345,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            86 => 
+            83 => 
             array (
                 'id' => 92,
                 'data_type_id' => 12,
@@ -1409,7 +1361,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            87 => 
+            84 => 
             array (
                 'id' => 93,
                 'data_type_id' => 12,
@@ -1425,7 +1377,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            88 => 
+            85 => 
             array (
                 'id' => 94,
                 'data_type_id' => 12,
@@ -1441,7 +1393,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 8,
             ),
-            89 => 
+            86 => 
             array (
                 'id' => 95,
                 'data_type_id' => 9,

@@ -9,6 +9,6 @@ class Category extends Model
 {
     public function contents()
     {
-        return $this->belongsToMany(Webinar::class);
+        return $this->hasMany(Webinar::class);
     }
 }
