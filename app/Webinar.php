@@ -26,9 +26,5 @@ class Webinar extends Model
             $categoryIds = $this->categories()->pluck('categories.id')->all();
             $query->whereIn('categories.id', $categoryIds);
         })->where('id', '<>', $this->id)->get();
-
-        //     $tagIds = $this->tags()->pluck('tags.id')->all();
-        //     $query->whereIn('tags.id', $tagIds);
-        // })->where('id', '<>', $this->id)->get();
     }
 }

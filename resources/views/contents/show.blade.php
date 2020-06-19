@@ -5,11 +5,18 @@
         @isset($content->author)
           {{ $content->author->name }} |
         @endisset
-        <time pubdate datetime="{{ $content->created_at }}">
-          Publicado: {{ $content->created_at->diffForHumans() }}
-        </time>
+        @isset($content->created_at)
+          <time pubdate datetime="{{ $content->created_at }}">
+            Publicado: {{ $content->created_at->diffForHumans() }}
+          </time>
+        @endisset
       </address>
+
       <h1>{{ $content->title }}</h1>
+
+      @isset($content->iframe)
+        {!! $content->iframe !!}
+      @endisset
 
       <div class="section-intern__tags">
         @foreach($content->categories as $category)

@@ -42,12 +42,12 @@ class ContentController extends Controller
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
     }
 
-    public function showPodcast(Podcast $webinar)
+    public function showPodcast(Podcast $podcast)
     {
-        $related_contents = $webinar->relatedWebinarsByTag();
+        $related_contents = $podcast->relatedByTag();
 
         return view('contents.show')
-            ->with('content', $webinar)
+            ->with('content', $podcast)
             ->with('related_contents', $related_contents);
     }
 }

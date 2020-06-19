@@ -18,7 +18,7 @@ class CreatePodcastsTable extends Migration
 			$table->integer('author_id')->default(1);
 			$table->integer('category_id')->nullable();
 			$table->string('title');
-            $table->string('iframe')->nullable();
+            $table->text('iframe')->nullable();
 			$table->string('seo_title')->nullable();
 			$table->text('excerpt', 65535)->nullable();
 			$table->text('body', 65535);
