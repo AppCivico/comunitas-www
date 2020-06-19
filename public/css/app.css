@@ -1996,6 +1996,12 @@ html {
   font-size: 1.265625em;
 }
 
+@media screen and (min-width: 64em) {
+  .sections__select strong {
+    margin-bottom: -2.7rem;
+  }
+}
+
 .sections__select select {
   display: flex;
   align-items: flex-end;
@@ -2018,6 +2024,12 @@ html {
 .sections__select select:focus {
   outline: 2px solid #015295;
   outline-offset: 2px;
+}
+
+@media screen and (min-width: 64em) {
+  .sections__select select {
+    height: 4rem;
+  }
 }
 
 .sections__select option {

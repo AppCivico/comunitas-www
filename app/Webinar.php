@@ -19,4 +19,16 @@ class Webinar extends Model
     {
         return $this->belongsTo(Author::class);
     }
+
+    public function relatedWebinarsByTag()
+    {
+        return Webinar::whereHas('categories', function ($query) {
+            $categoryIds = $this->categories()->pluck('categories.id')->all();
+            $query->whereIn('categories.id', $categoryIds);
+        })->where('id', '<>', $this->id)->get();
+
+        //     $tagIds = $this->tags()->pluck('tags.id')->all();
+        //     $query->whereIn('tags.id', $tagIds);
+        // })->where('id', '<>', $this->id)->get();
+    }
 }

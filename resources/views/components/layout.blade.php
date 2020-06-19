@@ -47,7 +47,11 @@
                 <li>Seções</li>
                 <li><a href="" class="main-nav__link-icon main-nav__paths">@svg('paths') Trilhas</a></li>
                 <li><a href="" class="main-nav__link-icon main-nav__podcasts">@svg('podcasts') Podcasts</a></li>
-                <li><a href="" class="main-nav__link-icon main-nav__webinars">@svg('webinars') Webnários</a></li>
+                <li>
+                  <a href="{{ route('webinars.index') }}" class="main-nav__link-icon main-nav__webinars">
+                    @svg('webinars') Webnários
+                  </a>
+                </li>
                 <li><a href="" class="main-nav__link-icon main-nav__good-practices">@svg('good-practices') Boas Práticas</a></li>
                 <li><a href="" class="main-nav__link-icon main-nav__interviews">@svg('interviews') Entrevistas</a></li>
                 <li><a href="" class="main-nav__link-icon main-nav__articles">@svg('articles') Artigos</a></li>

@@ -14,12 +14,14 @@ class WebinarController extends Controller
         $contents    = Webinar::all();
         $page_info   = WebinarContent::first();
         $content_url = 'webinarios';
+        $categories = Category::with('webinars')->get();
 
-        return view('contents.index', compact('contents', 'page_info', 'content_url'));
+        return view('contents.index', compact('contents', 'page_info', 'content_url', 'categories'));
     }
 
-    public function show(Webinar $webinar) {
-        $related_contents = Webinar::all()->except($webinar->id);
+    public function show(Webinar $webinar)
+    {
+        $related_contents = $webinar->relatedWebinarsByTag();
 
         return view('contents.show')
             ->with('content', $webinar)

@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/webinarios', 'WebinarController@index');
+Route::get('/webinarios', 'WebinarController@index')->name('webinars.index');
 Route::get('/webinarios/{webinar:slug}', 'WebinarController@show');
 
 

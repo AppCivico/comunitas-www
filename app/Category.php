@@ -7,7 +7,7 @@ use App\Webinar;
 
 class Category extends Model
 {
-    public function contents()
+    public function webinars()
     {
         return $this->hasMany(Webinar::class);
     }

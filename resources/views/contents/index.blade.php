@@ -10,6 +10,9 @@
         <strong>Categorias</strong>
         <select id="" name="">
           <option value="">Todas</option>
+          @foreach($categories as $category)
+            <option value="">{{ $category->name }}</option>
+          @endforeach
         </select>
       </form>
       <div class="sections__list">
