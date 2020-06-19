@@ -12,12 +12,12 @@ class WebinarsTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('webinars')->delete();
-
+        
         \DB::table('webinars')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
                 'author_id' => 1,
@@ -41,7 +41,7 @@ class WebinarsTableSeeder extends Seeder
                 'order' => 2,
                 'image_alt' => NULL,
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 3,
                 'author_id' => 1,
@@ -65,7 +65,7 @@ class WebinarsTableSeeder extends Seeder
                 'order' => 1,
                 'image_alt' => 'Show do barões da pisadinha',
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 4,
                 'author_id' => 1,
@@ -86,5 +86,7 @@ class WebinarsTableSeeder extends Seeder
                 'image_alt' => 'Veniam numquam illo',
             ),
         ));
+        
+        
     }
 }

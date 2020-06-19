@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/webinarios', 'WebinarController@index')->name('webinars.index');
-Route::get('/webinarios/{webinar:slug}', 'WebinarController@show');
+Route::get('/webinarios', 'ContentController@webinars')->name('webinars.index');
+Route::get('/webinarios/{webinar:slug}', 'ContentController@showWebinar');
+
+Route::get('/podcasts', 'ContentController@podcasts')->name('podcasts.index');
+Route::get('/podcasts/{podcast:slug}', 'ContentController@showPodcast');
 
 
 Route::group(['prefix' => 'admin'], function () {

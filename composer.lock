@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d74408f3a0db375c9695d32f6bf341ce",
+    "content-hash": "a1fa6d0c2887b3b50e44209e9cd523a6",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -2646,54 +2646,6 @@
                 "type"
             ],
             "time": "2020-03-21T18:07:53+00:00"
-        },
-        {
-            "name": "protoqol/prequel",
-            "version": "v1.22.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Protoqol/Prequel.git",
-                "reference": "fc62e4f8bd2f83f8e5ff61119b282ed174f0e733"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Protoqol/Prequel/zipball/fc62e4f8bd2f83f8e5ff61119b282ed174f0e733",
-                "reference": "fc62e4f8bd2f83f8e5ff61119b282ed174f0e733",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": ">=5.6",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^3.7",
-                "phpmd/phpmd": "^2.6"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Protoqol\\Prequel\\PrequelServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Protoqol\\Prequel\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Quinten Schorsij",
-                    "email": "quinten@protoqol.xyz"
-                }
-            ],
-            "description": "Clear and concise database management.",
-            "time": "2020-01-22T08:35:24+00:00"
         },
         {
             "name": "psr/container",

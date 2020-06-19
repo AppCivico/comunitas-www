@@ -2,22 +2,23 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateWebinarsTable extends Migration {
-
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('webinars', function(Blueprint $table)
-		{
+class CreatePodcastsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('podcasts', function (Blueprint $table) {
 			$table->increments('id');
 			$table->integer('author_id')->default(1);
 			$table->integer('category_id')->nullable();
 			$table->string('title');
+            $table->string('iframe')->nullable();
 			$table->string('seo_title')->nullable();
 			$table->text('excerpt', 65535)->nullable();
 			$table->text('body', 65535);
@@ -30,18 +31,16 @@ class CreateWebinarsTable extends Migration {
 			$table->timestamps();
 			$table->integer('order')->nullable();
 			$table->string('image_alt')->nullable();
-		});
-	}
+        });
+    }
 
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('webinars');
-	}
-
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('podcasts');
+    }
 }

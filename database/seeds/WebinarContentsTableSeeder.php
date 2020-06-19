@@ -12,12 +12,12 @@ class WebinarContentsTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('webinar_contents')->delete();
-
+        
         \DB::table('webinar_contents')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 2,
                 'title' => 'O conhecimento que criamos é gerado com base em experiências.',
@@ -32,7 +32,7 @@ class WebinarContentsTableSeeder extends Seeder
                 'seo_title' => 'Título de SEO',
             ),
         ));
-
-
+        
+        
     }
 }

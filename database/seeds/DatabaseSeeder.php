@@ -32,5 +32,9 @@ class DatabaseSeeder extends Seeder
         $this->call(WebinarsTableSeeder::class);
         $this->call(WebinarContentsTableSeeder::class);
         $this->call(AuthorsTableSeeder::class);
+        $this->call(PodcastsTableSeeder::class);
+        $this->call(PodcastContentsTableSeeder::class);
+        $this->call(CategoryPodcastTableSeeder::class);
+        $this->call(MigrationsTableSeeder::class);
     }
 }

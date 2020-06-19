@@ -73,24 +73,6 @@ class DataTypesTableSeeder extends Seeder
             ),
             3 => 
             array (
-                'id' => 4,
-                'name' => 'categories',
-                'slug' => 'categories',
-                'display_name_singular' => 'Category',
-                'display_name_plural' => 'Categories',
-                'icon' => 'voyager-categories',
-                'model_name' => 'TCG\\Voyager\\Models\\Category',
-                'policy_name' => NULL,
-                'controller' => NULL,
-                'description' => NULL,
-                'generate_permissions' => 1,
-                'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-05-26 21:55:40',
-                'updated_at' => '2020-06-12 16:06:36',
-            ),
-            4 => 
-            array (
                 'id' => 5,
                 'name' => 'posts',
                 'slug' => 'posts',
@@ -107,7 +89,7 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2020-05-26 21:55:40',
                 'updated_at' => '2020-05-26 21:55:40',
             ),
-            5 => 
+            4 => 
             array (
                 'id' => 6,
                 'name' => 'pages',
@@ -125,7 +107,7 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2020-05-26 21:55:40',
                 'updated_at' => '2020-05-26 21:55:40',
             ),
-            6 => 
+            5 => 
             array (
                 'id' => 9,
                 'name' => 'webinars',
@@ -141,9 +123,9 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-17 22:04:01',
+                'updated_at' => '2020-06-19 21:17:43',
             ),
-            7 => 
+            6 => 
             array (
                 'id' => 10,
                 'name' => 'types',
@@ -161,7 +143,7 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2020-06-11 18:33:23',
                 'updated_at' => '2020-06-11 20:00:37',
             ),
-            8 => 
+            7 => 
             array (
                 'id' => 12,
                 'name' => 'webinar_contents',
@@ -177,7 +159,61 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-12 22:34:35',
-                'updated_at' => '2020-06-12 23:14:08',
+                'updated_at' => '2020-06-19 21:53:58',
+            ),
+            8 => 
+            array (
+                'id' => 13,
+                'name' => 'podcasts',
+                'slug' => 'podcasts',
+                'display_name_singular' => 'Podcast',
+                'display_name_plural' => 'Podcasts',
+                'icon' => NULL,
+                'model_name' => 'App\\Podcast',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-06-19 20:46:14',
+                'updated_at' => '2020-06-19 21:17:06',
+            ),
+            9 => 
+            array (
+                'id' => 14,
+                'name' => 'podcast_contents',
+                'slug' => 'podcast-contents',
+                'display_name_singular' => 'Podcasts Conteúdo',
+                'display_name_plural' => 'Podcasts Conteúdos',
+                'icon' => NULL,
+                'model_name' => 'App\\PodcastContent',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-06-19 20:50:29',
+                'updated_at' => '2020-06-19 21:32:58',
+            ),
+            10 => 
+            array (
+                'id' => 15,
+                'name' => 'categories',
+                'slug' => 'categories',
+                'display_name_singular' => 'Categoria',
+                'display_name_plural' => 'Categorias',
+                'icon' => 'voyager-tag',
+                'model_name' => 'App\\Category',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2020-06-19 21:14:17',
+                'updated_at' => '2020-06-19 21:14:17',
             ),
         ));
         

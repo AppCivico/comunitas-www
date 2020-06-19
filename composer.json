@@ -17,7 +17,6 @@
         "laravel/tinker": "^2.0",
         "nothingworks/blade-svg": "^0.3.4",
         "orangehill/iseed": "^2.6",
-        "protoqol/prequel": "1.22.3",
         "tcg/voyager": "^1.4"
     },
     "require-dev": {

@@ -46,7 +46,11 @@
               <ul>
                 <li>Seções</li>
                 <li><a href="" class="main-nav__link-icon main-nav__paths">@svg('paths') Trilhas</a></li>
-                <li><a href="" class="main-nav__link-icon main-nav__podcasts">@svg('podcasts') Podcasts</a></li>
+                <li>
+                  <a href="{{ route('podcasts.index') }}" class="main-nav__link-icon main-nav__podcasts">
+                    @svg('podcasts') Podcasts
+                  </a>
+                </li>
                 <li>
                   <a href="{{ route('webinars.index') }}" class="main-nav__link-icon main-nav__webinars">
                     @svg('webinars') Webnários
