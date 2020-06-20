@@ -1,6 +1,16 @@
 <x-layout>
   <main class="section-intern">
     <div class="container">
+      @isset($content->featured)
+        <img
+          class="section-intern__featured"
+          src="{{ Voyager::image($content->featured) }}"
+          srcset="{{ Voyager::image($content->thumbnail('small', 'featured')) }} 0.25x,
+          {{ Voyager::image($content->thumbnail('medium', 'featured')) }} 0.5x,
+          {{ Voyager::image($content->featured) }} 1x"
+          alt="{{ $content->title }}"
+        >
+      @endisset
       <address class="section-intern__author">
         @isset($content->author)
           {{ $content->author->name }} |
