@@ -15,6 +15,9 @@ use App\GuidelineContent;
 use App\Interview;
 use App\InterviewContent;
 
+use App\Article;
+use App\ArticleContent;
+
 use App\Category;
 
 class ContentController extends Controller
@@ -94,4 +97,15 @@ class ContentController extends Controller
             ->with('content', $interview)
             ->with('related_contents', $related_contents);
     }
+
+    public function articles()
+    {
+        $contents   = Article::all();
+        $page_info  = ArticleContent::first();
+        $categories = Category::has('articles')->get();
+        $page_name = 'Biblioteca';
+
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+    }
+
 }

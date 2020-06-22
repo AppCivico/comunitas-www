@@ -67,7 +67,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" class="main-nav__link-icon main-nav__library">
+                  <a href="{{ route('articles.index') }}" class="main-nav__link-icon main-nav__library">
                     @svg('library') Biblioteca
                   </a>
                 </li>

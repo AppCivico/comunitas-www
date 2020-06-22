@@ -25,7 +25,13 @@
           @foreach($contents as $content)
             <article class="section__item">
               <div class="sections__image">
-                <a href="{{ URL::current() }}/{{ $content->slug }}">
+                  <a
+                    @if($content->external_link)
+                      href="{{ $content->external_link }}" target="blank"
+                    @else
+                      href="{{ URL::current() }}/{{ $content->slug }}"
+                    @endif
+                  >
                   <img
                     src="{{ Voyager::image($content->image) }}"
                     srcset="{{ Voyager::image($content->thumbnail('small')) }},
@@ -41,7 +47,20 @@
                   @endforeach
                 </div>
               </div>
-              <h2 class="sections__list-title">{{ $content->title }}</h2>
+              <a
+                @if($content->external_link)
+                  href="{{ $content->external_link }}" target="blank"
+                @else
+                  href="{{ URL::current() }}/{{ $content->slug }}"
+                @endif
+              >
+                @if($content->external_link)
+                  <span class="section__download-info">
+                    Clique para fazer o download
+                  </span>
+                @endif
+                <h2 class="sections__list-title">{{ $content->title }}</h2>
+              </a>
             </article>
           @endforeach
         @else

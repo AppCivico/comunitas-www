@@ -29,6 +29,8 @@ Route::get('/boas-praticas/{guideline:slug}', 'ContentController@showGuideline')
 Route::get('/entrevistas', 'ContentController@interviews')->name('interviews.index');
 Route::get('/entrevistas/{interview:slug}', 'ContentController@showInterview');
 
+Route::get('/biblioteca', 'ContentController@articles')->name('articles.index');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

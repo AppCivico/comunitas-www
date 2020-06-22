@@ -2135,6 +2135,14 @@ html {
   border-radius: 33px;
 }
 
+.section__download-info {
+  display: block;
+  padding: 0.5rem 1rem 0;
+  font-size: 0.7901234568em;
+  text-transform: uppercase;
+  color: #888888;
+}
+
 .sections__list-title {
   padding: 1rem;
   margin: 0;

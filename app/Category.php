@@ -25,4 +25,9 @@ class Category extends Model
     {
         return $this->belongsToMany(Interview::class);
     }
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class);
+    }
 }

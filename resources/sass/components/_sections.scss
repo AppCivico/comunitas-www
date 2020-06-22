@@ -192,6 +192,14 @@ $sections-list-tablet-margin: 1rem;
   border-radius: 33px;
 }
 
+.section__download-info {
+  display: block;
+  padding: 0.5rem 1rem 0;
+  font-size: ms(-2);
+  text-transform: uppercase;
+  color: palette('gray', 'dark');
+}
+
 .sections__list-title {
   padding: 1rem;
   margin: 0;
