@@ -24,7 +24,7 @@ class CreatePodcastsTable extends Migration
 			$table->text('excerpt', 65535)->nullable();
 			$table->text('body', 65535);
 			$table->string('image')->nullable();
-			$table->string('slug', 250)->unique('webinars_slug_unique');
+			$table->string('slug', 250)->unique('podcasts_slug_unique');
 			$table->text('meta_description', 65535)->nullable();
 			$table->text('meta_keywords', 65535)->nullable();
 			$table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT');
