@@ -36,5 +36,8 @@ class DatabaseSeeder extends Seeder
         $this->call(PodcastContentsTableSeeder::class);
         $this->call(CategoryPodcastTableSeeder::class);
         $this->call(MigrationsTableSeeder::class);
+        $this->call(GuidelinesTableSeeder::class);
+        $this->call(GuidelineContentsTableSeeder::class);
+        $this->call(CategoryGuidelineTableSeeder::class);
     }
 }

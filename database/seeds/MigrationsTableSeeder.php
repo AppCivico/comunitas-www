@@ -215,6 +215,24 @@ class MigrationsTableSeeder extends Seeder
                 'migration' => '2020_06_19_171321_create_podcast_contents_table',
                 'batch' => 1,
             ),
+            33 => 
+            array (
+                'id' => 109,
+                'migration' => '2020_06_22_161739_create_guidelines_table',
+                'batch' => 2,
+            ),
+            34 => 
+            array (
+                'id' => 110,
+                'migration' => '2020_06_22_180737_create_category_guideline_table',
+                'batch' => 2,
+            ),
+            35 => 
+            array (
+                'id' => 111,
+                'migration' => '2020_06_22_182058_create_guideline_contents_table',
+                'batch' => 3,
+            ),
         ));
         
         

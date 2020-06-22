@@ -9,6 +9,9 @@ use App\WebinarContent;
 use App\Podcast;
 use App\PodcastContent;
 
+use App\Guideline;
+use App\GuidelineContent;
+
 use App\Category;
 
 class ContentController extends Controller
@@ -48,6 +51,25 @@ class ContentController extends Controller
 
         return view('contents.show')
             ->with('content', $podcast)
+            ->with('related_contents', $related_contents);
+    }
+
+    public function guidelines()
+    {
+        $contents   = Guideline::all();
+        $page_info  = GuidelineContent::first();
+        $categories = Category::has('guidelines')->get();
+        $page_name = 'Boas Práticas';
+
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+    }
+
+    public function showGuideline(Guideline $guideline)
+    {
+        $related_contents = $guideline->relatedByTag();
+
+        return view('contents.show')
+            ->with('content', $guideline)
             ->with('related_contents', $related_contents);
     }
 }

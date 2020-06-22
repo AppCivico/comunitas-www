@@ -20,7 +20,7 @@ class PodcastsTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'author_id' => 1,
+                'author_id' => 2,
                 'category_id' => NULL,
                 'title' => 'Meu primeiro podcast',
                 'iframe' => NULL,
@@ -35,7 +35,7 @@ class PodcastsTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'status' => 'PUBLISHED',
                 'created_at' => '2020-06-19 20:00:00',
-                'updated_at' => '2020-06-19 23:41:06',
+                'updated_at' => '2020-06-22 19:24:45',
                 'order' => NULL,
                 'image_alt' => NULL,
             ),

@@ -23,6 +23,9 @@ Route::get('/webinarios/{webinar:slug}', 'ContentController@showWebinar');
 Route::get('/podcasts', 'ContentController@podcasts')->name('podcasts.index');
 Route::get('/podcasts/{podcast:slug}', 'ContentController@showPodcast');
 
+Route::get('/boas-praticas', 'ContentController@guidelines')->name('guidelines.index');
+Route::get('/boas-praticas/{guideline:slug}', 'ContentController@showguideline');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -56,10 +56,26 @@
                     @svg('webinars') Webnários
                   </a>
                 </li>
-                <li><a href="" class="main-nav__link-icon main-nav__good-practices">@svg('good-practices') Boas Práticas</a></li>
-                <li><a href="" class="main-nav__link-icon main-nav__interviews">@svg('interviews') Entrevistas</a></li>
-                <li><a href="" class="main-nav__link-icon main-nav__library">@svg('library') Biblioteca</a></li>
-                <li><a href="" class="main-nav__link-icon main-nav__news">@svg('news') Notícias</a></li>
+                <li>
+                  <a href="{{ route('guidelines.index') }}" class="main-nav__link-icon main-nav__good-practices">
+                    @svg('good-practices') Boas Práticas
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="main-nav__link-icon main-nav__interviews">
+                    @svg('interviews') Entrevistas
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="main-nav__link-icon main-nav__library">
+                    @svg('library') Biblioteca
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="main-nav__link-icon main-nav__news">
+                    @svg('news') Notícias
+                  </a>
+                </li>
               </ul>
               <li class="main-nav__button"><a href="" class="button button--secondary button--big">Entrar</a></li>
               <ul class="main-nav__localization">

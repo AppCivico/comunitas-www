@@ -585,6 +585,126 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:53:59',
                 'updated_at' => '2020-06-19 21:53:59',
             ),
+            71 => 
+            array (
+                'id' => 77,
+                'key' => 'browse_guidelines',
+                'table_name' => 'guidelines',
+                'created_at' => '2020-06-22 18:05:28',
+                'updated_at' => '2020-06-22 18:05:28',
+            ),
+            72 => 
+            array (
+                'id' => 78,
+                'key' => 'read_guidelines',
+                'table_name' => 'guidelines',
+                'created_at' => '2020-06-22 18:05:28',
+                'updated_at' => '2020-06-22 18:05:28',
+            ),
+            73 => 
+            array (
+                'id' => 79,
+                'key' => 'edit_guidelines',
+                'table_name' => 'guidelines',
+                'created_at' => '2020-06-22 18:05:28',
+                'updated_at' => '2020-06-22 18:05:28',
+            ),
+            74 => 
+            array (
+                'id' => 80,
+                'key' => 'add_guidelines',
+                'table_name' => 'guidelines',
+                'created_at' => '2020-06-22 18:05:28',
+                'updated_at' => '2020-06-22 18:05:28',
+            ),
+            75 => 
+            array (
+                'id' => 81,
+                'key' => 'delete_guidelines',
+                'table_name' => 'guidelines',
+                'created_at' => '2020-06-22 18:05:28',
+                'updated_at' => '2020-06-22 18:05:28',
+            ),
+            76 => 
+            array (
+                'id' => 82,
+                'key' => 'browse_guideline_contents',
+                'table_name' => 'guideline_contents',
+                'created_at' => '2020-06-22 18:27:47',
+                'updated_at' => '2020-06-22 18:27:47',
+            ),
+            77 => 
+            array (
+                'id' => 83,
+                'key' => 'read_guideline_contents',
+                'table_name' => 'guideline_contents',
+                'created_at' => '2020-06-22 18:27:47',
+                'updated_at' => '2020-06-22 18:27:47',
+            ),
+            78 => 
+            array (
+                'id' => 84,
+                'key' => 'edit_guideline_contents',
+                'table_name' => 'guideline_contents',
+                'created_at' => '2020-06-22 18:27:47',
+                'updated_at' => '2020-06-22 18:27:47',
+            ),
+            79 => 
+            array (
+                'id' => 85,
+                'key' => 'add_guideline_contents',
+                'table_name' => 'guideline_contents',
+                'created_at' => '2020-06-22 18:27:47',
+                'updated_at' => '2020-06-22 18:27:47',
+            ),
+            80 => 
+            array (
+                'id' => 86,
+                'key' => 'delete_guideline_contents',
+                'table_name' => 'guideline_contents',
+                'created_at' => '2020-06-22 18:27:47',
+                'updated_at' => '2020-06-22 18:27:47',
+            ),
+            81 => 
+            array (
+                'id' => 87,
+                'key' => 'browse_authors',
+                'table_name' => 'authors',
+                'created_at' => '2020-06-22 18:52:02',
+                'updated_at' => '2020-06-22 18:52:02',
+            ),
+            82 => 
+            array (
+                'id' => 88,
+                'key' => 'read_authors',
+                'table_name' => 'authors',
+                'created_at' => '2020-06-22 18:52:02',
+                'updated_at' => '2020-06-22 18:52:02',
+            ),
+            83 => 
+            array (
+                'id' => 89,
+                'key' => 'edit_authors',
+                'table_name' => 'authors',
+                'created_at' => '2020-06-22 18:52:02',
+                'updated_at' => '2020-06-22 18:52:02',
+            ),
+            84 => 
+            array (
+                'id' => 90,
+                'key' => 'add_authors',
+                'table_name' => 'authors',
+                'created_at' => '2020-06-22 18:52:02',
+                'updated_at' => '2020-06-22 18:52:02',
+            ),
+            85 => 
+            array (
+                'id' => 91,
+                'key' => 'delete_authors',
+                'table_name' => 'authors',
+                'created_at' => '2020-06-22 18:52:02',
+                'updated_at' => '2020-06-22 18:52:02',
+            ),
         ));
         
         

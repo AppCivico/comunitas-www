@@ -20,7 +20,7 @@ class WebinarsTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'author_id' => 1,
+                'author_id' => 2,
                 'category_id' => NULL,
                 'title' => 'Meu primeiro webinário',
                 'featured' => NULL,
@@ -37,7 +37,7 @@ class WebinarsTableSeeder extends Seeder
                 'meta_keywords' => NULL,
                 'status' => 'DRAFT',
                 'created_at' => '2020-06-11 20:17:53',
-                'updated_at' => '2020-06-12 23:17:32',
+                'updated_at' => '2020-06-22 19:22:20',
                 'order' => 2,
                 'image_alt' => NULL,
             ),
