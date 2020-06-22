@@ -18,7 +18,7 @@ class CreateWebinarsTable extends Migration {
 			$table->integer('author_id')->default(1);
 			$table->integer('category_id')->nullable();
 			$table->string('title');
-			$table->boolean('featured')->nullable();
+			$table->string('featured')->nullable();
 			$table->string('seo_title')->nullable();
 			$table->text('excerpt', 65535)->nullable();
 			$table->text('body', 65535);
