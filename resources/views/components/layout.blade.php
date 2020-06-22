@@ -62,7 +62,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" class="main-nav__link-icon main-nav__interviews">
+                  <a href="{{ route('interviews.index') }}" class="main-nav__link-icon main-nav__interviews">
                     @svg('interviews') Entrevistas
                   </a>
                 </li>

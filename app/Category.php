@@ -3,9 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Webinar;
-use App\Podcast;
-use App\Guideline;
 
 class Category extends Model
 {
@@ -22,5 +19,10 @@ class Category extends Model
     public function guidelines()
     {
         return $this->belongsToMany(Guideline::class);
+    }
+
+    public function interviews()
+    {
+        return $this->belongsToMany(Interview::class);
     }
 }

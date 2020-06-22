@@ -24,8 +24,10 @@ Route::get('/podcasts', 'ContentController@podcasts')->name('podcasts.index');
 Route::get('/podcasts/{podcast:slug}', 'ContentController@showPodcast');
 
 Route::get('/boas-praticas', 'ContentController@guidelines')->name('guidelines.index');
-Route::get('/boas-praticas/{guideline:slug}', 'ContentController@showguideline');
+Route::get('/boas-praticas/{guideline:slug}', 'ContentController@showGuideline');
 
+Route::get('/entrevistas', 'ContentController@interviews')->name('interviews.index');
+Route::get('/entrevistas/{interview:slug}', 'ContentController@showInterview');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

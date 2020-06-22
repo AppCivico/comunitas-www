@@ -12,6 +12,9 @@ use App\PodcastContent;
 use App\Guideline;
 use App\GuidelineContent;
 
+use App\Interview;
+use App\InterviewContent;
+
 use App\Category;
 
 class ContentController extends Controller
@@ -70,6 +73,25 @@ class ContentController extends Controller
 
         return view('contents.show')
             ->with('content', $guideline)
+            ->with('related_contents', $related_contents);
+    }
+
+    public function interviews()
+    {
+        $contents   = Interview::all();
+        $page_info  = InterviewContent::first();
+        $categories = Category::has('interviews')->get();
+        $page_name = 'Entrevistas';
+
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+    }
+
+    public function showInterview(Interview $interview)
+    {
+        $related_contents = $interview->relatedByTag();
+
+        return view('contents.show')
+            ->with('content', $interview)
             ->with('related_contents', $related_contents);
     }
 }

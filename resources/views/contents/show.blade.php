@@ -117,7 +117,7 @@
         </ul>
       </div>
 
-      @isset($related_contents)
+      @if(count($related_contents))
         <div class="sections__list sections__list--smaller-cards">
           <h2 class="sections__list-section-title color-blue">Conteúdos Relacionados</h2>
 
@@ -144,7 +144,7 @@
             </article>
           @endforeach
         </div>
-      @endisset
+      @endif
 
       <div class="disqus">
         <div id="disqus_thread"></div>
