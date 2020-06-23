@@ -54,7 +54,7 @@
                   href="{{ URL::current() }}/{{ $content->slug }}"
                 @endif
               >
-                @if($content->external_link)
+                @if(isset($has_obs))
                   <span class="section__download-info">
                     Clique para fazer o download
                   </span>

@@ -107,9 +107,10 @@ class ContentController extends Controller
         $contents   = Article::all();
         $page_info  = ArticleContent::first();
         $categories = Category::has('articles')->get();
-        $page_name = 'Biblioteca';
+        $has_obs    = true;
+        $page_name  = 'Biblioteca';
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'has_obs'));
     }
 
     public function news()
