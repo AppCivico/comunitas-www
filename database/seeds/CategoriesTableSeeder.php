@@ -62,6 +62,15 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2020-06-12 01:43:25',
                 'updated_at' => '2020-06-12 01:43:25',
             ),
+            5 => 
+            array (
+                'id' => 6,
+                'order' => 1,
+                'name' => 'nova categoria do edgard',
+                'slug' => NULL,
+                'created_at' => '2020-06-23 15:46:57',
+                'updated_at' => '2020-06-23 15:46:57',
+            ),
         ));
         
         
