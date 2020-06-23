@@ -17,7 +17,7 @@ class CreateNewsTable extends Migration
 			$table->increments('id');
 			$table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT');
 			$table->string('title');
-			$table->string('slug', 250)->unique('articles_slug_unique');
+			$table->string('slug', 250)->unique('news_slug_unique');
 			$table->string('external_link');
 			$table->string('image')->nullable();
 			$table->string('image_alt')->nullable();
