@@ -12,14 +12,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('users')->delete();
-        
+
         \DB::table('users')->insert(array (
-            0 => 
+            0 =>
             array (
-                'id' => 1,
                 'role_id' => 1,
                 'name' => 'Admin',
                 'email' => 'admin@admin.com',
@@ -31,9 +30,8 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2020-05-26 21:55:40',
                 'updated_at' => '2020-06-11 16:08:51',
             ),
-            1 => 
+            1 =>
             array (
-                'id' => 2,
                 'role_id' => 2,
                 'name' => 'edgard',
                 'email' => 'edg@email.com',
@@ -46,7 +44,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2020-06-23 15:45:35',
             ),
         ));
-        
-        
+
+
     }
 }
