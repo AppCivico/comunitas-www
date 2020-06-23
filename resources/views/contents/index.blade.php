@@ -69,7 +69,6 @@
           </h1>
         @endisset
 
-        <button class="button button--big sections__load-more">Carregar mais</button>
 
         @isset($page_info)
           <article class="sections__text">
