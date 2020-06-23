@@ -442,6 +442,156 @@ class PermissionRoleTableSeeder extends Seeder
                 'permission_id' => 91,
                 'role_id' => 1,
             ),
+            85 => 
+            array (
+                'permission_id' => 92,
+                'role_id' => 1,
+            ),
+            86 => 
+            array (
+                'permission_id' => 93,
+                'role_id' => 1,
+            ),
+            87 => 
+            array (
+                'permission_id' => 94,
+                'role_id' => 1,
+            ),
+            88 => 
+            array (
+                'permission_id' => 95,
+                'role_id' => 1,
+            ),
+            89 => 
+            array (
+                'permission_id' => 96,
+                'role_id' => 1,
+            ),
+            90 => 
+            array (
+                'permission_id' => 97,
+                'role_id' => 1,
+            ),
+            91 => 
+            array (
+                'permission_id' => 98,
+                'role_id' => 1,
+            ),
+            92 => 
+            array (
+                'permission_id' => 99,
+                'role_id' => 1,
+            ),
+            93 => 
+            array (
+                'permission_id' => 100,
+                'role_id' => 1,
+            ),
+            94 => 
+            array (
+                'permission_id' => 101,
+                'role_id' => 1,
+            ),
+            95 => 
+            array (
+                'permission_id' => 102,
+                'role_id' => 1,
+            ),
+            96 => 
+            array (
+                'permission_id' => 103,
+                'role_id' => 1,
+            ),
+            97 => 
+            array (
+                'permission_id' => 104,
+                'role_id' => 1,
+            ),
+            98 => 
+            array (
+                'permission_id' => 105,
+                'role_id' => 1,
+            ),
+            99 => 
+            array (
+                'permission_id' => 106,
+                'role_id' => 1,
+            ),
+            100 => 
+            array (
+                'permission_id' => 107,
+                'role_id' => 1,
+            ),
+            101 => 
+            array (
+                'permission_id' => 108,
+                'role_id' => 1,
+            ),
+            102 => 
+            array (
+                'permission_id' => 109,
+                'role_id' => 1,
+            ),
+            103 => 
+            array (
+                'permission_id' => 110,
+                'role_id' => 1,
+            ),
+            104 => 
+            array (
+                'permission_id' => 111,
+                'role_id' => 1,
+            ),
+            105 => 
+            array (
+                'permission_id' => 112,
+                'role_id' => 1,
+            ),
+            106 => 
+            array (
+                'permission_id' => 113,
+                'role_id' => 1,
+            ),
+            107 => 
+            array (
+                'permission_id' => 114,
+                'role_id' => 1,
+            ),
+            108 => 
+            array (
+                'permission_id' => 115,
+                'role_id' => 1,
+            ),
+            109 => 
+            array (
+                'permission_id' => 116,
+                'role_id' => 1,
+            ),
+            110 => 
+            array (
+                'permission_id' => 117,
+                'role_id' => 1,
+            ),
+            111 => 
+            array (
+                'permission_id' => 118,
+                'role_id' => 1,
+            ),
+            112 => 
+            array (
+                'permission_id' => 119,
+                'role_id' => 1,
+            ),
+            113 => 
+            array (
+                'permission_id' => 120,
+                'role_id' => 1,
+            ),
+            114 => 
+            array (
+                'permission_id' => 121,
+                'role_id' => 1,
+            ),
         ));
         
         

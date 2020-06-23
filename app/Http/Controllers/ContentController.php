@@ -18,7 +18,11 @@ use App\InterviewContent;
 use App\Article;
 use App\ArticleContent;
 
+use App\News;
+use App\NewContent;
+
 use App\Category;
+
 
 class ContentController extends Controller
 {
@@ -104,6 +108,16 @@ class ContentController extends Controller
         $page_info  = ArticleContent::first();
         $categories = Category::has('articles')->get();
         $page_name = 'Biblioteca';
+
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+    }
+
+    public function news()
+    {
+        $contents   = News::all();
+        $page_info  = NewContent::first();
+        $categories = Category::has('news')->get();
+        $page_name = 'Notícias';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
     }

@@ -28,7 +28,7 @@
                   <a
                     @if($content->external_link)
                       href="{{ $content->external_link }}" target="blank"
-                    @else
+                    @elseif($content->slug)
                       href="{{ URL::current() }}/{{ $content->slug }}"
                     @endif
                   >
@@ -50,7 +50,7 @@
               <a
                 @if($content->external_link)
                   href="{{ $content->external_link }}" target="blank"
-                @else
+                @elseif($content->slug)
                   href="{{ URL::current() }}/{{ $content->slug }}"
                 @endif
               >

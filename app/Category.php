@@ -30,4 +30,9 @@ class Category extends Model
     {
         return $this->belongsToMany(Article::class);
     }
+
+    public function news()
+    {
+        return $this->belongsToMany(News::class);
+    }
 }

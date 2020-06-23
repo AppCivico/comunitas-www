@@ -72,7 +72,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="" class="main-nav__link-icon main-nav__news">
+                  <a href="{{ route('news.index') }}" class="main-nav__link-icon main-nav__news">
                     @svg('news') Notícias
                   </a>
                 </li>

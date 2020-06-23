@@ -31,6 +31,8 @@ Route::get('/entrevistas/{interview:slug}', 'ContentController@showInterview');
 
 Route::get('/biblioteca', 'ContentController@articles')->name('articles.index');
 
+Route::get('/noticias', 'ContentController@news')->name('news.index');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

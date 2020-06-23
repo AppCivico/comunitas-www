@@ -233,6 +233,60 @@ class MigrationsTableSeeder extends Seeder
                 'migration' => '2020_06_22_182058_create_guideline_contents_table',
                 'batch' => 3,
             ),
+            36 => 
+            array (
+                'id' => 148,
+                'migration' => '2020_06_22_194417_create_interviews_table',
+                'batch' => 4,
+            ),
+            37 => 
+            array (
+                'id' => 149,
+                'migration' => '2020_06_22_204301_create_category_interview_table',
+                'batch' => 5,
+            ),
+            38 => 
+            array (
+                'id' => 150,
+                'migration' => '2020_06_22_205154_create_interview_contents_table',
+                'batch' => 6,
+            ),
+            39 => 
+            array (
+                'id' => 154,
+                'migration' => '2020_06_22_213533_create_articles_table',
+                'batch' => 7,
+            ),
+            40 => 
+            array (
+                'id' => 155,
+                'migration' => '2020_06_22_215816_create_article_category_table',
+                'batch' => 7,
+            ),
+            41 => 
+            array (
+                'id' => 157,
+                'migration' => '2020_06_22_220743_create_article_contents_table',
+                'batch' => 8,
+            ),
+            42 => 
+            array (
+                'id' => 161,
+                'migration' => '2020_06_22_223755_create_news_table',
+                'batch' => 9,
+            ),
+            43 => 
+            array (
+                'id' => 164,
+                'migration' => '2020_06_22_224120_create_category_news_table',
+                'batch' => 10,
+            ),
+            44 => 
+            array (
+                'id' => 165,
+                'migration' => '2020_06_22_225146_create_new_contents_table',
+                'batch' => 10,
+            ),
         ));
         
         

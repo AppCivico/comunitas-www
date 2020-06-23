@@ -705,6 +705,246 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:52:02',
                 'updated_at' => '2020-06-22 18:52:02',
             ),
+            86 => 
+            array (
+                'id' => 92,
+                'key' => 'browse_interviews',
+                'table_name' => 'interviews',
+                'created_at' => '2020-06-22 20:03:09',
+                'updated_at' => '2020-06-22 20:03:09',
+            ),
+            87 => 
+            array (
+                'id' => 93,
+                'key' => 'read_interviews',
+                'table_name' => 'interviews',
+                'created_at' => '2020-06-22 20:03:09',
+                'updated_at' => '2020-06-22 20:03:09',
+            ),
+            88 => 
+            array (
+                'id' => 94,
+                'key' => 'edit_interviews',
+                'table_name' => 'interviews',
+                'created_at' => '2020-06-22 20:03:09',
+                'updated_at' => '2020-06-22 20:03:09',
+            ),
+            89 => 
+            array (
+                'id' => 95,
+                'key' => 'add_interviews',
+                'table_name' => 'interviews',
+                'created_at' => '2020-06-22 20:03:09',
+                'updated_at' => '2020-06-22 20:03:09',
+            ),
+            90 => 
+            array (
+                'id' => 96,
+                'key' => 'delete_interviews',
+                'table_name' => 'interviews',
+                'created_at' => '2020-06-22 20:03:09',
+                'updated_at' => '2020-06-22 20:03:09',
+            ),
+            91 => 
+            array (
+                'id' => 97,
+                'key' => 'browse_interview_contents',
+                'table_name' => 'interview_contents',
+                'created_at' => '2020-06-22 20:58:34',
+                'updated_at' => '2020-06-22 20:58:34',
+            ),
+            92 => 
+            array (
+                'id' => 98,
+                'key' => 'read_interview_contents',
+                'table_name' => 'interview_contents',
+                'created_at' => '2020-06-22 20:58:34',
+                'updated_at' => '2020-06-22 20:58:34',
+            ),
+            93 => 
+            array (
+                'id' => 99,
+                'key' => 'edit_interview_contents',
+                'table_name' => 'interview_contents',
+                'created_at' => '2020-06-22 20:58:34',
+                'updated_at' => '2020-06-22 20:58:34',
+            ),
+            94 => 
+            array (
+                'id' => 100,
+                'key' => 'add_interview_contents',
+                'table_name' => 'interview_contents',
+                'created_at' => '2020-06-22 20:58:34',
+                'updated_at' => '2020-06-22 20:58:34',
+            ),
+            95 => 
+            array (
+                'id' => 101,
+                'key' => 'delete_interview_contents',
+                'table_name' => 'interview_contents',
+                'created_at' => '2020-06-22 20:58:34',
+                'updated_at' => '2020-06-22 20:58:34',
+            ),
+            96 => 
+            array (
+                'id' => 102,
+                'key' => 'browse_articles',
+                'table_name' => 'articles',
+                'created_at' => '2020-06-22 21:57:09',
+                'updated_at' => '2020-06-22 21:57:09',
+            ),
+            97 => 
+            array (
+                'id' => 103,
+                'key' => 'read_articles',
+                'table_name' => 'articles',
+                'created_at' => '2020-06-22 21:57:09',
+                'updated_at' => '2020-06-22 21:57:09',
+            ),
+            98 => 
+            array (
+                'id' => 104,
+                'key' => 'edit_articles',
+                'table_name' => 'articles',
+                'created_at' => '2020-06-22 21:57:09',
+                'updated_at' => '2020-06-22 21:57:09',
+            ),
+            99 => 
+            array (
+                'id' => 105,
+                'key' => 'add_articles',
+                'table_name' => 'articles',
+                'created_at' => '2020-06-22 21:57:09',
+                'updated_at' => '2020-06-22 21:57:09',
+            ),
+            100 => 
+            array (
+                'id' => 106,
+                'key' => 'delete_articles',
+                'table_name' => 'articles',
+                'created_at' => '2020-06-22 21:57:09',
+                'updated_at' => '2020-06-22 21:57:09',
+            ),
+            101 => 
+            array (
+                'id' => 107,
+                'key' => 'browse_article_contents',
+                'table_name' => 'article_contents',
+                'created_at' => '2020-06-22 22:12:59',
+                'updated_at' => '2020-06-22 22:12:59',
+            ),
+            102 => 
+            array (
+                'id' => 108,
+                'key' => 'read_article_contents',
+                'table_name' => 'article_contents',
+                'created_at' => '2020-06-22 22:12:59',
+                'updated_at' => '2020-06-22 22:12:59',
+            ),
+            103 => 
+            array (
+                'id' => 109,
+                'key' => 'edit_article_contents',
+                'table_name' => 'article_contents',
+                'created_at' => '2020-06-22 22:12:59',
+                'updated_at' => '2020-06-22 22:12:59',
+            ),
+            104 => 
+            array (
+                'id' => 110,
+                'key' => 'add_article_contents',
+                'table_name' => 'article_contents',
+                'created_at' => '2020-06-22 22:12:59',
+                'updated_at' => '2020-06-22 22:12:59',
+            ),
+            105 => 
+            array (
+                'id' => 111,
+                'key' => 'delete_article_contents',
+                'table_name' => 'article_contents',
+                'created_at' => '2020-06-22 22:12:59',
+                'updated_at' => '2020-06-22 22:12:59',
+            ),
+            106 => 
+            array (
+                'id' => 112,
+                'key' => 'browse_news',
+                'table_name' => 'news',
+                'created_at' => '2020-06-22 22:51:11',
+                'updated_at' => '2020-06-22 22:51:11',
+            ),
+            107 => 
+            array (
+                'id' => 113,
+                'key' => 'read_news',
+                'table_name' => 'news',
+                'created_at' => '2020-06-22 22:51:11',
+                'updated_at' => '2020-06-22 22:51:11',
+            ),
+            108 => 
+            array (
+                'id' => 114,
+                'key' => 'edit_news',
+                'table_name' => 'news',
+                'created_at' => '2020-06-22 22:51:11',
+                'updated_at' => '2020-06-22 22:51:11',
+            ),
+            109 => 
+            array (
+                'id' => 115,
+                'key' => 'add_news',
+                'table_name' => 'news',
+                'created_at' => '2020-06-22 22:51:11',
+                'updated_at' => '2020-06-22 22:51:11',
+            ),
+            110 => 
+            array (
+                'id' => 116,
+                'key' => 'delete_news',
+                'table_name' => 'news',
+                'created_at' => '2020-06-22 22:51:11',
+                'updated_at' => '2020-06-22 22:51:11',
+            ),
+            111 => 
+            array (
+                'id' => 117,
+                'key' => 'browse_new_contents',
+                'table_name' => 'new_contents',
+                'created_at' => '2020-06-22 23:01:27',
+                'updated_at' => '2020-06-22 23:01:27',
+            ),
+            112 => 
+            array (
+                'id' => 118,
+                'key' => 'read_new_contents',
+                'table_name' => 'new_contents',
+                'created_at' => '2020-06-22 23:01:27',
+                'updated_at' => '2020-06-22 23:01:27',
+            ),
+            113 => 
+            array (
+                'id' => 119,
+                'key' => 'edit_new_contents',
+                'table_name' => 'new_contents',
+                'created_at' => '2020-06-22 23:01:27',
+                'updated_at' => '2020-06-22 23:01:27',
+            ),
+            114 => 
+            array (
+                'id' => 120,
+                'key' => 'add_new_contents',
+                'table_name' => 'new_contents',
+                'created_at' => '2020-06-22 23:01:27',
+                'updated_at' => '2020-06-22 23:01:27',
+            ),
+            115 => 
+            array (
+                'id' => 121,
+                'key' => 'delete_new_contents',
+                'table_name' => 'new_contents',
+                'created_at' => '2020-06-22 23:01:27',
+                'updated_at' => '2020-06-22 23:01:27',
+            ),
         ));
         
         
