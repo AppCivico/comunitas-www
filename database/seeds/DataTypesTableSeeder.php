@@ -373,9 +373,9 @@ class DataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null}',
+                'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-22 23:55:05',
-                'updated_at' => '2020-06-22 23:55:05',
+                'updated_at' => '2020-06-24 22:04:00',
             ),
         ));
         
