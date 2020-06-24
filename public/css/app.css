@@ -1790,8 +1790,9 @@ html {
   }
 }
 
+.page-link,
 .button {
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem;
   font-weight: 600;
   line-height: 1.2;
   color: white;
@@ -2383,5 +2384,46 @@ html {
 
 .social-icons--red .social-icons__instagram {
   background-image: url("/images/icons/social/instagram-red.svg");
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 48em) {
+  .pagination {
+    justify-content: flex-end;
+  }
+}
+
+.pagination nav {
+  display: flex;
+}
+
+.page-item {
+  margin-left: 1rem;
+}
+
+.page-item:first-child {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 30em) {
+  .page-item {
+    margin-left: 2rem;
+  }
+}
+
+.page-link {
+  width: 5rem;
+}
+
+.page-item.disabled .page-link {
+  color: #6b6b6b;
+  background-color: #f0f0f0;
 }
 

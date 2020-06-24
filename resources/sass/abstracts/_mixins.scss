@@ -26,6 +26,11 @@
   }
 }
 
+@mixin container-flex {
+  @include container;
+  display: flex;
+}
+
 /// Special style for the _&_ used as a conjunction.
 ///
 /// @access private

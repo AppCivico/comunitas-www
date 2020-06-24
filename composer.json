@@ -17,7 +17,8 @@
         "laravel/tinker": "^2.0",
         "nothingworks/blade-svg": "^0.3.4",
         "orangehill/iseed": "^2.6",
-        "tcg/voyager": "^1.4"
+        "tcg/voyager": "^1.4",
+        "tightenco/ziggy": "^0.9.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

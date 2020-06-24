@@ -13,10 +13,12 @@
     <div class="container">
       <form action="" class="sections__select">
         <strong>Categorias</strong>
-        <select id="" name="">
+        <select id="js-category-select">
           <option value="">Todas</option>
           @foreach($categories as $category)
-            <option value="">{{ $category->name }}</option>
+            <option value="{{ url('/') }}/{{ Request::segment(1) }}/categoria/{{ $category->slug }}">
+              {{ $category->name }}
+            </option>
           @endforeach
         </select>
       </form>
@@ -68,17 +70,22 @@
             Nenhum conteúdo cadastrado.
           </h1>
         @endisset
-
-
-        @isset($page_info)
-          <article class="sections__text">
-            <h1>{{ $page_info->title }}</h1>
-            <div class="sections__text-description">
-              {!! $page_info->body !!}
-            </div>
-          </article>
-        @endisset
       </div>
+
+      @if($contents->links())
+        {{ $contents->links() }}
+      @endif
+      <!-- <button class="button button&#45;&#45;big sections__load&#45;more">Carregar mais</button> -->
+
+      @isset($page_info)
+        <article class="sections__text">
+          <h1>{{ $page_info->title }}</h1>
+          <div class="sections__text-description">
+            {!! $page_info->body !!}
+          </div>
+        </article>
+      @endisset
+
     </div>
   </main>
 </x-layout>
