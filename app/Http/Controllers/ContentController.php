@@ -38,7 +38,7 @@ class ContentController extends Controller
         $categories = Category::has('webinars')->get();
         $page_name  = 'Webinários';
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
     }
 
     public function showWebinar(Webinar $webinar)
@@ -61,7 +61,7 @@ class ContentController extends Controller
         $categories = Category::has('podcasts')->get();
         $page_name = 'Podcasts';
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
     }
 
     public function showPodcast(Podcast $podcast)
@@ -84,7 +84,7 @@ class ContentController extends Controller
         $categories = Category::has('guidelines')->get();
         $page_name = 'Boas Práticas';
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
     }
 
     public function showGuideline(Guideline $guideline)
@@ -107,7 +107,7 @@ class ContentController extends Controller
         $categories = Category::has('interviews')->get();
         $page_name = 'Entrevistas';
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
     }
 
     public function showInterview(Interview $interview)
@@ -131,7 +131,7 @@ class ContentController extends Controller
         $page_name  = 'Biblioteca';
         $has_obs    = true;
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'has_obs'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'has_obs', 'category'));
     }
 
     public function news(Category $category = null)
@@ -145,7 +145,7 @@ class ContentController extends Controller
         $categories = Category::has('news')->get();
         $page_name = 'Notícias';
 
-        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name'));
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
     }
 
 }

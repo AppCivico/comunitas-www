@@ -12,10 +12,15 @@
         <form action="" class="sections__select">
           <strong>Categorias</strong>
           <select id="js-category-select">
-            <option value="">Todas</option>
-            @foreach($categories as $category)
-              <option value="{{ url('/') }}/{{ Request::segment(1) }}/categoria/{{ $category->slug }}">
-                {{ $category->name }}
+            <option value="{{ url('/') }}/{{ Request::segment(1) }}">Todas</option>
+            @foreach($categories as $select_category)
+              <option
+                @if(isset($category) && $select_category->slug === $category->slug ?? '')
+                  selected
+                @endif
+                value="{{ url('/') }}/{{ Request::segment(1) }}/categoria/{{ $select_category->slug }}"
+              >
+                {{ $select_category->name }}
               </option>
             @endforeach
           </select>
