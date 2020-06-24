@@ -12,12 +12,12 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('categories')->delete();
-        
+
         \DB::table('categories')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'order' => 1,
@@ -26,7 +26,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2020-05-26 21:55:40',
                 'updated_at' => '2020-05-26 21:55:40',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'order' => 1,
@@ -35,7 +35,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2020-05-26 21:55:40',
                 'updated_at' => '2020-05-26 21:55:40',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'order' => 1,
@@ -44,16 +44,16 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2020-06-12 01:05:17',
                 'updated_at' => '2020-06-12 01:05:17',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'order' => NULL,
                 'name' => 'teste',
-                'slug' => NULL,
+                'slug' => 'teste',
                 'created_at' => '2020-06-12 01:20:01',
                 'updated_at' => '2020-06-12 01:20:01',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'order' => 1,
@@ -62,17 +62,17 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2020-06-12 01:43:25',
                 'updated_at' => '2020-06-12 01:43:25',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'order' => 1,
                 'name' => 'nova categoria do edgard',
-                'slug' => NULL,
+                'slug' => 'nova-categoria-do-edgard',
                 'created_at' => '2020-06-23 15:46:57',
                 'updated_at' => '2020-06-23 15:46:57',
             ),
         ));
-        
-        
+
+
     }
 }
