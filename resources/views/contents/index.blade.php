@@ -1,27 +1,26 @@
 <x-layout>
   <main class="sections">
     <header
-      class="sections__header"
-      @isset($page_info->image)
-        style="background-image: url('{{ Voyager::image($page_info->image) }}')"
-      @endisset
+      class="sections__header sections__header--categories"
     >
       <h1 class="sections__title">
         <span>{{ $page_name }}</span>
       </h1>
     </header>
     <div class="container">
-      <form action="" class="sections__select">
-        <strong>Categorias</strong>
-        <select id="js-category-select">
-          <option value="">Todas</option>
-          @foreach($categories as $category)
-            <option value="{{ url('/') }}/{{ Request::segment(1) }}/categoria/{{ $category->slug }}">
-              {{ $category->name }}
-            </option>
-          @endforeach
-        </select>
-      </form>
+      @if(isset($categories))
+        <form action="" class="sections__select">
+          <strong>Categorias</strong>
+          <select id="js-category-select">
+            <option value="">Todas</option>
+            @foreach($categories as $category)
+              <option value="{{ url('/') }}/{{ Request::segment(1) }}/categoria/{{ $category->slug }}">
+                {{ $category->name }}
+              </option>
+            @endforeach
+          </select>
+        </form>
+      @endif
       <div class="sections__list">
         @isset($contents)
           @foreach($contents as $content)
@@ -45,7 +44,10 @@
                 </a>
                 <div class="section__tags">
                   @foreach($content->categories as $category)
+                    <!--
                     <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
+                    -->
+                    <a>{{ $category->name }}</a>
                   @endforeach
                 </div>
               </div>

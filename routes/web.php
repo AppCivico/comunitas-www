@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return redirect()->route('webinars.index'); });
 
 Route::get('/webinarios', 'ContentController@webinars')->name('webinars.index');
 Route::get('/webinarios/categoria/{category:slug}', 'ContentController@webinars');
@@ -38,6 +36,8 @@ Route::get('/biblioteca/categoria/{category:slug}', 'ContentController@articles'
 
 Route::get('/noticias', 'ContentController@news')->name('news.index');
 Route::get('/noticias/categoria/{category:slug}', 'ContentController@news');
+
+Route::get('/categorias/{category:slug}', 'CategoryController@index')->name('categories.index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
