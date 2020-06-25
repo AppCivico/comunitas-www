@@ -371,7 +371,7 @@ class DataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => true,
                 'created_at' => '2020-06-19 21:14:17',
-                'updated_at' => '2020-06-25 01:05:21',
+                'updated_at' => '2020-06-25 01:16:52',
                 'server_side' => 0,
                 'controller' => NULL,
                 'policy_name' => NULL,
