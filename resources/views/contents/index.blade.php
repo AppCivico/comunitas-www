@@ -32,7 +32,7 @@
       <div class="sections__list">
         @isset($contents)
           @foreach($contents as $content)
-            <article class="section__item">
+            <article class="section__item @if($content->external_link) section__item--small @endif">
               <div class="sections__image">
                   <a
                     @if($content->external_link)

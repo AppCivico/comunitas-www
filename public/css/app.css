@@ -2093,6 +2093,13 @@ html {
   }
 }
 
+@media screen and (min-width: 48em) {
+  .section__item--small {
+    width: calc(33.333% - (2 * 1rem));
+    margin: 1rem;
+  }
+}
+
 .sections__image {
   position: relative;
   display: flex;

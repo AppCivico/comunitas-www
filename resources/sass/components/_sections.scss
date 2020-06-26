@@ -147,6 +147,13 @@ $sections-list-tablet-margin: 1rem;
   }
 }
 
+.section__item--small {
+  @media screen and (min-width: breakpoint('tablet')) {
+    width: calc(33.333% - (2 * #{$sections-list-tablet-margin}));
+    margin: $sections-list-tablet-margin;
+  }
+}
+
 .sections__image {
   position: relative;
   display: flex;
