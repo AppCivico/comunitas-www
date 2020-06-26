@@ -12,11 +12,13 @@ const mix = require('laravel-mix');
  */
 
 mix
-    .js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+    .js('resources/js/app.js', 'public/js').version()
+    .sass('resources/sass/app.scss', 'public/css').version()
     .browserSync({
         proxy: 'comunitas.test'
     });
+
+
     // .browserSync({
     //     host: '192.168.10.10',
     //     proxy: 'comunitas.test',
