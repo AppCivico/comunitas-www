@@ -2,6 +2,9 @@
   <main class="sections">
     <header
       class="sections__header sections__header--categories"
+      @isset($page_info->image)
+        style="background-image: url('{{ Voyager::image($page_info->image) }}')"
+      @endisset
     >
       <h1 class="sections__title">
         <span>{{ $page_name }}</span>
