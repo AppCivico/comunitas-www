@@ -243,22 +243,6 @@ class MenuItemsTableSeeder extends Seeder
             ),
             14 => 
             array (
-                'id' => 17,
-                'menu_id' => 1,
-                'title' => 'Webinários',
-                'url' => '',
-                'target' => '_self',
-                'icon_class' => NULL,
-                'color' => '#000000',
-                'parent_id' => 18,
-                'order' => 1,
-                'created_at' => '2020-06-12 22:34:35',
-                'updated_at' => '2020-06-23 15:58:56',
-                'route' => 'voyager.webinars.edit',
-                'parameters' => '1',
-            ),
-            15 => 
-            array (
                 'id' => 18,
                 'menu_id' => 1,
                 'title' => 'Páginas',
@@ -273,7 +257,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => NULL,
                 'parameters' => '',
             ),
-            16 => 
+            15 => 
             array (
                 'id' => 19,
                 'menu_id' => 1,
@@ -289,7 +273,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => NULL,
                 'parameters' => '',
             ),
-            17 => 
+            16 => 
             array (
                 'id' => 20,
                 'menu_id' => 1,
@@ -305,7 +289,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.podcasts.index',
                 'parameters' => 'null',
             ),
-            18 => 
+            17 => 
             array (
                 'id' => 21,
                 'menu_id' => 1,
@@ -321,7 +305,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.podcast-contents.edit',
                 'parameters' => '1',
             ),
-            19 => 
+            18 => 
             array (
                 'id' => 22,
                 'menu_id' => 1,
@@ -337,7 +321,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.categories.index',
                 'parameters' => NULL,
             ),
-            20 => 
+            19 => 
             array (
                 'id' => 23,
                 'menu_id' => 1,
@@ -353,7 +337,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.guidelines.index',
                 'parameters' => NULL,
             ),
-            21 => 
+            20 => 
             array (
                 'id' => 24,
                 'menu_id' => 1,
@@ -369,7 +353,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.guideline-contents.edit',
                 'parameters' => '1',
             ),
-            22 => 
+            21 => 
             array (
                 'id' => 25,
                 'menu_id' => 1,
@@ -385,7 +369,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.authors.index',
                 'parameters' => NULL,
             ),
-            23 => 
+            22 => 
             array (
                 'id' => 26,
                 'menu_id' => 1,
@@ -401,7 +385,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.interviews.index',
                 'parameters' => NULL,
             ),
-            24 => 
+            23 => 
             array (
                 'id' => 27,
                 'menu_id' => 1,
@@ -417,7 +401,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.interview-contents.edit',
                 'parameters' => '1',
             ),
-            25 => 
+            24 => 
             array (
                 'id' => 28,
                 'menu_id' => 1,
@@ -433,7 +417,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.articles.index',
                 'parameters' => 'null',
             ),
-            26 => 
+            25 => 
             array (
                 'id' => 29,
                 'menu_id' => 1,
@@ -449,7 +433,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.article-contents.edit',
                 'parameters' => '1',
             ),
-            27 => 
+            26 => 
             array (
                 'id' => 30,
                 'menu_id' => 1,
@@ -465,7 +449,7 @@ class MenuItemsTableSeeder extends Seeder
                 'route' => 'voyager.news.index',
                 'parameters' => NULL,
             ),
-            28 => 
+            27 => 
             array (
                 'id' => 31,
                 'menu_id' => 1,
@@ -480,6 +464,22 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2020-06-23 16:00:42',
                 'route' => 'voyager.new-contents.edit',
                 'parameters' => '1',
+            ),
+            28 => 
+            array (
+                'id' => 17,
+                'menu_id' => 1,
+                'title' => 'Webinários',
+                'url' => '',
+                'target' => '_self',
+                'icon_class' => NULL,
+                'color' => '#000000',
+                'parent_id' => 18,
+                'order' => 1,
+                'created_at' => '2020-06-12 22:34:35',
+                'updated_at' => '2020-06-26 20:53:52',
+                'route' => 'voyager.webinar-contents.edit',
+                'parameters' => '2',
             ),
         ));
         
