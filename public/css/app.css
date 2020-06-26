@@ -2106,7 +2106,7 @@ html {
 }
 
 .sections__image a {
-  display: block;
+  display: flex;
   width: 100%;
 }
 

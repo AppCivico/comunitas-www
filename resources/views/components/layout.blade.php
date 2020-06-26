@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="{{ route('webinars.index') }}" class="main-nav__link-icon main-nav__webinars">
-                    @svg('webinars') Webnários
+                    @svg('webinars') Webinários
                   </a>
                 </li>
                 <li>
