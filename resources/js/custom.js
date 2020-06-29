@@ -1,29 +1,24 @@
-// debugger;
-// import 'tinymce/plugins/media';
-function tinymce_setup_callback(editor)
-{
+function tinymce_init_callback(editor) {
+  editor.remove();
+  editor = null;
+
   tinymce.init({
+    menubar: false,
     selector: 'textarea.richTextBox',
-    min_height: 600,
-    resize: 'vertical',
-    plugins: [
-      'advlist autolink lists link image charmap print preview anchor',
-      'searchreplace visualblocks code fullscreen',
-      'insertdatetime media table paste code help wordcount'
-    ],
+    height: 500,
+    menubar: false,
+    skin_url: $('meta[name="assets-path"]').attr('content') + '?path=js/skins/voyager',
+    plugins: 'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern help code textcolor',
     file_browser_callback: function (field_name, url, type, win) {
-      if (type == 'image') {
-        $('#upload_file').trigger('click');
-      }
+      $('#upload_file').trigger('click');
     },
-    toolbar: 'undo redo | formatselect | image media link' +
-    'bold italic backcolor | alignleft aligncenter ' +
-    'alignright alignjustify | bullist numlist outdent indent | ' +
-    'removeformat | help',
-    image_caption: true,
-    image_title: true,
+    // plugins: [
+    //   'media advlist autolink lists link image charmap print preview anchor',
+    //   'searchreplace visualblocks code fullscreen',
+    //   'insertdatetime media table paste code help wordcount'
+    // ],
+    toolbar: 'formatselect | bold italic strikethrough | forecolor backcolor | link image media | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | ltr rtl | removeformat | code',
     external_plugins: {
-      'paste': '/tinymce/plugins/paste/plugin.min.js',
       'print': '/tinymce/plugins/print/plugin.min.js',
       'preview': '/tinymce/plugins/preview/plugin.min.js',
       'searchreplace': '/tinymce/plugins/searchreplace/plugin.min.js',
@@ -48,6 +43,5 @@ function tinymce_setup_callback(editor)
       'textpattern': '/tinymce/plugins/textpattern/plugin.min.js',
       'help': '/tinymce/plugins/help/plugin.min.js',
     }
-
-  });
+  })
 }
