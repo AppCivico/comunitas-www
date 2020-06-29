@@ -12,6 +12,7 @@ function tinymce_init_callback(editor) {
     file_browser_callback: function (field_name, url, type, win) {
       $('#upload_file').trigger('click');
     },
+
     // plugins: [
     //   'media advlist autolink lists link image charmap print preview anchor',
     //   'searchreplace visualblocks code fullscreen',
