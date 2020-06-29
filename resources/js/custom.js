@@ -3,7 +3,6 @@ function tinymce_init_callback(editor) {
   editor = null;
 
   tinymce.init({
-    menubar: false,
     selector: 'textarea.richTextBox',
     height: 500,
     menubar: false,
