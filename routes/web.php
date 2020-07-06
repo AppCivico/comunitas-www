@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return redirect()->route('webinars.index'); });
+Route::get('/', 'HomeController@index')->name('home.index');
 
 Route::get('/webinarios', 'ContentController@webinars')->name('webinars.index');
 Route::get('/webinarios/categoria/{category:slug}', 'ContentController@webinars');

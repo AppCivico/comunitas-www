@@ -2243,6 +2243,15 @@ html {
   }
 }
 
+.sections__list--home .sections__list-main-title {
+  width: 100%;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.423828125em;
+  color: #015295;
+}
+
 .section-intern {
   padding-top: 1rem;
 }
@@ -2525,5 +2534,55 @@ html {
 .page-item.disabled .page-link {
   color: #6b6b6b;
   background-color: #f0f0f0;
+}
+
+.home-banner {
+  background-color: #015295;
+}
+
+.home-banner__container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 30em) {
+  .home-banner__container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .home-banner__container {
+    width: 100%;
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .home-banner__container {
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.home-banner__title {
+  margin-bottom: 4rem;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.home-banner__image img {
+  display: block;
 }
 
