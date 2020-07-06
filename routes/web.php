@@ -37,6 +37,10 @@ Route::get('/biblioteca/categoria/{category:slug}', 'ContentController@articles'
 Route::get('/noticias', 'ContentController@news')->name('news.index');
 Route::get('/noticias/categoria/{category:slug}', 'ContentController@news');
 
+Route::get('/trilhas', 'ContentController@trails')->name('trails.index');
+Route::get('/trilhas/categoria/{category:slug}', 'ContentController@trails');
+Route::get('/trilhas/{trail:slug}', 'ContentController@showTrail');
+
 Route::get('/categorias/{category:slug}', 'CategoryController@index')->name('categories.index');
 
 Route::group(['prefix' => 'admin'], function () {

@@ -235,24 +235,6 @@ class DataTypesTableSeeder extends Seeder
             ),
             12 => 
             array (
-                'id' => 19,
-                'name' => 'authors',
-                'slug' => 'authors',
-                'display_name_singular' => 'Author',
-                'display_name_plural' => 'Authors',
-                'icon' => 'voyager-person',
-                'model_name' => 'App\\Author',
-                'description' => NULL,
-                'generate_permissions' => true,
-                'created_at' => '2020-06-22 18:52:02',
-                'updated_at' => '2020-06-22 18:52:02',
-                'server_side' => 0,
-                'controller' => NULL,
-                'policy_name' => NULL,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
-            ),
-            13 => 
-            array (
                 'id' => 21,
                 'name' => 'interviews',
                 'slug' => 'interviews',
@@ -269,7 +251,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
             ),
-            14 => 
+            13 => 
             array (
                 'id' => 22,
                 'name' => 'interview_contents',
@@ -287,7 +269,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
             ),
-            15 => 
+            14 => 
             array (
                 'id' => 23,
                 'name' => 'articles',
@@ -305,7 +287,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
             ),
-            16 => 
+            15 => 
             array (
                 'id' => 25,
                 'name' => 'article_contents',
@@ -323,7 +305,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
             ),
-            17 => 
+            16 => 
             array (
                 'id' => 29,
                 'name' => 'new_contents',
@@ -341,7 +323,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
             ),
-            18 => 
+            17 => 
             array (
                 'id' => 35,
                 'name' => 'news',
@@ -359,7 +341,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
             ),
-            19 => 
+            18 => 
             array (
                 'id' => 15,
                 'name' => 'categories',
@@ -376,6 +358,60 @@ class DataTypesTableSeeder extends Seeder
                 'controller' => NULL,
                 'policy_name' => NULL,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+            ),
+            19 => 
+            array (
+                'id' => 19,
+                'name' => 'authors',
+                'slug' => 'authors',
+                'display_name_singular' => 'Autor',
+                'display_name_plural' => 'Autores',
+                'icon' => 'voyager-person',
+                'model_name' => 'App\\Author',
+                'description' => NULL,
+                'generate_permissions' => true,
+                'created_at' => '2020-06-22 18:52:02',
+                'updated_at' => '2020-06-26 23:48:49',
+                'server_side' => 0,
+                'controller' => NULL,
+                'policy_name' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+            ),
+            20 => 
+            array (
+                'id' => 38,
+                'name' => 'trail_contents',
+                'slug' => 'trail-contents',
+                'display_name_singular' => 'Trail Content',
+                'display_name_plural' => 'Trail Contents',
+                'icon' => NULL,
+                'model_name' => 'App\\TrailContent',
+                'description' => NULL,
+                'generate_permissions' => true,
+                'created_at' => '2020-07-02 23:15:13',
+                'updated_at' => '2020-07-02 23:15:13',
+                'server_side' => 0,
+                'controller' => NULL,
+                'policy_name' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+            ),
+            21 => 
+            array (
+                'id' => 36,
+                'name' => 'trails',
+                'slug' => 'trails',
+                'display_name_singular' => 'Trilha',
+                'display_name_plural' => 'Trilhas',
+                'icon' => NULL,
+                'model_name' => 'App\\Trail',
+                'description' => NULL,
+                'generate_permissions' => true,
+                'created_at' => '2020-07-02 21:53:18',
+                'updated_at' => '2020-07-03 19:56:02',
+                'server_side' => 0,
+                'controller' => NULL,
+                'policy_name' => NULL,
+                'details' => '{"order_column":"order","order_display_column":"name","order_direction":"asc","default_search_key":null,"scope":null}',
             ),
         ));
         

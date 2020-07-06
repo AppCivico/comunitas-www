@@ -71,7 +71,52 @@
                     Clique para fazer o download
                   </span>
                 @endif
-                <h2 class="sections__list-title">{{ $content->title }}</h2>
+
+                <h2 class="sections__list-title">
+                  @isset($content->title)
+                    {{ $content->title }}
+                  @elseif($content->name)
+                    {{ $content->name }}
+                  @endisset
+                </h2>
+
+                @if($type ?? '' === 'trails')
+                  <p class="section__excerpt">
+                    {{ $content->excerpt }}
+                  </p>
+                @endif
+
+                @if(isset($content->duration) || isset($content->person) || isset($content->modules))
+                  <footer class="section__footer">
+                    @isset($content->duration)
+                      <div class="section__footer--item">
+                        <span>Duração</span>
+                        <strong>{{ $content->duration }}</strong>
+                      </div>
+                    @endisset
+
+                    @isset($content->person)
+                      <div class="section__footer--item">
+                        <span>Mentoria</span>
+                        <strong>
+                          @foreach($content->person as $author)
+                              {{ $author->name }}@if(!$loop->last),@endif
+                          @endforeach
+                        </strong>
+                      </div>
+                    @endisset
+
+                    @isset($content->modules)
+                      <div class="section__footer--item">
+                        <span>Módulos</span>
+                        <strong>
+                          {{ $content->modules->count() }}
+                        </strong>
+                      </div>
+                    @endisset
+                  </footer>
+                @endisset
+
               </a>
             </article>
           @endforeach

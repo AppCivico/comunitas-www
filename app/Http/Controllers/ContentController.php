@@ -22,6 +22,9 @@ use App\ArticleContent;
 use App\News;
 use App\NewContent;
 
+use App\Trail;
+use App\TrailContent;
+
 use App\Category;
 
 
@@ -148,4 +151,27 @@ class ContentController extends Controller
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
     }
 
+    public function trails(Category $category = null)
+    {
+        if($category) {
+            $contents = Category::findOrFail($category->id)->trails()->simplePaginate(Config('app.pagination_limit'));
+        } else {
+            $contents   = Trail::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+        }
+        $page_info  = TrailContent::first();
+        $categories = Category::has('trails')->get();
+        $page_name = 'Trilhas';
+        $type = 'trails';
+
+        return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category', 'type'));
+    }
+
+    public function showTrail(Trail $trail)
+    {
+        $related_contents = $trail->relatedByTag();
+
+        return view('contents.show')
+            ->with('content', $trail)
+            ->with('related_contents', $related_contents);
+    }
 }

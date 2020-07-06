@@ -38,4 +38,9 @@ class Category extends Model
     {
         return $this->belongsToMany(News::class);
     }
+
+    public function trails()
+    {
+        return $this->belongsToMany(Trail::class);
+    }
 }
