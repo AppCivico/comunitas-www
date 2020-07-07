@@ -1,0 +1,36 @@
+.home-main {
+  // background-color: red;
+}
+
+.home-main__tiny-text {
+  font-size: ms(-3);
+  color: palette('blue');
+}
+
+.home-main__title {
+  line-height: 1.2;
+}
+
+.home-main__row img {
+  max-width: 2rem;
+}
+
+.home-main__intern-text {
+  margin-bottom: 2rem;
+}
+
+.home-main__title span {
+  color: palette('red', 'violet');
+}
+
+.home-main__row h2 {
+  margin: 1rem 0 0;
+  font-size: ms(2);
+  text-transform: uppercase;
+  color: palette('blue');
+}
+
+.home-main__image {
+  display: none;
+}
+

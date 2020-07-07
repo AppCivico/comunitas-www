@@ -15,6 +15,12 @@
   color: palette('white');
 }
 
+.home-banner__image {
+  display: none;
+  margin-right: -2rem;
+  margin-left: -2rem;
+}
+
 .home-banner__image img {
   display: block;
 }

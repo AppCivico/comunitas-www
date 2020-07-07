@@ -63,9 +63,10 @@
       <div class="sections__list sections__list--home sections__list--small">
         @isset($contents)
           @foreach($contents as $content)
-            <article class="section__item @if($content->external_link) section__item--small @endif">
+            <article class="section__item">
               <div class="sections__image">
                   <a href="{{ URL::current() }}/{{ $content->slug }}">
+                  <!--
                   <img
                     src="{{ Voyager::image($content->image) }}"
                     srcset="{{ Voyager::image($content->thumbnail('small')) }},
@@ -74,6 +75,8 @@
                     sizes="(max-width: 400px) 480px, 800px"
                     alt="{{ $content->image_alt }}"
                   >
+                  -->
+                  <img src="https://www.placecage.com/400/300">
                 </a>
                 <div class="section__tags">
                   @foreach($content->categories as $category)
@@ -82,23 +85,25 @@
                     -->
                     <a>{{ $category->name }}</a>
                   @endforeach
-                </div>
-              </div>
-              <a href="{{ URL::current() }}/{{ $content->slug }}">
-                @if(isset($has_obs))
-                  <span class="section__download-info">
-                    Clique para fazer o download
-                  </span>
-                @endif
 
-                <h2 class="sections__list-title">
-                  @isset($content->title)
-                    {{ $content->title }}
-                  @elseif($content->name)
-                    {{ $content->name }}
-                  @endisset
-                </h2>
-              </a>
+                  <a href="{{ URL::current() }}/{{ $content->slug }}" class="section__small-section-title">
+                    @if(isset($has_obs))
+                      <span class="section__download-info">
+                        Clique para fazer o download
+                      </span>
+                    @endif
+
+                    <h2>
+                      @isset($content->title)
+                        {{ $content->title }}
+                      @elseif($content->name)
+                        {{ $content->name }}
+                      @endisset
+                    </h2>
+                  </a>
+                </div>
+
+              </div>
             </article>
           @endforeach
         @endisset
@@ -107,22 +112,28 @@
       <div class="home-main">
         <div class="home-main__text">
           <strong class="home-main__tiny-text">AS VANTAGENS DA PLATAFORMA REDE JUNTOS</strong>
-          <h1 class="home-main__title">A plataforma é aberta e gratuita para acesso a todo o conteúdo disponível</h1>
+          <h1 class="home-main__title">A plataforma é <span>aberta</span> e <span>gratuita</span> para acesso a todo o conteúdo disponível</h1>
           <div class="home-main__rows">
             <div class="home-main__row">
               <img src="{{ url('images/icons/speedometer--purple.svg') }}" alt="Progresso">
-              <h2>Progresso</h2>
-              <p>Área onde o usuário pode ver todos as trilhas e seu progresso</p>
+              <div class="home-main__intern-text">
+                <h2>Progresso</h2>
+                <p>Área onde o usuário pode ver todos as trilhas e seu progresso</p>
+              </div>
             </div>
             <div class="home-main__row">
               <img src="{{ url('images/icons/book--purple.svg') }}" alt="Trilhas">
-              <h2>Progresso</h2>
-              <p>As melhores trilhas para melhorias dos serviços prestados à população</p>
+              <div class="home-main__intern-text">
+                <h2>Trilhas</h2>
+                <p>As melhores trilhas para melhorias dos serviços prestados à população</p>
+              </div>
             </div>
             <div class="home-main__row">
               <img src="{{ url('images/icons/dialog--purple.svg') }}" alt="Progresso">
-              <h2>Progresso</h2>
-              <p>Tirar dúvidas, conhecer pessoas e replicar seu conhecimento com pessoas engajadas</p>
+              <div class="home-main__intern-text">
+                <h2>Forúm</h2>
+                <p>Tirar dúvidas, conhecer pessoas e replicar seu conhecimento com pessoas engajadas</p>
+              </div>
             </div>
           </div>
         </div>

@@ -2252,6 +2252,21 @@ html {
   color: #015295;
 }
 
+.sections__list--small .section__tags {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.sections__list--small .sections__image {
+  flex-wrap: wrap;
+}
+
+.sections__list--small .section__small-section-title {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+}
+
 .section-intern {
   padding-top: 1rem;
 }
@@ -2582,7 +2597,45 @@ html {
   color: white;
 }
 
+.home-banner__image {
+  display: none;
+  margin-right: -2rem;
+  margin-left: -2rem;
+}
+
 .home-banner__image img {
   display: block;
+}
+
+.home-main__tiny-text {
+  font-size: 0.7023319616em;
+  color: #015295;
+}
+
+.home-main__title {
+  line-height: 1.2;
+}
+
+.home-main__row img {
+  max-width: 2rem;
+}
+
+.home-main__intern-text {
+  margin-bottom: 2rem;
+}
+
+.home-main__title span {
+  color: #f43e7f;
+}
+
+.home-main__row h2 {
+  margin: 1rem 0 0;
+  font-size: 1.265625em;
+  text-transform: uppercase;
+  color: #015295;
+}
+
+.home-main__image {
+  display: none;
 }
 

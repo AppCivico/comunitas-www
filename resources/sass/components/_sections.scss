@@ -306,7 +306,17 @@ $sections-list-tablet-margin: 1rem;
   color: palette('blue');
 }
 
+.sections__list--small .section__tags {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
 
+.sections__list--small .sections__image {
+  flex-wrap: wrap;
+}
 
-
-
+.sections__list--small .section__small-section-title {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+}
