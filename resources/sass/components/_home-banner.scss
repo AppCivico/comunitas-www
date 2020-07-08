@@ -6,6 +6,11 @@
   @include container;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .home-banner__title {
@@ -17,8 +22,12 @@
 
 .home-banner__image {
   display: none;
-  margin-right: -2rem;
-  margin-left: -2rem;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    display: block;
+    flex-shrink: 0;
+    width: 30rem;
+  }
 }
 
 .home-banner__image img {

@@ -2,6 +2,14 @@
 //
 // }
 
+.sections__container {
+  @media screen and (min-width: breakpoint('desktop')) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
 .sections__header {
   display: flex;
   align-items: flex-end;
@@ -218,9 +226,9 @@ $sections-list-tablet-margin: 1rem;
   color: palette('blue');
   background: transparent;
 
-  // @media screen and (min-width: breakpoint('desktop')) {
-  //   min-height: 4.6rem;
-  // }
+  @media screen and (min-width: breakpoint('desktop')) {
+    min-height: 4.6rem;
+  }
 }
 
 .section__excerpt {
@@ -297,13 +305,45 @@ $sections-list-tablet-margin: 1rem;
   }
 }
 
-.sections__list--home .sections__list-main-title {
+.sections__list--home {
+  @media screen and (min-width: breakpoint('desktop')) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 66.666%;
+  }
+}
+
+.sections__list--home-big .section__tags {
+  position: relative;
+  background-image: none;
+}
+
+.sections__list--small {
+  @media screen and (min-width: breakpoint('desktop')) {
+    width: 33.333%;
+    margin-left: 2rem;
+  }
+}
+
+.sections__list-main-title {
   width: 100%;
   padding: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: ms(3);
   color: palette('blue');
+
+  @media screen and (min-width: breakpoint('tablet')) {
+    font-size: ms(7);
+  }
+}
+
+.sections__list--small .section__item {
+  @media screen and (min-width: breakpoint('desktop')) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .sections__list--small .section__tags {
@@ -313,6 +353,10 @@ $sections-list-tablet-margin: 1rem;
 
 .sections__list--small .sections__image {
   flex-wrap: wrap;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    height: 10rem;
+  }
 }
 
 .sections__list--small .section__small-section-title {

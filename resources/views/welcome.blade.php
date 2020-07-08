@@ -12,15 +12,15 @@
       </div>
     </header>
 
-    <div class="container">
-      <div class="sections__list sections__list--home">
-        <h2 class="sections__list-main-title">Novidades</h2>
+    <div class="container sections__container">
+      <h2 class="sections__list-main-title">Novidades</h2>
 
+      <div class="sections__list sections__list--home sections__list--home-big">
         @isset($trails)
           @foreach($trails as $content)
-            <article class="section__item @if($content->external_link) section__item--small @endif">
+            <article class="section__item">
               <div class="sections__image">
-                  <a href="{{ URL::current() }}/{{ $content->slug }}">
+                  <a href="{{ route('trails.show', ['trail' => $content->slug]) }}">
                   <img
                     src="https://via.placeholder.com/800x600.jpg?text=sem+imagem"
                     src="{{ Voyager::image($content->image) }}"
@@ -31,22 +31,14 @@
                     alt="{{ $content->image_alt }}"
                   >
                 </a>
-                <div class="section__tags">
-                  @foreach($content->categories as $category)
-                    <!--
-                    <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
-                    -->
-                    <a>{{ $category->name }}</a>
-                  @endforeach
-                </div>
               </div>
-              <a href="{{ URL::current() }}/{{ $content->slug }}">
-                @if(isset($has_obs))
-                  <span class="section__download-info">
-                    Clique para fazer o download
-                  </span>
-                @endif
-
+              <div class="section__tags">
+                @foreach($content->categories as $category)
+                  <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
+                  <a>{{ $category->name }}</a>
+                @endforeach
+              </div>
+              <a href="{{ route('trails.show', ['trail' => $content->slug]) }}">
                 <h2 class="sections__list-title">
                   @isset($content->title)
                     {{ $content->title }}
@@ -66,7 +58,6 @@
             <article class="section__item">
               <div class="sections__image">
                   <a href="{{ URL::current() }}/{{ $content->slug }}">
-                  <!--
                   <img
                     src="{{ Voyager::image($content->image) }}"
                     srcset="{{ Voyager::image($content->thumbnail('small')) }},
@@ -75,8 +66,6 @@
                     sizes="(max-width: 400px) 480px, 800px"
                     alt="{{ $content->image_alt }}"
                   >
-                  -->
-                  <img src="https://www.placecage.com/400/300">
                 </a>
                 <div class="section__tags">
                   @foreach($content->categories as $category)
@@ -108,40 +97,41 @@
           @endforeach
         @endisset
       </div>
+    </div> <!-- container -->
 
+    <div class="container">
       <div class="home-main">
-        <div class="home-main__text">
-          <strong class="home-main__tiny-text">AS VANTAGENS DA PLATAFORMA REDE JUNTOS</strong>
-          <h1 class="home-main__title">A plataforma é <span>aberta</span> e <span>gratuita</span> para acesso a todo o conteúdo disponível</h1>
-          <div class="home-main__rows">
-            <div class="home-main__row">
-              <img src="{{ url('images/icons/speedometer--purple.svg') }}" alt="Progresso">
-              <div class="home-main__intern-text">
-                <h2>Progresso</h2>
-                <p>Área onde o usuário pode ver todos as trilhas e seu progresso</p>
+          <div class="home-main__text">
+            <strong class="home-main__tiny-text">AS VANTAGENS DA PLATAFORMA REDE JUNTOS</strong>
+            <h1 class="home-main__title">A plataforma é <span>aberta</span> e <span>gratuita</span> para acesso a todo o conteúdo disponível</h1>
+            <div class="home-main__rows">
+              <div class="home-main__row">
+                <img src="{{ url('images/icons/speedometer--purple.svg') }}" alt="Progresso">
+                <div class="home-main__intern-text">
+                  <h2>Progresso</h2>
+                  <p>Área onde o usuário pode ver todos as trilhas e seu progresso</p>
+                </div>
               </div>
-            </div>
-            <div class="home-main__row">
-              <img src="{{ url('images/icons/book--purple.svg') }}" alt="Trilhas">
-              <div class="home-main__intern-text">
-                <h2>Trilhas</h2>
-                <p>As melhores trilhas para melhorias dos serviços prestados à população</p>
+              <div class="home-main__row">
+                <img src="{{ url('images/icons/book--purple.svg') }}" alt="Trilhas">
+                <div class="home-main__intern-text">
+                  <h2>Trilhas</h2>
+                  <p>As melhores trilhas para melhorias dos serviços prestados à população</p>
+                </div>
               </div>
-            </div>
-            <div class="home-main__row">
-              <img src="{{ url('images/icons/dialog--purple.svg') }}" alt="Progresso">
-              <div class="home-main__intern-text">
-                <h2>Forúm</h2>
-                <p>Tirar dúvidas, conhecer pessoas e replicar seu conhecimento com pessoas engajadas</p>
+              <div class="home-main__row">
+                <img src="{{ url('images/icons/dialog--purple.svg') }}" alt="Progresso">
+                <div class="home-main__intern-text">
+                  <h2>Forúm</h2>
+                  <p>Tirar dúvidas, conhecer pessoas e replicar seu conhecimento com pessoas engajadas</p>
+                </div>
               </div>
             </div>
           </div>
+          <div class="home-main__image">
+            <img src="https://www.placecage.com/485/630" alt="AS VANTAGENS DA PLATAFORMA REDE JUNTOS">
+          </div>
         </div>
-        <div class="home-main__image">
-          <img src="https://www.placecage.com/485/630" alt="AS VANTAGENS DA PLATAFORMA REDE JUNTOS">
-        </div>
-      </div>
-
-    </div> <!-- container -->
+    </div>
   </main>
 </x-layout>

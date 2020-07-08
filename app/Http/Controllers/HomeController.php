@@ -23,8 +23,8 @@ class HomeController extends Controller
             Interview::first(),
             Article::first(),
             News::first(),
-            Trail::first(),
         ];
+        dd($contents);
 
         return view('welcome', compact('trails', 'contents'));
     }
