@@ -60,6 +60,14 @@
         {!! $content->body !!}
       </div>
 
+      @isset($content->url)
+        <div class="section-intern__big-button">
+          <a href="{{ $content->url }}" class="button button--big" target="_blank">
+            Iniciar
+          </a>
+        </div>
+      @endisset
+
       @isset($content->author)
         <footer>
           <address class="section-intern__address">
