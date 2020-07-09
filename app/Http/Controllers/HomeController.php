@@ -24,7 +24,6 @@ class HomeController extends Controller
             Article::first(),
             News::first(),
         ];
-        dd($contents);
 
         return view('welcome', compact('trails', 'contents'));
     }

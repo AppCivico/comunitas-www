@@ -945,6 +945,86 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 23:01:27',
                 'updated_at' => '2020-06-22 23:01:27',
             ),
+            116 => 
+            array (
+                'id' => 122,
+                'key' => 'browse_trail_contents',
+                'table_name' => 'trail_contents',
+                'created_at' => '2020-07-08 23:29:57',
+                'updated_at' => '2020-07-08 23:29:57',
+            ),
+            117 => 
+            array (
+                'id' => 123,
+                'key' => 'read_trail_contents',
+                'table_name' => 'trail_contents',
+                'created_at' => '2020-07-08 23:29:57',
+                'updated_at' => '2020-07-08 23:29:57',
+            ),
+            118 => 
+            array (
+                'id' => 124,
+                'key' => 'edit_trail_contents',
+                'table_name' => 'trail_contents',
+                'created_at' => '2020-07-08 23:29:57',
+                'updated_at' => '2020-07-08 23:29:57',
+            ),
+            119 => 
+            array (
+                'id' => 125,
+                'key' => 'add_trail_contents',
+                'table_name' => 'trail_contents',
+                'created_at' => '2020-07-08 23:29:57',
+                'updated_at' => '2020-07-08 23:29:57',
+            ),
+            120 => 
+            array (
+                'id' => 126,
+                'key' => 'delete_trail_contents',
+                'table_name' => 'trail_contents',
+                'created_at' => '2020-07-08 23:29:57',
+                'updated_at' => '2020-07-08 23:29:57',
+            ),
+            121 => 
+            array (
+                'id' => 127,
+                'key' => 'browse_trails',
+                'table_name' => 'trails',
+                'created_at' => '2020-07-08 23:31:26',
+                'updated_at' => '2020-07-08 23:31:26',
+            ),
+            122 => 
+            array (
+                'id' => 128,
+                'key' => 'read_trails',
+                'table_name' => 'trails',
+                'created_at' => '2020-07-08 23:31:26',
+                'updated_at' => '2020-07-08 23:31:26',
+            ),
+            123 => 
+            array (
+                'id' => 129,
+                'key' => 'edit_trails',
+                'table_name' => 'trails',
+                'created_at' => '2020-07-08 23:31:26',
+                'updated_at' => '2020-07-08 23:31:26',
+            ),
+            124 => 
+            array (
+                'id' => 130,
+                'key' => 'add_trails',
+                'table_name' => 'trails',
+                'created_at' => '2020-07-08 23:31:26',
+                'updated_at' => '2020-07-08 23:31:26',
+            ),
+            125 => 
+            array (
+                'id' => 131,
+                'key' => 'delete_trails',
+                'table_name' => 'trails',
+                'created_at' => '2020-07-08 23:31:26',
+                'updated_at' => '2020-07-08 23:31:26',
+            ),
         ));
         
         

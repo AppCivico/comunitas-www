@@ -3937,6 +3937,22 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 12,
             ),
+            245 => 
+            array (
+                'id' => 276,
+                'data_type_id' => 36,
+                'field' => 'duration',
+                'type' => 'text',
+                'display_name' => 'Duração',
+                'required' => false,
+                'browse' => false,
+                'read' => true,
+                'edit' => true,
+                'add' => true,
+                'delete' => true,
+                'details' => '{}',
+                'order' => 16,
+            ),
         ));
         
         

@@ -15,6 +15,7 @@ class CreateWebinarsTable extends Migration {
 		Schema::create('webinars', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('type')->default('webinar');
 			$table->integer('author_id')->default(1);
 			$table->integer('category_id')->nullable();
 			$table->string('title');

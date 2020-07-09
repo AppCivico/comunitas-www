@@ -15,6 +15,7 @@ class CreateInterviewsTable extends Migration
     {
         Schema::create('interviews', function (Blueprint $table) {
 			$table->increments('id');
+			$table->string('type')->default('interview');
 			$table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT');
 			$table->string('title');
 			$table->string('slug', 250)->unique('interviews_slug_unique');

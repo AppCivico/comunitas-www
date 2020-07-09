@@ -7,7 +7,7 @@
           VAMOS JUNTOS CONSTRUIR A MAIOR PLATAFORMA DE CONHECIMENTO EM GESTÃO PÚBLICA
         </h1>
         <div class="home-banner__image">
-          <img src="https://www.placecage.com/480/488" alt="Título">
+          <img src="{{ url('images/temp/home-banner.jpg') }}" alt="Título">
         </div>
       </div>
     </header>
@@ -15,14 +15,13 @@
     <div class="container sections__container">
       <h2 class="sections__list-main-title">Novidades</h2>
 
-      <div class="sections__list sections__list--home sections__list--home-big">
-        @isset($trails)
+      @if(!empty($trails[0]))
+        <div class="sections__list sections__list--home sections__list--home-big">
           @foreach($trails as $content)
             <article class="section__item">
               <div class="sections__image">
                   <a href="{{ route('trails.show', ['trail' => $content->slug]) }}">
                   <img
-                    src="https://via.placeholder.com/800x600.jpg?text=sem+imagem"
                     src="{{ Voyager::image($content->image) }}"
                     srcset="{{ Voyager::image($content->thumbnail('small')) }},
                     {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
@@ -49,15 +48,21 @@
               </a>
             </article>
           @endforeach
-        @endisset
-      </div>
+        </div>
+      @endisset
 
       <div class="sections__list sections__list--home sections__list--small">
-        @isset($contents)
+        @if(isset($contents) && $contents[0])
           @foreach($contents as $content)
             <article class="section__item">
               <div class="sections__image">
-                  <a href="{{ URL::current() }}/{{ $content->slug }}">
+                  <a
+                    @if($content->external_link)
+                      href="{{ $content->external_link }}" target="blank"
+                    @elseif($content->slug)
+                      href="{{ route($content->type, [$content->type => $content->slug]) }}"
+                    @endif
+                  >
                   <img
                     src="{{ Voyager::image($content->image) }}"
                     srcset="{{ Voyager::image($content->thumbnail('small')) }},
@@ -69,13 +74,18 @@
                 </a>
                 <div class="section__tags">
                   @foreach($content->categories as $category)
-                    <!--
-                    <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
-                    -->
                     <a>{{ $category->name }}</a>
                   @endforeach
 
-                  <a href="{{ URL::current() }}/{{ $content->slug }}" class="section__small-section-title">
+                  <a
+                    @if($content->external_link)
+                      href="{{ $content->external_link }}" target="blank"
+                    @elseif($content->slug)
+                      href="{{ route($content->type, [$content->type => $content->slug]) }}"
+                    @endif
+                    class="section__small-section-title"
+                  >
+
                     @if(isset($has_obs))
                       <span class="section__download-info">
                         Clique para fazer o download
@@ -95,7 +105,7 @@
               </div>
             </article>
           @endforeach
-        @endisset
+        @endif
       </div>
     </div> <!-- container -->
 
@@ -129,7 +139,7 @@
             </div>
           </div>
           <div class="home-main__image">
-            <img src="https://www.placecage.com/485/630" alt="AS VANTAGENS DA PLATAFORMA REDE JUNTOS">
+            <img src="{{ url('images/temp/home-main.jpg') }}" alt="AS VANTAGENS DA PLATAFORMA REDE JUNTOS">
           </div>
         </div>
     </div>

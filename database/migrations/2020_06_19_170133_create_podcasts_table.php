@@ -15,6 +15,7 @@ class CreatePodcastsTable extends Migration
     {
         Schema::create('podcasts', function (Blueprint $table) {
 			$table->increments('id');
+			$table->string('type')->default('podcast');
 			$table->integer('author_id')->default(1);
 			$table->integer('category_id')->nullable();
 			$table->string('title');

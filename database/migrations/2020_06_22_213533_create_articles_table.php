@@ -15,6 +15,7 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
 			$table->increments('id');
+			$table->string('type')->default('article');
 			$table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT');
 			$table->string('title');
 			$table->string('slug', 250)->unique('articles_slug_unique');

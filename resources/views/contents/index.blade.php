@@ -38,7 +38,7 @@
                     @if($content->external_link)
                       href="{{ $content->external_link }}" target="blank"
                     @elseif($content->slug)
-                      href="{{ URL::current() }}/{{ $content->slug }}"
+                      href="{{ route($content->type, [$content->type => $content->slug]) }}"
                     @endif
                   >
                   <img
@@ -52,9 +52,7 @@
                 </a>
                 <div class="section__tags">
                   @foreach($content->categories as $category)
-                    <!--
-                    <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
-                    -->
+                    <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
                     <a>{{ $category->name }}</a>
                   @endforeach
                 </div>
@@ -63,7 +61,7 @@
                 @if($content->external_link)
                   href="{{ $content->external_link }}" target="blank"
                 @elseif($content->slug)
-                  href="{{ URL::current() }}/{{ $content->slug }}"
+                  href="{{ route($content->type, [$content->type => $content->slug]) }}"
                 @endif
               >
                 @if(isset($has_obs))

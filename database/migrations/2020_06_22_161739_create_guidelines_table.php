@@ -15,6 +15,7 @@ class CreateGuidelinesTable extends Migration
     {
         Schema::create('guidelines', function (Blueprint $table) {
 			$table->increments('id');
+			$table->string('type')->default('guideline');
 			$table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT');
 			$table->string('title');
 			$table->string('slug', 250)->unique('guidelines_slug_unique');

@@ -15,21 +15,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home.index');
 
+// Route::get('/', function () { return redirect()->route('webinars.index'); });
+
 Route::get('/webinarios', 'ContentController@webinars')->name('webinars.index');
 Route::get('/webinarios/categoria/{category:slug}', 'ContentController@webinars');
-Route::get('/webinarios/{webinar:slug}', 'ContentController@showWebinar');
+Route::get('/webinarios/{webinar:slug}', 'ContentController@showWebinar')->name('webinar');
 
 Route::get('/podcasts', 'ContentController@podcasts')->name('podcasts.index');
 Route::get('/podcasts/categoria/{category:slug}', 'ContentController@podcasts');
-Route::get('/podcasts/{podcast:slug}', 'ContentController@showPodcast');
+Route::get('/podcasts/{podcast:slug}', 'ContentController@showPodcast')->name('podcast');
 
 Route::get('/boas-praticas', 'ContentController@guidelines')->name('guidelines.index');
 Route::get('/boas-praticas/categoria/{category:slug}', 'ContentController@guidelines');
-Route::get('/boas-praticas/{guideline:slug}', 'ContentController@showGuideline');
+Route::get('/boas-praticas/{guideline:slug}', 'ContentController@showGuideline')->name('guideline');
 
 Route::get('/entrevistas', 'ContentController@interviews')->name('interviews.index');
 Route::get('/entrevistas/categoria/{category:slug}', 'ContentController@interviews');
-Route::get('/entrevistas/{interview:slug}', 'ContentController@showInterview');
+Route::get('/entrevistas/{interview:slug}', 'ContentController@showInterview')->name('interview');
 
 Route::get('/biblioteca', 'ContentController@articles')->name('articles.index');
 Route::get('/biblioteca/categoria/{category:slug}', 'ContentController@articles');
