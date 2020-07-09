@@ -37,6 +37,8 @@
                   <a
                     @if($content->external_link)
                       href="{{ $content->external_link }}" target="blank"
+                    @elseif($content->type === 'trail')
+                      href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
                     @elseif($content->slug)
                       href="{{ route($content->type, [$content->type => $content->slug]) }}"
                     @endif
@@ -60,6 +62,8 @@
               <a
                 @if($content->external_link)
                   href="{{ $content->external_link }}" target="blank"
+                @elseif($content->type === 'trail')
+                  href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
                 @elseif($content->slug)
                   href="{{ route($content->type, [$content->type => $content->slug]) }}"
                 @endif

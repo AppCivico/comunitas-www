@@ -20,7 +20,7 @@
           @foreach($trails as $content)
             <article class="section__item">
               <div class="sections__image">
-                  <a href="{{ route('trails.show', ['trail' => $content->slug]) }}">
+                <a href="{{ route('trails.show', ['trail' => $content->course_code]) }}">
                   <img
                     src="{{ Voyager::image($content->image) }}"
                     srcset="{{ Voyager::image($content->thumbnail('small')) }},
@@ -37,7 +37,7 @@
                   <a>{{ $category->name }}</a>
                 @endforeach
               </div>
-              <a href="{{ route('trails.show', ['trail' => $content->slug]) }}">
+              <a href="{{ route('trails.show', ['trail' => $content->course_code]) }}">
                 <h2 class="sections__list-title">
                   @isset($content->title)
                     {{ $content->title }}
