@@ -43,14 +43,19 @@
                       href="{{ route($content->type, [$content->type => $content->slug]) }}"
                     @endif
                   >
-                  <img
-                    src="{{ Voyager::image($content->image) }}"
-                    srcset="{{ Voyager::image($content->thumbnail('small')) }},
-                    {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
-                    {{ Voyager::image( $content->image ) }} 2x"
-                    sizes="(max-width: 400px) 480px, 800px"
-                    alt="{{ $content->image_alt }}"
-                  >
+
+                  @isset($content->picture)
+                    <img src="{{ $content->picture }}" alt="{{ $content->name }}">
+                  @elseif($content->image)
+                    <img
+                      src="{{ Voyager::image($content->image) }}"
+                      srcset="{{ Voyager::image($content->thumbnail('small')) }},
+                      {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
+                      {{ Voyager::image( $content->image ) }} 2x"
+                      sizes="(max-width: 400px) 480px, 800px"
+                      alt="{{ $content->image_alt }}"
+                    >
+                  @endisset
                 </a>
                 <div class="section__tags">
                   @foreach($content->categories as $category)
