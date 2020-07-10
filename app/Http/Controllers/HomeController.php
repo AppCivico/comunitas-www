@@ -15,14 +15,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $trails = Trail::orderBy('order')->take(6)->get();
+        $trails = Trail::orderBy('order')->take(4)->get();
         $contents = [
             Webinar::first(),
             Podcast::first(),
             Guideline::first(),
             Interview::first(),
-            Article::first(),
-            News::first(),
+            // Article::first(),
+            // News::first(),
         ];
 
         return view('welcome', compact('trails', 'contents'));
