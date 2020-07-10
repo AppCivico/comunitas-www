@@ -145,35 +145,35 @@
                   </div>
 
                   <ul class="social-icons social-icons--red">
-                    @isset($author->facebook)
+                    @if($author->facebook)
                       <li>
                           <a href="{{ $author->facebook }}" class="social-icons__facebook">
                             facebook
                           </a>
                       </li>
                     @endisset
-                    @isset($author->linkedin)
+                    @if($author->linkedin)
                       <li>
                         <a href="{{ $author->linkedin }}" class="social-icons__linkedin">
                           linkedin
                         </a>
                       </li>
                     @endisset
-                    @isset($author->twitter)
+                    @if($author->twitter)
                       <li>
                         <a href="{{ $author->twitter }}" class="social-icons__twitter">
                           twitter
                         </a>
                       </li>
                     @endisset
-                    @isset($author->youtube)
+                    @if($author->youtube)
                       <li>
                         <a href="{{ $author->youtube }}" class="social-icons__youtube">
                           youtube
                         </a>
                       </li>
                     @endisset
-                    @isset($author->instagram)
+                    @if($author->instagram)
                       <li>
                         <a href="{{ $author->instagram }}" class="social-icons__instagram">
                           instagram
