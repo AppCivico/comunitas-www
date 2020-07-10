@@ -2431,8 +2431,7 @@ html {
   }
 }
 
-.section-intern__address img,
-.section-intern__address svg {
+.section-intern__address img {
   max-width: 6.875em;
 }
 
@@ -2777,6 +2776,7 @@ html {
   .home-main__image {
     display: block;
     width: 31.25rem;
+    text-align: right;
   }
 }
 
