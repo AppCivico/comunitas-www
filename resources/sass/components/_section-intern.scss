@@ -73,26 +73,21 @@
   color: palette('gray', 'dark');
 }
 
-.section-intern__person {
+.section-intern__person footer {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin-right: -1rem;
-  margin-left: -1rem;
 
   @media screen and (min-width: breakpoint('desktop')) {
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
   }
-}
-
-.section-intern__person footer {
-  flex-basis: 100%;
-  margin: 0 1rem;
 }
 
 .section-intern__address {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
   padding-top: 2rem;
   margin-top: 2rem;
   font-style: normal;
@@ -100,6 +95,7 @@
 
   @media screen and (min-width: breakpoint('desktop')) {
     justify-content: flex-start;
+    width: 50%;
   }
 }
 

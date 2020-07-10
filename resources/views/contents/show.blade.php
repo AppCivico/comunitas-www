@@ -132,8 +132,8 @@
 
       @isset($content->person)
         <div class="section-intern__person">
-          @foreach($content->person as $author)
-            <footer>
+          <footer>
+            @foreach($content->person as $author)
               <address class="section-intern__address">
                 @if($author->avatar_image_url)
                   <img
@@ -191,8 +191,8 @@
                   </ul>
                 </div>
               </address>
-            </footer>
-          @endforeach
+            @endforeach
+          </footer>
         </div>
       @endisset
 

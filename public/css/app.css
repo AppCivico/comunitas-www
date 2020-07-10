@@ -2397,28 +2397,17 @@ html {
   color: #888888;
 }
 
-.section-intern__person {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -1rem;
-  margin-left: -1rem;
-}
-
-@media screen and (min-width: 64em) {
-  .section-intern__person {
-    flex-wrap: nowrap;
-  }
-}
-
 .section-intern__person footer {
-  flex-basis: 100%;
-  margin: 0 1rem;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .section-intern__address {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
   padding-top: 2rem;
   margin-top: 2rem;
   font-style: normal;
@@ -2428,6 +2417,7 @@ html {
 @media screen and (min-width: 64em) {
   .section-intern__address {
     justify-content: flex-start;
+    width: 50%;
   }
 }
 
