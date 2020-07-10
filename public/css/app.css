@@ -1744,6 +1744,7 @@ html {
   font-weight: 600;
   font-size: 0.8888888889em;
   text-align: center;
+  text-transform: uppercase;
   color: #888888;
   border-top: 1px solid #e6e6e6;
 }

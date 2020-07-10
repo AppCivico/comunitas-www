@@ -146,7 +146,7 @@
             </div>
           </div>
           <span class="footer__by">
-            desenvolvido por <a href="https://appcivico.com">APPCÍVICO</a>
+            desenvolvido por <a href="https://appcivico.com">appcívico</a>
           </span>
         </div>
       </footer>
