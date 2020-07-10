@@ -44,7 +44,7 @@
                     @endif
                   >
 
-                  @isset($content->picture)
+                  @if($content->picture)
                     <img src="{{ $content->picture }}" alt="{{ $content->name }}">
                   @elseif($content->image)
                     <img
@@ -55,15 +55,21 @@
                       sizes="(max-width: 400px) 480px, 800px"
                       alt="{{ $content->image_alt }}"
                     >
-                  @endisset
+                  @else
+                    @svg('no-picture')
+                  @endif
                 </a>
-                <div class="section__tags">
-                  @foreach($content->categories as $category)
-                    <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
-                    <a>{{ $category->name }}</a>
-                  @endforeach
-                </div>
+
+                @if(!empty($content->categories[0]))
+                  <div class="section__tags">
+                    @foreach($content->categories as $category)
+                      <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
+                      <a>{{ $category->name }}</a>
+                    @endforeach
+                  </div>
+                @endif
               </div>
+
               <a
                 @if($content->external_link)
                   href="{{ $content->external_link }}" target="blank"

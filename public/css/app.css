@@ -2431,7 +2431,8 @@ html {
   }
 }
 
-.section-intern__address img {
+.section-intern__address img,
+.section-intern__address svg {
   max-width: 6.875em;
 }
 

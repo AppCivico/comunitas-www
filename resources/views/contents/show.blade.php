@@ -71,10 +71,14 @@
       @isset($content->author)
         <footer>
           <address class="section-intern__address">
-            <img
-              src="{{ voyager::image($content->author->image) }}"
-              alt="{{ $content->author->name }}"
-            >
+            @if($content->author->image)
+              <img
+                src="{{ voyager::image($content->author->image) }}"
+                alt="{{ $content->author->name }}"
+              >
+            @else
+              @svg('no-profile-picture')
+            @endif
             <div class="section-intern__text">
               <h1 class="section-intern__address-name">{{ $content->author->name }}</h1>
 
@@ -131,10 +135,14 @@
           @foreach($content->person as $author)
             <footer>
               <address class="section-intern__address">
-                <img
-                  src="{{ $author->avatar_image_url }}"
-                  alt="{{ $author->name }}"
-                >
+                @if($author->avatar_image_url)
+                  <img
+                    src="{{ $author->avatar_image_url }}"
+                    alt="{{ $author->name }}"
+                  >
+                @else
+                  @svg('no-profile-picture')
+                @endif
                 <div class="section-intern__text">
                   <h1 class="section-intern__address-name">{{ $author->name }}</h1>
 
