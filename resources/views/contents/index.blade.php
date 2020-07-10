@@ -84,7 +84,7 @@
 
                 @if($type ?? '' === 'trails')
                   <p class="section__excerpt">
-                    {{ $content->excerpt }}
+                    {{ Str::words($content->excerpt, 30) }}
                   </p>
                 @endif
 
