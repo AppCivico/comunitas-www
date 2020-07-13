@@ -2405,7 +2405,6 @@ html {
 
 .section-intern__address {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   padding-top: 2rem;
@@ -2608,6 +2607,10 @@ html {
 .page-item.disabled .page-link {
   color: #6b6b6b;
   background-color: #f0f0f0;
+}
+
+.disqus {
+  margin-top: 2rem;
 }
 
 .home-banner {

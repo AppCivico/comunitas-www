@@ -222,7 +222,7 @@
 
       @if(count($related_contents))
         <div class="sections__list sections__list--smaller-cards">
-          <h2 class="sections__list-section-title color-blue">conteúdos relacionados</h2>
+          <h2 class="sections__list-section-title color-blue">Conteúdos relacionados</h2>
 
           @foreach($related_contents as $related)
             <article class="section__item">
