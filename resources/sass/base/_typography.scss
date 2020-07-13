@@ -442,3 +442,7 @@ blockquote.verse p { // sass-lint:disable-line no-qualifying-elements
 
   text-align: left;
 }
+
+.text-destak {
+  color: palette('red', 'violet');
+}

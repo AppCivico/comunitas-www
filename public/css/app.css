@@ -900,6 +900,10 @@ blockquote.verse p {
   text-align: left;
 }
 
+.text-destak {
+  color: #f43e7f;
+}
+
 /* CLASSES
 ============================================================================ */
 
@@ -2667,7 +2671,20 @@ html {
 }
 
 .home-banner__image {
+  position: relative;
   display: none;
+}
+
+.home-banner__image::before {
+  position: absolute;
+  top: calc(50% - 2.094rem);
+  left: -2.094rem;
+  display: block;
+  z-index: 1;
+  width: 4.188rem;
+  height: 4.188rem;
+  background-image: url("/images/logo--simple.svg");
+  content: "";
 }
 
 @media screen and (min-width: 64em) {

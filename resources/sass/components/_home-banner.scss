@@ -21,7 +21,20 @@
 }
 
 .home-banner__image {
+  position: relative;
   display: none;
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 2.094rem);
+    left: -2.094rem;
+    display: block;
+    z-index: layer('default');
+    width: 4.188rem;
+    height: 4.188rem;
+    background-image: image('logo--simple.svg');
+    content: '';
+  }
 
   @media screen and (min-width: breakpoint('desktop')) {
     display: block;

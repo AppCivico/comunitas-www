@@ -4,7 +4,8 @@
     <header class="home-banner">
       <div class="home-banner__container">
         <h1 class="home-banner__title">
-          VAMOS JUNTOS CONSTRUIR A MAIOR PLATAFORMA DE CONHECIMENTO EM GESTÃO PÚBLICA
+          VAMOS JUNTOS CONSTRUIR A <span class="text-destak">MAIOR PLATAFORMA</span> DE CONHECIMENTO EM
+          <span class="text-destak">GESTÃO PÚBLICA</span>
         </h1>
         <div class="home-banner__image">
           <img src="{{ url('images/temp/home-banner.jpg') }}" alt="Título">
