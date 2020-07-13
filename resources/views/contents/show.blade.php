@@ -147,9 +147,9 @@
                   <h1 class="section-intern__address-name">{{ $author->name }}</h1>
 
                   <div class="section-intern__footer-bio">
-                    @isset($author->bio)
+                    @if($author->bio)
                       <span class="color-blue">biografia:</span> {{ $author->bio }}
-                    @endisset
+                    @endif
                   </div>
 
                   <ul class="social-icons social-icons--red">
@@ -159,35 +159,35 @@
                             facebook
                           </a>
                       </li>
-                    @endisset
+                    @endif
                     @if($author->linkedin)
                       <li>
                         <a href="{{ $author->linkedin }}" class="social-icons__linkedin">
                           linkedin
                         </a>
                       </li>
-                    @endisset
+                    @endif
                     @if($author->twitter)
                       <li>
                         <a href="{{ $author->twitter }}" class="social-icons__twitter">
                           twitter
                         </a>
                       </li>
-                    @endisset
+                    @endif
                     @if($author->youtube)
                       <li>
                         <a href="{{ $author->youtube }}" class="social-icons__youtube">
                           youtube
                         </a>
                       </li>
-                    @endisset
+                    @endif
                     @if($author->instagram)
                       <li>
                         <a href="{{ $author->instagram }}" class="social-icons__instagram">
                           instagram
                         </a>
                       </li>
-                    @endisset
+                    @endif
                   </ul>
                 </div>
               </address>
