@@ -22,15 +22,9 @@
             <article class="section__item">
               <div class="sections__image">
                 <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
-                  @if($content->image)
-                  <img
-                    src="{{ Voyager::image($content->image) }}"
-                    srcset="{{ Voyager::image($content->thumbnail('small')) }},
-                    {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
-                    {{ Voyager::image($content->image) }} 2x"
-                    sizes="(max-width: 400px) 480px, 800px"
-                    alt="{{ $content->image_alt }}"
-                  >
+                  @if($content->picture)
+                    <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
+                    </div>
                   @else
                     @svg('no-picture')
                   @endif

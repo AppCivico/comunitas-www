@@ -47,7 +47,8 @@
                   >
 
                   @if($content->picture)
-                    <img src="{{ $content->picture }}" alt="{{ $content->name }}">
+                    <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
+                    </div>
                   @elseif($content->image)
                     <img
                       src="{{ Voyager::image($content->image) }}"
