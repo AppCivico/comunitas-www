@@ -24,7 +24,6 @@
                 <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
                   @if($content->picture)
                     <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
-                      {{-- <img src="{{ $content->picture }}" alt="{{ $content->name }}"> --}}
                     </div>
                   @else
                     @svg('no-picture')
@@ -56,27 +55,32 @@
           @foreach($contents as $content)
             <article class="section__item">
               <div class="sections__image">
-                  <a
-                    @if($content->external_link)
-                      href="{{ $content->external_link }}" target="blank"
-                    @elseif($content->slug)
-                      href="{{ route($content->type, [$content->type => $content->slug]) }}"
-                    @endif
-                  >
-                  <img
-                    src="{{ Voyager::image($content->image) }}"
-                    srcset="{{ Voyager::image($content->thumbnail('small')) }},
-                    {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
-                    {{ Voyager::image( $content->image ) }} 2x"
-                    sizes="(max-width: 400px) 480px, 800px"
-                    alt="{{ $content->image_alt }}"
-                  >
+                <a
+                  @if($content->external_link)
+                    href="{{ $content->external_link }}" target="blank"
+                  @elseif($content->slug)
+                    href="{{ route($content->type, [$content->type => $content->slug]) }}"
+                  @endif
+                >
+                  @if($content->image)
+                    <img
+                      src="{{ Voyager::image($content->image) }}"
+                      srcset="{{ Voyager::image($content->thumbnail('small')) }},
+                      {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
+                      {{ Voyager::image( $content->image ) }} 2x"
+                      sizes="(max-width: 400px) 480px, 800px"
+                      alt="{{ $content->image_alt }}"
+                    >
+                  @else
+                    @svg('no-picture')
+                  @endif
                 </a>
-                <div class="section__tags">
-                  @foreach($content->categories as $category)
-                    <a>{{ $category->name }}</a>
-                  @endforeach
-
+                <div class="section__image-text-over">
+                  <div class="section__tags">
+                    @foreach($content->categories as $category)
+                      <a>{{ $category->name }}</a>
+                    @endforeach
+                  </div>
                   <a
                     @if($content->external_link)
                       href="{{ $content->external_link }}" target="blank"
@@ -101,7 +105,6 @@
                     </h2>
                   </a>
                 </div>
-
               </div>
             </article>
           @endforeach
