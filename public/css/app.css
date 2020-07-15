@@ -2357,11 +2357,13 @@ html {
   .sections__list--small .section__item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 0;
     margin-left: 0;
   }
 }
 
 .sections__list--small .section__tags {
+  height: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
 }
@@ -2377,8 +2379,10 @@ html {
 }
 
 .sections__list--small .section__small-section-title {
+  align-items: flex-end;
   width: 100%;
   padding: 0;
+  color: white;
   background-color: transparent;
 }
 
