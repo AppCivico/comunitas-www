@@ -36,7 +36,7 @@
               <div class="sections__image">
                   <a
                     @if($content->type === 'article')
-                      href="{{ Storage::url(json_decode($content->external_link)[0]->download_link) }}" target="blank"
+                      href="{{ Storage::url($content->external_link) }}" target="blank"
                     @elseif($content->external_link)
                       href="{{ $content->external_link }}" target="blank"
                     @elseif($content->type === 'trail')
@@ -76,7 +76,7 @@
 
               <a
                 @if($content->type === 'article')
-                  href="{{ Storage::url(json_decode($content->external_link)[0]->download_link) }}" target="blank"
+                  href="{{ Storage::url($content->external_link) }}" target="blank"
                 @elseif($content->external_link)
                   href="{{ $content->external_link }}" target="blank"
                 @elseif($content->type === 'trail')

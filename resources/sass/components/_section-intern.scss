@@ -36,9 +36,10 @@
   margin-right: 0.2rem;
   margin-bottom: 0.3rem;
   margin-left: 0.2rem;
+  font-weight: font-weight('bold');
   font-size: ms(-2);
-  color: palette('white');
-  background-color: palette('red', 'violet');
+  color: palette('blue');
+  background-color: palette('green');
   border-radius: 33px;
 }
 

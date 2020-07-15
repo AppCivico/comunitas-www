@@ -2385,9 +2385,10 @@ html {
   margin-right: 0.2rem;
   margin-bottom: 0.3rem;
   margin-left: 0.2rem;
+  font-weight: 600;
   font-size: 0.7901234568em;
-  color: white;
-  background-color: #f43e7f;
+  color: #015295;
+  background-color: #05d7bd;
   border-radius: 33px;
 }
 
