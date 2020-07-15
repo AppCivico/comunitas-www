@@ -70,7 +70,7 @@ dt a {
 h1 {
   font-size: ms(6);
   line-height: 1;
-  color: palette('blue');
+  color: palette('purple');
 
   @media screen and (min-width: breakpoint('tablet')) {
     font-size: ms(8);
@@ -444,5 +444,5 @@ blockquote.verse p { // sass-lint:disable-line no-qualifying-elements
 }
 
 .text-destak {
-  color: palette('red', 'violet');
+  color: palette('green');
 }

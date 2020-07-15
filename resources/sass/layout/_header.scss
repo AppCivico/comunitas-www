@@ -3,7 +3,7 @@
   top: 0;
   z-index: layer('modal');
   color: inherit;
-  background-color: palette('blue');
+  background-color: palette('purple');
 
   @media screen and (min-width: breakpoint('desktop')) {
     position: fixed;
@@ -55,12 +55,12 @@
 .site-header__institutional .site-header__search-button {
   display: block;
   margin-left: auto;
-  background-image: image('icons/magnifying-glass-blue.svg');
+  background-image: image('icons/magnifying-glass-purple.svg');
 }
 
 .site-header__institutional ul a {
   font-size: ms(-1);
-  color: palette('blue');
+  color: palette('purple');
 }
 
 .site-header__institutional .button {

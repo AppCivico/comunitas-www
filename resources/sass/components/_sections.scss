@@ -56,7 +56,7 @@
   margin-bottom: 1.5rem;
   font-size: ms(0);
   font-family: $orkney-bold-font-stack;
-  color: palette('blue');
+  color: palette('purple');
   border-bottom: 1px solid palette('gray');
 
   @media screen and (min-width: breakpoint('desktop')) {
@@ -92,7 +92,7 @@
   appearance: none;
 
   &:focus {
-    outline: 2px solid palette('blue');
+    outline: 2px solid palette('purple');
     outline-offset: 2px;
   }
 
@@ -229,10 +229,11 @@ $sections-list-tablet-margin: 1rem;
   margin-right: 0.2rem;
   margin-bottom: 0.3rem;
   margin-left: 0.2rem;
+  font-weight: font-weight('bold');
   font-size: ms(-2);
   text-decoration: none;
-  color: palette('white');
-  background-color: palette('red', 'violet');
+  color: palette('blue');
+  background-color: palette('green');
   border-radius: 33px;
 }
 
@@ -251,7 +252,7 @@ $sections-list-tablet-margin: 1rem;
   line-height: 1.2;
   font-family: $orkney-bold-font-stack;
   text-transform: uppercase;
-  color: palette('blue');
+  color: palette('purple');
   background: transparent;
 
   @media screen and (min-width: breakpoint('desktop')) {
@@ -360,7 +361,7 @@ $sections-list-tablet-margin: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: ms(3);
-  color: palette('blue');
+  color: palette('purple');
 
   @media screen and (min-width: breakpoint('tablet')) {
     font-size: ms(7);

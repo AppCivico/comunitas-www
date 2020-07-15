@@ -88,7 +88,7 @@
                 @endisset
               </div>
 
-              <ul class="social-icons social-icons--red">
+              <ul class="social-icons social-icons">
                 @isset($content->author->facebook)
                   <li>
                       <a href="{{ $content->author->facebook }}" class="social-icons__facebook">
@@ -152,7 +152,7 @@
                     @endif
                   </div>
 
-                  <ul class="social-icons social-icons--red">
+                  <ul class="social-icons social-icons">
                     @if($author->facebook)
                       <li>
                           <a href="{{ $author->facebook }}" class="social-icons__facebook">

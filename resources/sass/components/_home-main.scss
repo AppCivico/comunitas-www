@@ -18,7 +18,7 @@
 
 .home-main__tiny-text {
   font-size: ms(-3);
-  color: palette('blue');
+  color: palette('purple');
 
   @media screen and (min-width: breakpoint('desktop')) {
     width: 100%;
@@ -57,14 +57,14 @@
 }
 
 .home-main__title span {
-  color: palette('red', 'violet');
+  color: palette('green');
 }
 
 .home-main__row h2 {
   margin: 1rem 0 0;
   font-size: ms(2);
   text-transform: uppercase;
-  color: palette('blue');
+  color: palette('purple');
 
   @media screen and (min-width: breakpoint('desktop')) {
     margin-bottom: 1rem;

@@ -116,21 +116,21 @@
             <h1 class="home-main__title">A plataforma é <span>aberta</span> e <span>gratuita</span> para acesso a todo o conteúdo disponível</h1>
             <div class="home-main__rows">
               <div class="home-main__row">
-                <img src="{{ url('images/icons/speedometer--purple.svg') }}" alt="Progresso">
+                <img src="{{ url('images/icons/speedometer.svg') }}" alt="Progresso">
                 <div class="home-main__intern-text">
                   <h2>Progresso</h2>
                   <p>Área onde o usuário pode ver todos as trilhas e seu progresso</p>
                 </div>
               </div>
               <div class="home-main__row">
-                <img src="{{ url('images/icons/book--purple.svg') }}" alt="Trilhas">
+                <img src="{{ url('images/icons/book.svg') }}" alt="Trilhas">
                 <div class="home-main__intern-text">
                   <h2>Trilhas</h2>
                   <p>As melhores trilhas para melhorias dos serviços prestados à população</p>
                 </div>
               </div>
               <div class="home-main__row">
-                <img src="{{ url('images/icons/dialog--purple.svg') }}" alt="Progresso">
+                <img src="{{ url('images/icons/dialog.svg') }}" alt="Progresso">
                 <div class="home-main__intern-text">
                   <h2>Forúm</h2>
                   <p>Tirar dúvidas, conhecer pessoas e replicar seu conhecimento com pessoas engajadas</p>

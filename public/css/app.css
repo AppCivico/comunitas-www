@@ -582,7 +582,7 @@ dt a:link {
 h1 {
   font-size: 2.0272865295em;
   line-height: 1;
-  color: #015295;
+  color: #7654a3;
 }
 
 @media screen and (min-width: 48em) {
@@ -902,7 +902,7 @@ blockquote.verse p {
 }
 
 .text-destak {
-  color: #f43e7f;
+  color: #05d7bd;
 }
 
 /* CLASSES
@@ -1032,7 +1032,7 @@ textarea[aria-busy=true] {
 }
 
 .color-blue {
-  color: #015295;
+  color: #7654a3;
 }
 
 .container {
@@ -1083,7 +1083,7 @@ html {
   top: 0;
   z-index: 5000;
   color: inherit;
-  background-color: #015295;
+  background-color: #7654a3;
 }
 
 @media screen and (min-width: 64em) {
@@ -1139,12 +1139,12 @@ html {
 .site-header__institutional .site-header__search-button {
   display: block;
   margin-left: auto;
-  background-image: url("/images/icons/magnifying-glass-blue.svg");
+  background-image: url("/images/icons/magnifying-glass-purple.svg");
 }
 
 .site-header__institutional ul a {
   font-size: 0.8888888889em;
-  color: #015295;
+  color: #7654a3;
 }
 
 .site-header__institutional .button {
@@ -1374,7 +1374,7 @@ html {
 
 .main-nav a {
   letter-spacing: 0.1rem;
-  color: #015295;
+  color: #7654a3;
 }
 
 @media screen and (min-width: 64em) {
@@ -1497,7 +1497,7 @@ html {
   font-size: 1em;
   line-height: 0;
   color: white;
-  background-color: #015295;
+  background-color: #7654a3;
   border: 0;
   border-radius: 50%;
   box-sizing: border-box;
@@ -1650,7 +1650,7 @@ html {
   font-size: 1.125em;
   line-height: 1.5;
   font-family: "orkneybold", sans-serif;
-  color: #015295;
+  color: #7654a3;
 }
 
 .footer__about {
@@ -1685,7 +1685,7 @@ html {
 .footer__logo {
   width: 7.75rem;
   height: 5.93rem;
-  background-image: url("/images/logo-blue.svg");
+  background-image: url("/images/logo-purple.svg");
 }
 
 .footer__social {
@@ -1695,7 +1695,7 @@ html {
 .footer__social strong {
   font-size: 1.125em;
   text-transform: uppercase;
-  color: #015295;
+  color: #7654a3;
 }
 
 .footer__social ul {
@@ -1802,13 +1802,13 @@ html {
   font-weight: 600;
   line-height: 1.2;
   color: white;
-  background-color: #015295;
+  background-color: #7654a3;
   border: 0;
   border-radius: 5px;
 }
 
 .button--secondary {
-  background-color: #f43e7f;
+  background-color: #05d7bd;
 }
 
 .button--big {
@@ -1995,7 +1995,7 @@ html {
   margin-bottom: 1.5rem;
   font-size: 1em;
   font-family: "orkneybold", sans-serif;
-  color: #015295;
+  color: #7654a3;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -2037,7 +2037,7 @@ html {
 }
 
 .sections__select select:focus {
-  outline: 2px solid #015295;
+  outline: 2px solid #7654a3;
   outline-offset: 2px;
 }
 
@@ -2169,10 +2169,11 @@ html {
   margin-right: 0.2rem;
   margin-bottom: 0.3rem;
   margin-left: 0.2rem;
+  font-weight: 600;
   font-size: 0.7901234568em;
   text-decoration: none;
-  color: white;
-  background-color: #f43e7f;
+  color: #015295;
+  background-color: #05d7bd;
   border-radius: 33px;
 }
 
@@ -2191,7 +2192,7 @@ html {
   line-height: 1.2;
   font-family: "orkneybold", sans-serif;
   text-transform: uppercase;
-  color: #015295;
+  color: #7654a3;
   background: transparent;
 }
 
@@ -2308,7 +2309,7 @@ html {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.423828125em;
-  color: #015295;
+  color: #7654a3;
 }
 
 @media screen and (min-width: 48em) {
@@ -2409,7 +2410,7 @@ html {
 
 .section-intern__modules-title {
   font-size: 1.8020324707em;
-  color: #015295;
+  color: #7654a3;
 }
 
 .section-intern__modules {
@@ -2509,7 +2510,7 @@ html {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 0.7901234568em;
-  color: #015295;
+  color: #7654a3;
 }
 
 .section-intern__text .social-icons {
@@ -2529,7 +2530,7 @@ html {
 
 .section-intern__related h2 {
   width: 100%;
-  color: #015295;
+  color: #7654a3;
 }
 
 .social-icons {
@@ -2570,26 +2571,6 @@ html {
 
 .social-icons__instagram {
   background-image: url("/images/icons/social/instagram.svg");
-}
-
-.social-icons--red .social-icons__facebook {
-  background-image: url("/images/icons/social/facebook-red.svg");
-}
-
-.social-icons--red .social-icons__linkedin {
-  background-image: url("/images/icons/social/linkedin-red.svg");
-}
-
-.social-icons--red .social-icons__twitter {
-  background-image: url("/images/icons/social/twitter-red.svg");
-}
-
-.social-icons--red .social-icons__youtube {
-  background-image: url("/images/icons/social/youtube-red.svg");
-}
-
-.social-icons--red .social-icons__instagram {
-  background-image: url("/images/icons/social/instagram-red.svg");
 }
 
 .pagination {
@@ -2638,7 +2619,7 @@ html {
 }
 
 .home-banner {
-  background-color: #015295;
+  background-color: #7654a3;
 }
 
 .home-banner__container {
@@ -2742,7 +2723,7 @@ html {
 
 .home-main__tiny-text {
   font-size: 0.7023319616em;
-  color: #015295;
+  color: #7654a3;
 }
 
 @media screen and (min-width: 64em) {
@@ -2785,14 +2766,14 @@ html {
 }
 
 .home-main__title span {
-  color: #f43e7f;
+  color: #05d7bd;
 }
 
 .home-main__row h2 {
   margin: 1rem 0 0;
   font-size: 1.265625em;
   text-transform: uppercase;
-  color: #015295;
+  color: #7654a3;
 }
 
 @media screen and (min-width: 64em) {

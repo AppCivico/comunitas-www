@@ -116,7 +116,7 @@
 
 .main-nav a {
   letter-spacing: 0.1rem;
-  color: palette('blue');
+  color: palette('purple');
 
   @media screen and (min-width: breakpoint('desktop')) {
     display: flex;
@@ -228,7 +228,7 @@
   font-size: 1em;
   line-height: 0;
   color: palette('white');
-  background-color: palette('blue');
+  background-color: palette('purple');
   border: 0;
   border-radius: 50%;
   box-sizing: border-box;
@@ -314,6 +314,6 @@
 // .menu li:last-child a {
 //   padding: 0.6em 2em;
 //   color: palette('white');
-//   background-color: palette('blue');
+//   background-color: palette('purple');
 //   border-radius: 20px;
 // }

@@ -51,7 +51,7 @@
   font-size: ms(1);
   line-height: 1.5;
   font-family: $orkney-bold-font-stack;
-  color: palette('blue');
+  color: palette('purple');
 }
 
 .footer__about {
@@ -83,7 +83,7 @@
 .footer__logo {
   width: 7.75rem;
   height: 5.93rem;
-  background-image: image('logo-blue.svg');
+  background-image: image('logo-purple.svg');
 }
 
 .footer__social {
@@ -93,7 +93,7 @@
 .footer__social strong {
   font-size: ms(1);
   text-transform: uppercase;
-  color: palette('blue');
+  color: palette('purple');
 }
 
 .footer__social ul {
