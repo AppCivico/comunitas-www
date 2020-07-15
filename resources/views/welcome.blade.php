@@ -23,7 +23,8 @@
               <div class="sections__image">
                 <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
                   @if($content->picture)
-                    <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
+                    <div class="sections__image-picture">
+                      <img src="{{ $content->picture }}" alt="{{ $content->name }}">
                     </div>
                   @else
                     @svg('no-picture')
@@ -39,9 +40,9 @@
               <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
                 <h2 class="sections__list-title">
                   @isset($content->title)
-                    {{ $content->title }}
+                    {{ Str::limit($content->title, 55) }}
                   @elseif($content->name)
-                    {{ $content->name }}
+                    {{ Str::limit($content->name, 55) }}
                   @endisset
                 </h2>
               </a>
@@ -93,9 +94,9 @@
 
                     <h2>
                       @isset($content->title)
-                        {{ $content->title }}
+                        {{ Str::limit($content->title, 55) }}
                       @elseif($content->name)
-                        {{ $content->name }}
+                        {{ Str::limit($content->name, 55) }}
                       @endisset
                     </h2>
                   </a>

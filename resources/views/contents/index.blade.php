@@ -47,7 +47,8 @@
                   >
 
                   @if($content->picture)
-                    <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
+                    <div class="sections__image-picture">
+                      <img src="{{ $content->picture }}" alt="{{ $content->name }}">
                     </div>
                   @elseif($content->image)
                     <img
