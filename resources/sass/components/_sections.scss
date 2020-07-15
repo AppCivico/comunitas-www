@@ -157,6 +157,11 @@ $sections-list-tablet-margin: 1rem;
 
 .section__item--small {
   @media screen and (min-width: breakpoint('tablet')) {
+    width: calc(50% - (2 * #{$sections-list-tablet-margin}));
+    margin: $sections-list-tablet-margin;
+  }
+
+  @media screen and (min-width: breakpoint('desktop')) {
     width: calc(33.333% - (2 * #{$sections-list-tablet-margin}));
     margin: $sections-list-tablet-margin;
   }

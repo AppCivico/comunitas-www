@@ -32,7 +32,7 @@
       <div class="sections__list">
         @isset($contents)
           @foreach($contents as $content)
-            <article class="section__item @if($content->external_link) section__item--small @endif">
+            <article class="section__item section__item--small">
               <div class="sections__image">
                   <a
                     @if($content->type === 'article')
@@ -99,7 +99,7 @@
                   @endisset
                 </h2>
 
-                @if($type ?? '' === 'trails')
+                @if($type ?? '' ?? '' === 'trails')
                   <p class="section__excerpt">
                     {{ Str::words($content->excerpt, 30) }}
                   </p>
