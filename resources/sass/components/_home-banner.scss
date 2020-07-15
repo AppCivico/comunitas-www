@@ -13,12 +13,16 @@
   }
 }
 
-.home-banner__title {
+.home-banner__title h1,
+.home-banner__title h2,
+.home-banner__title h3,
+.home-banner__title h4 {
   margin-bottom: 4rem;
   line-height: 1.3;
   letter-spacing: 1px;
   color: palette('white');
 }
+
 
 .home-banner__image {
   position: relative;

@@ -6,6 +6,15 @@ function tinymce_init_callback(editor) {
     selector: 'textarea.richTextBox',
     height: 500,
     menubar: false,
+    fontsize_formats: "9.989px 16px 18px 22.781px 32.437px 46.184px",
+    textcolor_map: [
+      "000000", "Black",
+      "797979", "Gray",
+      "FFFFFF", "White",
+      "6C41A0", "Purple",
+      "05D7BD", "Green",
+      "F5CB38", "Yellow"
+    ],
     skin_url: $('meta[name="assets-path"]').attr('content') + '?path=js/skins/voyager',
     plugins: 'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern help code textcolor',
     file_browser_callback: function (field_name, url, type, win) {
@@ -17,7 +26,7 @@ function tinymce_init_callback(editor) {
     //   'searchreplace visualblocks code fullscreen',
     //   'insertdatetime media table paste code help wordcount'
     // ],
-    toolbar: 'formatselect | bold italic strikethrough | forecolor backcolor | link image media | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | ltr rtl | removeformat | code',
+    toolbar: 'formatselect | bold italic strikethrough | fontsizeselect | forecolor backcolor | link image media | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | ltr rtl | removeformat | code',
     external_plugins: {
       'print': '/tinymce/plugins/print/plugin.min.js',
       'preview': '/tinymce/plugins/preview/plugin.min.js',

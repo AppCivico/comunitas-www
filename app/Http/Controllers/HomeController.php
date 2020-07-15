@@ -10,6 +10,7 @@ use App\Interview;
 use App\Article;
 use App\News;
 use App\Trail;
+use App\Banner;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,8 @@ class HomeController extends Controller
             // Article::first(),
             // News::first(),
         ];
+        $banner = Banner::first();
 
-        return view('welcome', compact('trails', 'contents'));
+        return view('welcome', compact('trails', 'contents', 'banner'));
     }
 }
