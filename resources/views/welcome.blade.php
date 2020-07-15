@@ -23,8 +23,8 @@
               <div class="sections__image">
                 <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
                   @if($content->picture)
-                    <div class="sections__image-picture">
-                      <img src="{{ $content->picture }}" alt="{{ $content->name }}">
+                    <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
+                      {{-- <img src="{{ $content->picture }}" alt="{{ $content->name }}"> --}}
                     </div>
                   @else
                     @svg('no-picture')

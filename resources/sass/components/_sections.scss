@@ -169,18 +169,27 @@ $sections-list-tablet-margin: 1rem;
 
 .sections__image-picture {
   display: flex;
+  width: 100%;
+  height: 14.25rem;
+  background-position: center;
+  background-size: cover;
 
-  // @media screen and (min-width: breakpoint('tablet')) {
-  //   max-height: 21.25rem;
-  // }
-  //
-  // @media screen and (min-width: breakpoint('desktop')) {
-  //   height: 16.25rem;
-  // }
-  //
-  // @media screen and (min-width: breakpoint('wide')) {
-  //   height: 16.938rem;
-  // }
+
+  @media screen and (min-width: breakpoint('phablet')) {
+    height: 24.25rem;
+  }
+
+  @media screen and (min-width: breakpoint('tablet')) {
+    height: 15.25rem;
+  }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    height: 12.875rem;
+  }
+
+  @media screen and (min-width: breakpoint('wide')) {
+    height: 12.875rem;
+  }
 }
 
 .sections__image-picture img {

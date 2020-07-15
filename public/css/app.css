@@ -2120,6 +2120,34 @@ html {
 
 .sections__image-picture {
   display: flex;
+  width: 100%;
+  height: 14.25rem;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 30em) {
+  .sections__image-picture {
+    height: 24.25rem;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .sections__image-picture {
+    height: 15.25rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .sections__image-picture {
+    height: 12.875rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .sections__image-picture {
+    height: 12.875rem;
+  }
 }
 
 .sections__image-picture img {
