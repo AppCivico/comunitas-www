@@ -150,23 +150,49 @@
     </div>
 
     <div class="testimonials">
-      <div class="container">
-        <span class="testimonials__tiny-text">
-          Comentários das pessoas que fazem a Rede Juntos
-        </span>
+      <div class="container container--flex">
         <div class="testimonials__text">
+          <span class="testimonials__tiny-text">
+            Comentários das pessoas que fazem a Rede Juntos
+          </span>
           <p>
             Iniciativas que visam à combinação de forças de diferentes setores da sociedade possuem potencial inestimável de promoção de melhorias no poder público.
           </p>
         </div>
         <div class="testimonials__content">
-          <blockquote>
-            <figure>
-              <img src="https://www.placecage.com/45/45" alt="lalala">
-            </figure>
-            <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
-            <footer><cite>Nome da pessoa</cite> - Empresa</footer>
-          </blockquote>
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <blockquote>
+                    <figure>
+                      <img src="https://www.placecage.com/45/45" alt="lalala">
+                    </figure>
+                    <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
+                    <footer><cite>Nome da pessoa</cite> - Empresa</footer>
+                  </blockquote>
+                </li>
+                <li class="splide__slide">
+                  <blockquote>
+                    <figure>
+                      <img src="https://www.placecage.com/45/45" alt="lalala">
+                    </figure>
+                    <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
+                    <footer><cite>Nome da pessoa</cite> - Empresa</footer>
+                  </blockquote>
+                </li>
+                <li class="splide__slide">
+                  <blockquote>
+                    <figure>
+                      <img src="https://www.placecage.com/45/45" alt="lalala">
+                    </figure>
+                    <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
+                    <footer><cite>Nome da pessoa</cite> - Empresa</footer>
+                  </blockquote>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
