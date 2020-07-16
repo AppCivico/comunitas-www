@@ -1,0 +1,60 @@
+.testimonials {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: palette('white');
+  background-color: palette('purple');
+}
+
+.testimonials__tiny-text {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: ms(-2);
+  text-transform: uppercase;
+  color: palette('yellow');
+}
+
+.testimonials__text {
+  font-size: ms(3);
+  line-height: 1.25;
+  font-family: $orkney-bold-font-stack;
+}
+
+.testimonials__text p {
+  line-height: inherit;
+}
+
+.testimonials__content {
+  width: 100%;
+  margin-top: 4rem;
+  background-color: palette('white');
+  border-radius: 6px;
+}
+
+.testimonials__content figure {
+  display: flex;
+  margin: 0 0 -0.5rem;
+  transform: translateY(-50%);
+}
+
+.testimonials__content img {
+  margin-left: 0;
+  border-radius: 50%;
+}
+
+.testimonials__content blockquote {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  font-style: normal;
+  font-size: ms(-1);
+  text-align: left;
+}
+
+.testimonials__content footer {
+  font-size: ms(-1);
+}
+
+.testimonials__content cite {
+  font-style: normal;
+  font-size: ms(-1);
+  font-family: $orkney-bold-font-stack;
+}

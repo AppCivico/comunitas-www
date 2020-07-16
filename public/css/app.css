@@ -2865,3 +2865,64 @@ html {
   }
 }
 
+.testimonials {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: white;
+  background-color: #7654a3;
+}
+
+.testimonials__tiny-text {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 0.7901234568em;
+  text-transform: uppercase;
+  color: #ffcc33;
+}
+
+.testimonials__text {
+  font-size: 1.423828125em;
+  line-height: 1.25;
+  font-family: "orkneybold", sans-serif;
+}
+
+.testimonials__text p {
+  line-height: inherit;
+}
+
+.testimonials__content {
+  width: 100%;
+  margin-top: 4rem;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.testimonials__content figure {
+  display: flex;
+  margin: 0 0 -0.5rem;
+  transform: translateY(-50%);
+}
+
+.testimonials__content img {
+  margin-left: 0;
+  border-radius: 50%;
+}
+
+.testimonials__content blockquote {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  font-style: normal;
+  font-size: 0.8888888889em;
+  text-align: left;
+}
+
+.testimonials__content footer {
+  font-size: 0.8888888889em;
+}
+
+.testimonials__content cite {
+  font-style: normal;
+  font-size: 0.8888888889em;
+  font-family: "orkneybold", sans-serif;
+}
+
