@@ -137,10 +137,25 @@
               <div class="footer__social">
                 <strong>Siga-nos</strong>
                 <ul>
-                  <li><a class="footer__facebook" href="">Facebook</a></li>
-                  <li><a class="footer__twitter" href="">Twitter</a></li>
-                  <li><a class="footer__instagram" href="">Instagram</a></li>
-                  <li><a class="footer__youtube" href="">YouTube</a></li>
+                  <li>
+                    <a class="footer__facebook" href="https://web.facebook.com/ComunitasBR" target="_blank">
+                      Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a class="footer__twitter" href="https://twitter.com/ComunitasBR" target="_blank">
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a class="footer__instagram" href="https://www.instagram.com/comunitasbr" target="_blank">
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a class="footer__youtube" href="https://www.youtube.com/channel/UC53N5fT0dLmFoy_El2EUHTA" target="_blank">
+                      YouTube</a>
+                  </li>
                 </ul>
               </div>
             </div>
