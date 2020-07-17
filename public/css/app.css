@@ -2875,7 +2875,7 @@ html {
 
 @media screen and (min-width: 64em) {
   .testimonials {
-    min-height: 25rem;
+    min-height: 30rem;
     background-image: url("http://www.placecage.com/585/498");
     background-size: 50%;
   }
@@ -2904,12 +2904,43 @@ html {
   color: #ffcc33;
 }
 
+.testimonials__text blockquote {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-size: 1em;
+  text-align: left;
+  color: white;
+}
+
+.testimonials__text footer {
+  display: flex;
+  align-items: center;
+  font-size: 0.624295077em;
+}
+
+.testimonials__text footer::before {
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.12rem;
+  margin-right: 0.5rem;
+  background-color: white;
+  content: "";
+}
+
+.testimonials__text cite {
+  margin-right: 1ex;
+  font-style: normal;
+  font-size: 1em;
+}
+
 .testimonials__text p {
   line-height: inherit;
 }
 
 .testimonials__content {
   width: 100%;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 64em) {
@@ -2917,10 +2948,7 @@ html {
     position: absolute;
     right: 0;
     bottom: 2rem;
-    align-self: flex-end;
     width: 70%;
-    max-width: 81.25rem;
-    padding-left: 2rem;
   }
 }
 
@@ -2931,13 +2959,15 @@ html {
 }
 
 .testimonials__content img {
+  width: 3rem;
+  height: 3rem;
   margin-left: 0;
   border-radius: 50%;
 }
 
 .testimonials__content blockquote {
   padding: 0 1rem 1rem 4rem;
-  margin: 2rem 0 0;
+  margin: 2.5rem 0 0;
   font-style: normal;
   font-size: 0.8888888889em;
   text-align: left;

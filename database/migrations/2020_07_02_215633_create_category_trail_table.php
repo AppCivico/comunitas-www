@@ -13,12 +13,15 @@ class CreateCategoryTrailTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_trail', function (Blueprint $table) {
-			$table->increments('id');
-			$table->integer('category_id');
-			$table->integer('trail_id');
-			$table->timestamps();
-        });
+
+        if(!Schema::hasTable('trails')) {
+            Schema::create('category_trail', function (Blueprint $table) {
+                $table->increments('id');
+                $table->integer('category_id');
+                $table->integer('trail_id');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -13,29 +13,29 @@ class AddCmsFieldsToTrailsTable extends Migration
      */
     public function up()
     {
-        if(!Schema::hasTable('trails')) {
-            Schema::create('trails', function(Blueprint $table)
-            {
-                $table->increments('id');
-            });
-        }
-
-        Schema::table('trails', function (Blueprint $table) {
-            $table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT')->nullable();
-			$table->string('type')->default('trail');
-            $table->string('slug', 250)->unique('trails_slug_unique')->nullable();
-            $table->text('excerpt', 65535)->nullable();
-            $table->text('body', 65535)->nullable();
-            $table->string('image')->nullable();
-            $table->string('image_alt')->nullable();
-            $table->string('duration')->nullable();
-            $table->string('seo_title')->nullable();
-            $table->text('meta_description', 65535)->nullable();
-            $table->text('featured')->nullable();
-            $table->integer('person_id')->nullable();
-            $table->integer('order')->nullable();
-            $table->text('updated_at')->nullable();
-        });
+        // if(!Schema::hasTable('trails')) {
+        //     Schema::create('trails', function(Blueprint $table)
+        //     {
+        //         $table->increments('id');
+        //     });
+        // }
+        //
+        // Schema::table('trails', function (Blueprint $table) {
+        //     $table->enum('status', array('PUBLISHED','DRAFT','PENDING'))->default('DRAFT')->nullable();
+		// 	$table->string('type')->default('trail');
+        //     $table->string('slug', 250)->unique('trails_slug_unique')->nullable();
+        //     $table->text('excerpt', 65535)->nullable();
+        //     $table->text('body', 65535)->nullable();
+        //     $table->string('image')->nullable();
+        //     $table->string('image_alt')->nullable();
+        //     $table->string('duration')->nullable();
+        //     $table->string('seo_title')->nullable();
+        //     $table->text('meta_description', 65535)->nullable();
+        //     $table->text('featured')->nullable();
+        //     $table->integer('person_id')->nullable();
+        //     $table->integer('order')->nullable();
+        //     $table->text('updated_at')->nullable();
+        // });
     }
 
     /**

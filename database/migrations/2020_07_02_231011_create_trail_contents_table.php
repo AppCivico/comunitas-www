@@ -13,15 +13,18 @@ class CreateTrailContentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('trail_contents', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-            $table->text('body', 16777215)->nullable();
-            $table->string('image')->nullable();
-            $table->text('meta_description', 16777215)->nullable();
-            $table->string('seo_title')->nullable();
-            $table->timestamps();
-        });
+
+        if(!Schema::hasTable('trails')) {
+            Schema::create('trail_contents', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('title');
+                $table->text('body', 16777215)->nullable();
+                $table->string('image')->nullable();
+                $table->text('meta_description', 16777215)->nullable();
+                $table->string('seo_title')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**

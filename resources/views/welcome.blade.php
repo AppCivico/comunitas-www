@@ -1,19 +1,23 @@
 <x-layout>
   <main class="sections">
 
-    <header class="home-banner">
-      <div class="home-banner__container">
-        <div class="home-banner__title">
-          {!! $banner->body !!}
+    @if($banner)
+      <header class="home-banner">
+        <div class="home-banner__container">
+          <div class="home-banner__title">
+            {!! $banner->body !!}
+          </div>
+          <div class="home-banner__image">
+            <img
+              src="{{ voyager::image($banner->image) }}"
+              srcset="{{ voyager::image($banner->image) }} 2x,
+              {{ voyager::image($banner->thumbnail('medium', 'image')) }} 1x"
+              alt="{{ $banner->body }}"
+            >
+          </div>
         </div>
-        <div class="home-banner__image">
-          <img
-            src="{{ Voyager::image($banner->image) }}"
-            alt="{{ $banner->body }}"
-          >
-        </div>
-      </div>
-    </header>
+      </header>
+    @endif
 
     <div class="container sections__container">
       <h2 class="sections__list-main-title">Novidades</h2>
@@ -149,53 +153,9 @@
         </div>
     </div>
 
-    <div class="testimonials">
-      <div class="container container--flex">
-        <div class="testimonials__text">
-          <span class="testimonials__tiny-text">
-            Comentários das pessoas que fazem a Rede Juntos
-          </span>
-          <p>
-            Iniciativas que visam à combinação de forças de diferentes setores da sociedade possuem potencial inestimável de promoção de melhorias no poder público.
-          </p>
-        </div>
-        <div class="testimonials__content">
-          <div class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <blockquote>
-                    <figure>
-                      <img src="https://www.placecage.com/45/45" alt="lalala">
-                    </figure>
-                    <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
-                    <footer><cite>Nome da pessoa</cite> - Empresa</footer>
-                  </blockquote>
-                </li>
-                <li class="splide__slide">
-                  <blockquote>
-                    <figure>
-                      <img src="https://www.placecage.com/45/45" alt="lalala">
-                    </figure>
-                    <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
-                    <footer><cite>Nome da pessoa</cite> - Empresa</footer>
-                  </blockquote>
-                </li>
-                <li class="splide__slide">
-                  <blockquote>
-                    <figure>
-                      <img src="https://www.placecage.com/45/45" alt="lalala">
-                    </figure>
-                    <p>Elit explicabo soluta accusamus fuga aperiam Asperiores porro quibusdam obcaecati labore quos?</p>
-                    <footer><cite>Nome da pessoa</cite> - Empresa</footer>
-                  </blockquote>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    @if(isset($testimonials))
+      <x-testimonials :testimonials="$testimonials"/>
+    @endif
 
   </main>
 </x-layout>

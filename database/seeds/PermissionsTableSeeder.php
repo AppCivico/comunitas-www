@@ -1025,6 +1025,86 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:31:26',
                 'updated_at' => '2020-07-08 23:31:26',
             ),
+            126 => 
+            array (
+                'id' => 132,
+                'key' => 'browse_banners',
+                'table_name' => 'banners',
+                'created_at' => '2020-07-17 19:31:21',
+                'updated_at' => '2020-07-17 19:31:21',
+            ),
+            127 => 
+            array (
+                'id' => 133,
+                'key' => 'read_banners',
+                'table_name' => 'banners',
+                'created_at' => '2020-07-17 19:31:21',
+                'updated_at' => '2020-07-17 19:31:21',
+            ),
+            128 => 
+            array (
+                'id' => 134,
+                'key' => 'edit_banners',
+                'table_name' => 'banners',
+                'created_at' => '2020-07-17 19:31:21',
+                'updated_at' => '2020-07-17 19:31:21',
+            ),
+            129 => 
+            array (
+                'id' => 135,
+                'key' => 'add_banners',
+                'table_name' => 'banners',
+                'created_at' => '2020-07-17 19:31:21',
+                'updated_at' => '2020-07-17 19:31:21',
+            ),
+            130 => 
+            array (
+                'id' => 136,
+                'key' => 'delete_banners',
+                'table_name' => 'banners',
+                'created_at' => '2020-07-17 19:31:21',
+                'updated_at' => '2020-07-17 19:31:21',
+            ),
+            131 => 
+            array (
+                'id' => 137,
+                'key' => 'browse_testimonials',
+                'table_name' => 'testimonials',
+                'created_at' => '2020-07-17 19:44:36',
+                'updated_at' => '2020-07-17 19:44:36',
+            ),
+            132 => 
+            array (
+                'id' => 138,
+                'key' => 'read_testimonials',
+                'table_name' => 'testimonials',
+                'created_at' => '2020-07-17 19:44:36',
+                'updated_at' => '2020-07-17 19:44:36',
+            ),
+            133 => 
+            array (
+                'id' => 139,
+                'key' => 'edit_testimonials',
+                'table_name' => 'testimonials',
+                'created_at' => '2020-07-17 19:44:36',
+                'updated_at' => '2020-07-17 19:44:36',
+            ),
+            134 => 
+            array (
+                'id' => 140,
+                'key' => 'add_testimonials',
+                'table_name' => 'testimonials',
+                'created_at' => '2020-07-17 19:44:36',
+                'updated_at' => '2020-07-17 19:44:36',
+            ),
+            135 => 
+            array (
+                'id' => 141,
+                'key' => 'delete_testimonials',
+                'table_name' => 'testimonials',
+                'created_at' => '2020-07-17 19:44:36',
+                'updated_at' => '2020-07-17 19:44:36',
+            ),
         ));
         
         

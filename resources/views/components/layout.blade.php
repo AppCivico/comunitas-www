@@ -167,33 +167,5 @@
       </footer>
 
       <script src="{{ mix('js/app.js') }}"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-      <script>
-        new Splide('.splide', {
-          arrows: false,
-          pagination: false,
-          perPage: 2,
-          autoplay: true,
-          type: 'loop',
-          gap: '2rem',
-          interval: 4000,
-          padding: {
-            right: '10rem',
-          },
-
-          breakpoints: {
-            800: {
-              perPage: 1,
-              padding: {
-                right: '0',
-                left : '0',
-              },
-            },
-          }
-        }).mount();
-      </script>
-      <!-- or the reference on CDN -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.5/dist/css/splide&#45;core.min.css"> -->
     </body>
 </html>

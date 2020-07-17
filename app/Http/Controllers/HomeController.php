@@ -11,6 +11,7 @@ use App\Article;
 use App\News;
 use App\Trail;
 use App\Banner;
+use App\Testimonial;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,8 @@ class HomeController extends Controller
             // News::first(),
         ];
         $banner = Banner::first();
+        $testimonials = Testimonial::orderBy('order')->get();
 
-        return view('welcome', compact('trails', 'contents', 'banner'));
+        return view('welcome', compact('trails', 'contents', 'banner', 'testimonials'));
     }
 }
