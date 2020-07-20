@@ -53,8 +53,8 @@
                   @elseif($content->image)
                     <img
                       src="{{ Voyager::image($content->image) }}"
-                      srcset="{{ Voyager::image($content->thumbnail('small')) }},
-                      {{ Voyager::image( $content->image ) }} 2x"
+                      srcset="{{ Voyager::image($content->thumbnail('medium')) }},
+                      {{ Voyager::image($content->image) }} 2x"
                       sizes="(max-width: 400px) 480px, 800px"
                       alt="{{ $content->image_alt }}"
                     >
