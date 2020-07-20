@@ -153,7 +153,7 @@ body > * {
 
 @media screen and (min-width: 64em) {
   body {
-    padding-top: 9.8rem;
+    padding-top: 6.6rem;
   }
 }
 
@@ -1101,7 +1101,7 @@ html {
 
 @media screen and (min-width: 64em) {
   .site-header__institutional {
-    display: block;
+    display: none;
     background-color: white;
   }
 }
@@ -1335,7 +1335,6 @@ html {
   font-family: "orkneyregular", sans-serif;
   text-align: right;
   list-style: none;
-  border-top: 1px solid #f43e7f;
 }
 
 @media screen and (min-width: 64em) {
@@ -1349,6 +1348,7 @@ html {
 }
 
 .main-nav ul ul:first-child {
+  display: none;
   margin-top: 0;
   border-top: 0;
 }

@@ -17,7 +17,9 @@
   transition: max-height 0.3s;
 
   @media screen and (min-width: breakpoint('desktop')) {
-    display: block;
+    // display: block;
+    // terporarily hide this menus
+    display: none;
     background-color: palette('white');
   }
 }
