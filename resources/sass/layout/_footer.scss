@@ -1,3 +1,10 @@
+.site-footer {
+  // terporarily hide this menus
+  @media screen and (min-width: breakpoint('desktop')) {
+    margin-top: 2rem;
+  }
+}
+
 .site-footer .container {
   @media screen and (min-width: breakpoint('desktop')) {
     display: flex;
@@ -6,6 +13,8 @@
 }
 
 .footer-nav {
+  // terporarily hide this menus
+  display: none;
   padding-top: 1.5rem;
   padding-right: 0;
   padding-bottom: 1.5rem;
@@ -19,7 +28,9 @@
   border-bottom: 1px solid palette('gray');
 
   @media screen and (min-width: breakpoint('phablet')) {
-    display: flex;
+    // display: flex;
+    // terporarily hide this menus
+    display: none;
     flex-direction: row;
     justify-content: center;
   }
