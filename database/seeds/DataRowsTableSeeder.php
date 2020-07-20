@@ -3982,7 +3982,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"resize":{"width":"1000","height":"480"},"quality":"70%","upsize":true}',
+                'details' => 'null',
                 'order' => 2,
             ),
             248 => 
@@ -3998,7 +3998,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
+                'details' => '{"resize":{"width":"2000","height":"960"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"}]}',
                 'order' => 3,
             ),
             249 => 
