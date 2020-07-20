@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Resizable;
 use App\Person;
+use Laravel\Scout\Searchable;
 
 class Trail extends Model
 {
     use Resizable;
+    use Searchable;
 
     public function categories()
     {
