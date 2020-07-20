@@ -12,6 +12,18 @@
 
       <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" >
 
+      <!-- favicon tons of tags -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=00BWXRa5zw">
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=00BWXRa5zw">
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=00BWXRa5zw">
+      <link rel="manifest" href="/images/favicon/site.webmanifest?v=00BWXRa5zw">
+      <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=00BWXRa5zw" color="#5bbad5">
+      <link rel="shortcut icon" href="/images/favicon/favicon.ico?v=00BWXRa5zw">
+      <meta name="msapplication-TileColor" content="#7654a3">
+      <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=00BWXRa5zw">
+      <meta name="theme-color" content="#7654a3">
+
+
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
