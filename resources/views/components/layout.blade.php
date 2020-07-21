@@ -109,12 +109,15 @@
       <section class="search" id="js-search">
         <div class="container search__container">
           <h1>Encontre o que te interessa</h1>
-          <form action="">
-            <input type="text" placeholder="Tema, temática, termo">
-            <select>
-              <option value="area">Área</option>
-              <option value="area">Área</option>
-              <option value="area">Área</option>
+          <form action="{{ route('search.index') }}" method="GET">
+            <input type="text" name="q" placeholder="Tema, temática, termo" required>
+            <select name="area">
+              <option value="">Todas</option>
+              {{--
+                @foreach($search_categories as $category)
+                   <option value="{{ $category->slug }}">{{ $category->name }}</option>
+                 @endforeach
+               --}}
             </select>
             <button type="submit" class="button button--big">Pesquisar</button>
           </form>

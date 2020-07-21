@@ -1101,7 +1101,7 @@ html {
 
 @media screen and (min-width: 64em) {
   .site-header__institutional {
-    display: none;
+    display: block;
     background-color: white;
   }
 }
@@ -2073,6 +2073,12 @@ html {
   .sections__list {
     margin-right: -1rem;
     margin-left: -1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .sections__list {
+    justify-content: flex-start;
   }
 }
 

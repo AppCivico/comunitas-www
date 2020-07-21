@@ -115,6 +115,10 @@ $sections-list-tablet-margin: 1rem;
     margin-right: -$sections-list-tablet-margin;
     margin-left: -$sections-list-tablet-margin;
   }
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    justify-content: flex-start;
+  }
 }
 
 .sections__list--smaller-cards {
