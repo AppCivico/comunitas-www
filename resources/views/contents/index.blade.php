@@ -13,7 +13,7 @@
     <div class="container">
       @if(isset($categories))
         <form action="" class="sections__select">
-          <strong>Categorias</strong>
+          <strong>@lang('content.categories')</strong>
           <select id="js-category-select">
             <option value="{{ url('/') }}/{{ Request::segment(1) }}">Todas</option>
             @foreach($categories as $select_category)
@@ -87,7 +87,7 @@
               >
                 @if(isset($has_obs))
                   <span class="section__download-info">
-                    Clique para fazer o download
+                    @lang('content.click-to-download')
                   </span>
                 @endif
 
@@ -109,14 +109,16 @@
                   <footer class="section__footer">
                     @isset($content->duration)
                       <div class="section__footer--item">
-                        <span>Duração</span>
+
+
+                        <span>@lang('content.duration')</span>
                         <strong>{{ $content->duration }}</strong>
                       </div>
                     @endisset
 
                     @isset($content->person)
                       <div class="section__footer--item">
-                        <span>Mentoria</span>
+                        <span>@lang('content.mentorship')</span>
                         <strong>
                           @foreach($content->person as $author)
                               {{ $author->name }}@if(!$loop->last),@endif
@@ -127,7 +129,7 @@
 
                     @isset($content->modules)
                       <div class="section__footer--item">
-                        <span>Módulos</span>
+                        <span>@lang('content.modules')</span>
                         <strong>
                           {{ $content->modules->count() }}
                         </strong>
@@ -141,7 +143,7 @@
           @endforeach
         @else
           <h1>
-            Nenhum conteúdo cadastrado.
+            @lang('content.no-entries')
           </h1>
         @endisset
       </div>

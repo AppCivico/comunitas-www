@@ -34,92 +34,94 @@
         <div class="site-header__institutional">
           <div class="container">
             <ul>
-              <li>Institucional</li>
-              <li><a href="">Hub</a></li>
-              <li><a href="">Quem Somos</a></li>
-              <li><a href="">Sobre a plataforma</a></li>
-              <li><a href="">Contato</a></li>
+              <li>@lang('header.institutional')</li>
+              <li><a href="">@lang('header.hub')</a></li>
+              <li><a href="">@lang('header.about')</a></li>
+              <li><a href="">@lang('header.about-plataform')</a></li>
+              <li><a href="">@lang('header.contact')</a></li>
             </ul>
-            <a href="#site-header" class="site-header__search-button js-search-toggle">Abrir busca</a>
-            <a href="" class="button button--secondary">Entrar</a>
+            <a href="#site-header" class="site-header__search-button js-search-toggle">@lang('header.open-search')</a>
+            <a href="" class="button button--secondary">@lang('header.login')</a>
           </div>
         </div>
         <div class="site-header__container">
-          <a href="/" class="site-header__logo">Rede Juntos</a>
+          <a href="/" class="site-header__logo">{{ config('app.name') }}</a>
           <nav class="main-nav">
             <ul class="main-nav__links" id="js-menu">
               <ul class="main-nav__institutional-mobile">
-                <li>Institucional</li>
-                <li><a href="">Hub</a></li>
-                <li><a href="">Quem Somos</a></li>
-                <li><a href="">Sobre a plataforma</a></li>
-                <li><a href="">Contato</a></li>
+                <li>@lang('header.institutional')</li>
+                <li><a href="">@lang('header.hub')</a></li>
+                <li><a href="">@lang('header.about')</a></li>
+                <li><a href="">@lang('header.about-plataform')</a></li>
+                <li><a href="">@lang('header.contact')</a></li>
               </ul>
               <ul>
-                <li>Seções</li>
+                <li>@lang('header.sections')</li>
                 <li>
                   <a href="{{ route('trails.index') }}" class="main-nav__link-icon main-nav__paths">
-                    @svg('paths') Trilhas
+                    @svg('paths') @lang('header.paths')
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('podcasts.index') }}" class="main-nav__link-icon main-nav__podcasts">
-                    @svg('podcasts') Podcasts
+                    @svg('podcasts') @lang('header.podcasts')
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('webinars.index') }}" class="main-nav__link-icon main-nav__webinars">
-                    @svg('webinars') Webinários
+                    @svg('webinars') @lang('header.webinars')
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('guidelines.index') }}" class="main-nav__link-icon main-nav__good-practices">
-                    @svg('good-practices') Boas Práticas
+                    @svg('good-practices') @lang('header.good-practices')
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('interviews.index') }}" class="main-nav__link-icon main-nav__interviews">
-                    @svg('interviews') Entrevistas
+                    @svg('interviews') @lang('header.interviews')
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('articles.index') }}" class="main-nav__link-icon main-nav__library">
-                    @svg('library') Biblioteca
+                    @svg('library') @lang('header.library')
                   </a>
                 </li>
                 <li>
                   <a href="{{ route('news.index') }}" class="main-nav__link-icon main-nav__news">
-                    @svg('news') Notícias
+                    @svg('news') @lang('header.news')
                   </a>
                 </li>
               </ul>
-              <li class="main-nav__button"><a href="" class="button button--secondary button--big">Entrar</a></li>
+              <li class="main-nav__button">
+                <a href="" class="button button--secondary button--big">@lang('header.login')</a>
+              </li>
               <ul class="main-nav__localization">
-                <li><a class="main-nav__pt-flag" href="">Português</a></li>
-                <li><a class="main-nav__es-flag" href="">Espanhol</a></li>
-                <li><a class="main-nav__gb-flag" href="">Inglês</a></li>
+                <li><a class="main-nav__pt-flag" href="">@lang('header.portugues')</a></li>
+                <li><a class="main-nav__es-flag" href="">@lang('header.espanhol')</a></li>
+                <li><a class="main-nav__gb-flag" href="">@lang('header.ingles')</a></li>
               </ul>
             </ul>
           </nav>
-          <a href="#site-header" class="site-header__search-button js-search-toggle">Abrir busca</a>
-          <button class="main-nav__hamburguer js-main-nav-toggle">Menu</button>
+          <a href="#site-header" class="site-header__search-button js-search-toggle">@lang('header.open-search')</a>
+          <button class="main-nav__hamburguer js-main-nav-toggle">@lang('header.menu')</button>
         </div>
       </header>
 
       <section class="search" id="js-search">
         <div class="container search__container">
-          <h1>Encontre o que te interessa</h1>
+          <h1>@lang('search.find')</h1>
           <form action="{{ route('search.index') }}" method="GET">
-            <input type="text" name="q" placeholder="Tema, temática, termo" required>
+            <input type="text" name="q" placeholder="@lang('search.placeholder')" required>
             <select name="area">
-              <option value="">Todas</option>
+              <option value="">@lang('search.all')</option>
               {{--
                 @foreach($search_categories as $category)
                    <option value="{{ $category->slug }}">{{ $category->name }}</option>
                  @endforeach
                --}}
             </select>
-            <button type="submit" class="button button--big">Pesquisar</button>
+            <button type="submit" class="button button--big">@lang('search.search')</button>
           </form>
         </div>
       </section>
@@ -135,48 +137,49 @@
           <div class="footer__blocks">
             <div class="footer__last-block">
               <article class="footer__about">
-                <h1>A comunitas</h1>
-                <p>A Comunitas é uma organização da sociedade civil brasileira que tem como objetivo contribuir para o aprimoramento dos investimentos sociais corporativos e estimular a participação da iniciativa privada no desenvolvimento social e econômico do país. Saiba mais sobre a Comunitas em nosso site institucional. </p>
+                <h1>@lang('footer.about-title')</h1>
+                <p>@lang('footer.about-description')</p>
               </article>
               <div class="footer__copyleft">
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">
-                  Licença Creative Commons "Attribution-NonCommercial-ShareAlike 4.0 International"
+                  @lang('footer.about-description')
                 </a>
                 <p>
-                  Exceto onde indicado de outra forma, todos os conteúdos disponibilizados neste website estão licenciados com uma Licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional
+                  @lang('footer.license-description');
                 </p>
               </div>
             </div>
             <div class="footer__first-block">
               <div class="footer__logo"></div>
               <div class="footer__social">
-                <strong>Siga-nos</strong>
+                <strong>@lang('footer.follow')</strong>
                 <ul>
                   <li>
                     <a class="footer__facebook" href="https://web.facebook.com/ComunitasBR" target="_blank">
-                      Facebook
+                      @lang('social.facebook')
                     </a>
                   </li>
                   <li>
                     <a class="footer__twitter" href="https://twitter.com/ComunitasBR" target="_blank">
-                      Twitter
+                      @lang('social.twitter')
                     </a>
                   </li>
                   <li>
                     <a class="footer__instagram" href="https://www.instagram.com/comunitasbr" target="_blank">
-                      Instagram
+                      @lang('social.instagram')
                     </a>
                   </li>
                   <li>
                     <a class="footer__youtube" href="https://www.youtube.com/channel/UC53N5fT0dLmFoy_El2EUHTA" target="_blank">
-                      YouTube</a>
+                      @lang('social.youtube')
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <span class="footer__by">
-            desenvolvido por <a href="https://appcivico.com">appcívico</a>
+            @lang('footer.developed-by', ['link' => 'https://appcivico.com', 'name' => 'appcívico'])
           </span>
         </div>
       </footer>

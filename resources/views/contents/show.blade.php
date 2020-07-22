@@ -18,7 +18,7 @@
         @endisset
         @isset($content->created_at)
           <time pubdate datetime="{{ $content->created_at }}">
-            publicado: {{ $content->created_at->diffforhumans() }}
+            @lang('published') {{ $content->created_at->diffforhumans() }}
           </time>
         @endisset
       </address>
@@ -63,7 +63,7 @@
       @isset($content->url)
         <div class="section-intern__big-button">
           <a href="{{ $content->url }}" class="button button--big" target="_blank">
-            Iniciar
+            @lang('content.start')
           </a>
         </div>
       @endisset
@@ -92,35 +92,35 @@
                 @isset($content->author->facebook)
                   <li>
                       <a href="{{ $content->author->facebook }}" class="social-icons__facebook">
-                        facebook
+                        @lang('social.facebook')
                       </a>
                   </li>
                 @endisset
                 @isset($content->author->linkedin)
                   <li>
                     <a href="{{ $content->author->linkedin }}" class="social-icons__linkedin">
-                      linkedin
+                      @lang('social.linkedin')
                     </a>
                   </li>
                 @endisset
                 @isset($content->author->twitter)
                   <li>
                     <a href="{{ $content->author->twitter }}" class="social-icons__twitter">
-                      twitter
+                      @lang('social.twitter')
                     </a>
                   </li>
                 @endisset
                 @isset($content->author->youtube)
                   <li>
                     <a href="{{ $content->author->youtube }}" class="social-icons__youtube">
-                      youtube
+                      @lang('social.youtube')
                     </a>
                   </li>
                 @endisset
                 @isset($content->author->instagram)
                   <li>
                     <a href="{{ $content->author->instagram }}" class="social-icons__instagram">
-                      instagram
+                      @lang('social.instagram')
                     </a>
                   </li>
                 @endisset
@@ -148,7 +148,7 @@
 
                   <div class="section-intern__footer-bio">
                     @if($author->bio)
-                      <span class="color-blue">biografia:</span> {{ $author->bio }}
+                      <span class="color-blue">@lang('bio'):</span> {{ $author->bio }}
                     @endif
                   </div>
 
@@ -156,35 +156,35 @@
                     @if($author->facebook)
                       <li>
                           <a href="{{ $author->facebook }}" class="social-icons__facebook">
-                            facebook
+                            @lang('social.facebook')
                           </a>
                       </li>
                     @endif
                     @if($author->linkedin)
                       <li>
                         <a href="{{ $author->linkedin }}" class="social-icons__linkedin">
-                          linkedin
+                          @lang('social.linkedin')
                         </a>
                       </li>
                     @endif
                     @if($author->twitter)
                       <li>
                         <a href="{{ $author->twitter }}" class="social-icons__twitter">
-                          twitter
+                          @lang('social.twitter')
                         </a>
                       </li>
                     @endif
                     @if($author->youtube)
                       <li>
                         <a href="{{ $author->youtube }}" class="social-icons__youtube">
-                          youtube
+                          @lang('social.youtube')
                         </a>
                       </li>
                     @endif
                     @if($author->instagram)
                       <li>
                         <a href="{{ $author->instagram }}" class="social-icons__instagram">
-                          instagram
+                          @lang('social.instagram')
                         </a>
                       </li>
                     @endif
@@ -197,7 +197,7 @@
       @endisset
 
       <div class="section-intern__share">
-        <h4>compartilhe nas redes sociais</h4>
+        <h4>@lang('content.share')</h4>
         <ul class="social-icons social-icons--blue">
           <li>
             <a
@@ -205,7 +205,7 @@
               href="https://www.facebook.com/sharer/sharer.php?u={{ URL::full() }}"
               target="_blank"
             >
-              facebook
+              @lang('social.facebook')
             </a>
           </li>
           <li>
@@ -214,7 +214,7 @@
               href="https://twitter.com/intent/tweet?url={{ URL::full() }}"
               target="_blank"
             >
-              twitter
+              @lang('social.twitter')
             </a>
           </li>
         </ul>
@@ -222,7 +222,7 @@
 
       @if(count($related_contents))
         <div class="sections__list sections__list--smaller-cards">
-          <h2 class="sections__list-section-title color-blue">Conteúdos relacionados</h2>
+          <h2 class="sections__list-section-title color-blue">@lang('related-contens')</h2>
 
           @foreach($related_contents as $related)
             <article class="section__item">
