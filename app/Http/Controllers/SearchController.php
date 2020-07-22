@@ -13,11 +13,14 @@ use App\News;
 use App\Trail;
 use App\Category;
 
-class customContent {
-    public function __construct()
+class CustomContent {
+    public $name;
+    public $data;
+
+    public function __construct($name = null, $data = null)
     {
-        $this->name = null;
-        $this->data = null;
+        $this->name = $name;
+        $this->data = $data;
     }
 
 };
@@ -30,37 +33,26 @@ class SearchController extends Controller
 
         $limit = 1;
 
-        $contents = app()->make('stdClass');
+        // $contents = app()->make('stdClass');
 
-        $contents->trails = new CustomContent;
-        $contents->trails->name = 'Trilhas';
-        $contents->trails->data = Trail::search($request->q)->paginate($limit);
+        $trails = new CustomContent('Trilhas', Trail::search($request->q)->paginate($limit));
+        $webinars = new CustomContent('Webinários', Webinar::search($request->q)->paginate($limit));
+        $podcasts = new CustomContent('Podcasts', Podcast::search($request->q)->paginate($limit));
+        $guidelines = new CustomContent('Boas Práticas', Guideline::search($request->q)->paginate($limit));
+        $interviews = new CustomContent('Entrevistas', Interview::search($request->q)->paginate($limit));
+        $articles = new CustomContent('Biblioteca', Article::search($request->q)->paginate($limit));
+        $news = new CustomContent('Notícias', News::search($request->q)->paginate($limit));
 
-        $contents->webinars = new CustomContent;
-        $contents->webinars->name = 'Webinários';
-        $contents->webinars->data = Webinar::search($request->q)->paginate($limit);
+        $contents = (object) [
+            'trails' => $trails,
+            'webinars' => $webinars,
+            'podcasts' => $podcasts,
+            'guidelines' => $guidelines,
+            'interviews' => $interviews,
+            'articles' => $articles,
+            'news' => $news,
+        ];
 
-        $contents->podcasts = new CustomContent;
-        $contents->podcasts->name = 'Podcasts';
-        $contents->podcasts->data = Podcast::search($request->q)->paginate($limit);
-
-        $contents->guidelines = new CustomContent;
-        $contents->guidelines->name = 'Boas Práticas';
-        $contents->guidelines->data = Guideline::search($request->q)->paginate($limit);
-
-        $contents->interviews = new CustomContent;
-        $contents->interviews->name = 'Entrevistas';
-        $contents->interviews->data = Interview::search($request->q)->paginate($limit);
-
-        $contents->articles = new CustomContent;
-        $contents->articles->name = 'Biblioteca';
-        $contents->articles->data = Article::search($request->q)->paginate($limit);
-
-        $contents->news = new CustomContent;
-        $contents->news->name = 'Notícias';
-        $contents->news->data = News::search($request->q)->paginate($limit);
-
-        // dd($contents);
         // foreach($contents as $contentGroup) {
         //     dd($contentGroup->name);
         //     foreach($contentGroup->data as $content) {
