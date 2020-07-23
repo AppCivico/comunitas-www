@@ -2528,6 +2528,7 @@ html {
 
 .section-intern__address img,
 .section-intern__address svg {
+  align-self: flex-start;
   max-width: 6.875em;
 }
 
