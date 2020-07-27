@@ -25,19 +25,21 @@
 
       <h1>
         @isset($content->title)
-          {{ $content->title }}
+          {{ $content->getTranslatedAttribute('title', app()->getLocale()) }}
         @elseif($content->name)
-          {{ $content->name }}
+          {{ $content->getTranslatedAttribute('name', app()->getLocale()) }}
         @endisset
       </h1>
 
       @isset($content->iframe)
-        {!! $content->iframe !!}
+        {!! $content->getTranslatedAttribute('iframe', app()->getLocale()) !!}
       @endisset
 
       <div class="section-intern__tags">
         @foreach($content->categories as $category)
-          <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
+          <a href="categories/{{ $category->slug }}">
+            {{ $category->getTranslatedAttribute('name', app()->getLocale()) }}
+          </a>
         @endforeach
       </div>
 
@@ -57,7 +59,7 @@
       @endisset
 
       <div class="section-intern__content">
-        {!! $content->body !!}
+        {!! $content->getTranslatedAttribute('body', app()->getLocale()) !!}
       </div>
 
       @isset($content->url)
@@ -84,7 +86,8 @@
 
               <div class="section-intern__footer-bio">
                 @isset($content->author->bio)
-                  <span class="color-blue">biografia:</span> {{ $content->author->bio }}
+                  <span class="color-blue">biografia:</span>
+                  {{ $content->author->getTranslatedAttribute('bio', app()->getLocale()) }}
                 @endisset
               </div>
 
@@ -222,7 +225,7 @@
 
       @if(count($related_contents))
         <div class="sections__list sections__list--smaller-cards">
-          <h2 class="sections__list-section-title color-blue">@lang('related-contens')</h2>
+          <h2 class="sections__list-section-title color-blue">@lang('content.related-content')</h2>
 
           @foreach($related_contents as $related)
             <article class="section__item">
@@ -239,11 +242,15 @@
                 </a>
                 <div class="section__tags">
                   @foreach($related->categories as $category)
-                    <a href="categories/{{ $category->slug }}">{{ $category->name }}</a>
+                    <a href="categories/{{ $category->slug }}">
+                      {{ $category->getTranslatedAttribute('name', app()->getLocale()) }}
+                    </a>
                   @endforeach
                 </div>
               </div>
-              <h2 class="sections__list-title">{{ $related->title }}</h2>
+              <h2 class="sections__list-title">
+                {{ $related->getTranslatedAttribute('title', app()->getLocale()) }}
+              </h2>
             </article>
           @endforeach
         </div>
@@ -257,6 +264,9 @@
 </x-layout>
 
 <script>
+  // var disqus_config = function () {
+  //   this.language = "ru";
+  // };
 
   /**
   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

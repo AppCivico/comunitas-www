@@ -40,6 +40,11 @@
               <li><a href="">@lang('header.about-plataform')</a></li>
               <li><a href="">@lang('header.contact')</a></li>
             </ul>
+            <ul class="main-nav__localization main-nav__localization--institutional">
+              <li><a class="main-nav__pt-flag" href="{{ route('language.pt') }}">@lang('header.portugues')</a></li>
+              <li><a class="main-nav__es-flag" href="{{ route('language.es') }}">@lang('header.espanhol')</a></li>
+              <li><a class="main-nav__gb-flag" href="{{ route('language.en') }}">@lang('header.ingles')</a></li>
+            </ul>
             <a href="#site-header" class="site-header__search-button js-search-toggle">@lang('header.open-search')</a>
             <a href="" class="button button--secondary">@lang('header.login')</a>
           </div>
@@ -97,9 +102,9 @@
                 <a href="" class="button button--secondary button--big">@lang('header.login')</a>
               </li>
               <ul class="main-nav__localization">
-                <li><a class="main-nav__pt-flag" href="">@lang('header.portugues')</a></li>
-                <li><a class="main-nav__es-flag" href="">@lang('header.espanhol')</a></li>
-                <li><a class="main-nav__gb-flag" href="">@lang('header.ingles')</a></li>
+                <li><a class="main-nav__pt-flag" href="{{ route('language.pt') }}">@lang('header.portugues')</a></li>
+                <li><a class="main-nav__es-flag" href="{{ route('language.es') }}">@lang('header.espanhol')</a></li>
+                <li><a class="main-nav__gb-flag" href="{{ route('language.en') }}">@lang('header.ingles')</a></li>
               </ul>
             </ul>
           </nav>
@@ -131,8 +136,8 @@
       <footer class="site-footer">
         <div class="container">
           <ul class="footer-nav">
-            <li><a href="">Sobre a Plataforma</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a href="">@lang('header.about-plataform')</a></li>
+            <li><a href="">@lang('header.contact')</a></li>
           </ul>
           <div class="footer__blocks">
             <div class="footer__last-block">

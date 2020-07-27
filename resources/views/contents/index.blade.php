@@ -15,7 +15,7 @@
         <form action="" class="sections__select">
           <strong>@lang('content.categories')</strong>
           <select id="js-category-select">
-            <option value="{{ url('/') }}/{{ Request::segment(1) }}">Todas</option>
+            <option value="{{ url('/') }}/{{ Request::segment(1) }}">@lang('content.all')</option>
             @foreach($categories as $select_category)
               <option
                 @if(isset($category) && $select_category->slug === $category->slug ?? '')
@@ -23,7 +23,7 @@
                 @endif
                 value="{{ url('/') }}/{{ Request::segment(1) }}/categoria/{{ $select_category->slug }}"
               >
-                {{ $select_category->name }}
+                {{ $select_category->getTranslatedAttribute('name', app()->getLocale()) }}
               </option>
             @endforeach
           </select>
@@ -38,7 +38,7 @@
                     @if($content->type === 'article')
                       href="{{ Storage::url($content->external_link) }}" target="blank"
                     @elseif($content->external_link)
-                      href="{{ $content->external_link }}" target="blank"
+                      href="{{ $content->getTranslatedAttribute('external_link', app()->getLocale()) }}" target="blank"
                     @elseif($content->type === 'trail')
                       href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
                     @elseif($content->slug)
@@ -57,7 +57,7 @@
                       {{ Voyager::image($content->thumbnail('medium')) }} 1.5x,
                       {{ Voyager::image( $content->image ) }} 2x"
                       sizes="(max-width: 400px) 480px, 800px"
-                      alt="{{ $content->image_alt }}"
+                      alt="{{ $content->getTranslatedAttribute('image_alt', app()->getLocale()) }}"
                     >
                   @else
                     @svg('no-picture')
@@ -68,7 +68,7 @@
                   <div class="section__tags">
                     @foreach($content->categories as $category)
                       <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
-                      <a>{{ $category->name }}</a>
+                      <a>{{ $category->getTranslatedAttribute('name', app()->getLocale()) }}</a>
                     @endforeach
                   </div>
                 @endif
@@ -93,15 +93,15 @@
 
                 <h2 class="sections__list-title">
                   @isset($content->title)
-                    {{ $content->title }}
+                    {{ $content->getTranslatedAttribute('title', app()->getLocale()) }}
                   @elseif($content->name)
-                    {{ $content->name }}
+                    {{ $content->getTranslatedAttribute('name', app()->getLocale()) }}
                   @endisset
                 </h2>
 
                 @if($type ?? '' ?? '' === 'trails')
                   <p class="section__excerpt">
-                    {{ Str::words($content->excerpt, 30) }}
+                    {{ Str::words($content->getTranslatedAttribute('excerpt', app()->getLocale()), 30) }}
                   </p>
                 @endif
 
@@ -155,9 +155,9 @@
 
       @isset($page_info)
         <article class="sections__text">
-          <h1>{{ $page_info->title }}</h1>
+          <h1>{{ $page_info->getTranslatedAttribute('title', app()->getLocale()) }}</h1>
           <div class="sections__text-description">
-            {!! $page_info->body !!}
+            {!! $page_info->getTranslatedAttribute('body', app()->getLocale()) !!}
           </div>
         </article>
       @endisset

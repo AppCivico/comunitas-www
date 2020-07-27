@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Resizable;
+use TCG\Voyager\Traits\Translatable;
 use Laravel\Scout\Searchable;
 use App\Author;
 
@@ -11,7 +12,22 @@ use App\Author;
 class Podcast extends Model
 {
     use Resizable;
-    use Searchable;
+    // use Searchable;
+    use Translatable;
+
+    protected $translatable = [
+        'id',
+        'title',
+        'iframe',
+        'featured',
+        'seo_title',
+        'excerpt',
+        'body',
+        'slug',
+        'meta_description',
+        'meta_keywords',
+        'image_alt',
+    ];
 
     public function categories()
     {

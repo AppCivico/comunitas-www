@@ -1,6 +1,6 @@
 function tinymce_init_callback(editor) {
-  editor.remove();
-  editor = null;
+  // editor.remove();
+  // editor = null;
 
   tinymce.init({
     selector: 'textarea.richTextBox',

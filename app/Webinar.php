@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 use TCG\Voyager\Traits\Resizable;
 use Laravel\Scout\Searchable;
 use App\Author;
@@ -11,7 +12,19 @@ use App\Author;
 class Webinar extends Model
 {
     use Resizable;
-    use Searchable;
+    // use Searchable;
+    use Translatable;
+
+    protected $translatable = [
+        'title',
+        'slug',
+        'seo_title',
+        'excerpt',
+        'body',
+        'meta_description',
+        'meta_keywords',
+        'image_alt',
+    ];
 
     public function categories()
     {

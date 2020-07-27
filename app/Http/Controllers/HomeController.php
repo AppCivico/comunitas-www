@@ -12,9 +12,11 @@ use App\News;
 use App\Trail;
 use App\Banner;
 use App\Testimonial;
+use App;
 
 class HomeController extends Controller
 {
+
     public function index()
     {
         $trails = Trail::orderBy('order')->take(4)->get();
@@ -27,7 +29,9 @@ class HomeController extends Controller
             // News::first(),
         ];
         $banner = Banner::first();
+
         $testimonials = Testimonial::orderBy('order')->get();
+        // $testimonials = $testimonials->translate('en');
 
         return view('welcome', compact('trails', 'contents', 'banner', 'testimonials'));
     }

@@ -9,7 +9,7 @@
         @if($loop->first)
           <blockquote>
             <p>
-              {{ $testimonial->body }}
+              {{ $testimonial->getTranslatedAttribute('body', app()->getLocale()) }}
             </p>
             <footer>
               <cite>{{ $testimonial->author }}</cite>
@@ -35,7 +35,9 @@
                         alt="{{ $testimonial->author }}"
                         >
                     </figure>
-                    <p>{{ $testimonial->body }}</p>
+                    <p>
+                      {{ $testimonial->body }}
+                    </p>
                     <footer>
                       <cite>{{ $testimonial->author }}</cite>
                       <span>@if($testimonial->institution) - {{ $testimonial->institution }} @endif</span>

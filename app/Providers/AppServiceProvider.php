@@ -25,7 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // view()->share('youVarName', [1, 2, 3]);
-        view()->share(['search_categories', Category::all()]);
+        //
     }
 }

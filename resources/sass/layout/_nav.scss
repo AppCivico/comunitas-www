@@ -93,8 +93,6 @@
   }
 
   &:first-child {
-    // terporarily hide this menus
-    display: none;
     margin-top: 0;
     border-top: 0;
   }
@@ -282,14 +280,20 @@
   border-top: 0;
 
   @media screen and (min-width: breakpoint('desktop')) {
-    position: absolute;
-    top: 5rem;
-    left: 0;
     display: none;
   }
 }
 
+.site-header__institutional .main-nav__localization--institutional {
+  margin-left: auto;
+}
+
+.main-nav__localization--institutional li {
+  margin-right: 0.5rem;
+}
+
 .main-nav__localization li:first-child {
+  display: block;
   padding-top: 0;
   margin-bottom: 0;
 }
@@ -300,6 +304,12 @@
   width: 1.8rem;
   height: 0.9rem;
   background-size: contain;
+
+  @media screen and (min-width: breakpoint('desktop')) {
+    width: 1.8rem;
+    height: 1.5rem;
+    background-size: 100% 100%;
+  }
 }
 
 .main-nav__pt-flag {

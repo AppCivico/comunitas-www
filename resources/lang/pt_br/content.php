@@ -3,6 +3,7 @@
 return [
 
     'categories' => 'Categorias',
+    'all' => 'Todas',
     'click-to-download' => 'Clique para fazer o download',
 
     'duration' => 'Duração',

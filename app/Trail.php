@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 use TCG\Voyager\Traits\Resizable;
 use Laravel\Scout\Searchable;
 use App\Person;
@@ -10,7 +11,17 @@ use App\Person;
 class Trail extends Model
 {
     use Resizable;
-    use Searchable;
+    // use Searchable;
+    use Translatable;
+
+    protected $translatable = [
+        'title',
+        'body',
+        'excerpt',
+        'image',
+        'meta_description',
+        'seo_title'
+    ];
 
     public function categories()
     {

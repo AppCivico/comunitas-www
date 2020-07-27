@@ -1138,7 +1138,7 @@ html {
 
 .site-header__institutional .site-header__search-button {
   display: block;
-  margin-left: auto;
+  margin-left: 1rem;
   background-image: url("/images/icons/magnifying-glass-purple.svg");
 }
 
@@ -1348,7 +1348,6 @@ html {
 }
 
 .main-nav ul ul:first-child {
-  display: none;
   margin-top: 0;
   border-top: 0;
 }
@@ -1556,14 +1555,20 @@ html {
 
 @media screen and (min-width: 64em) {
   .main-nav .main-nav__localization {
-    position: absolute;
-    top: 5rem;
-    left: 0;
     display: none;
   }
 }
 
+.site-header__institutional .main-nav__localization--institutional {
+  margin-left: auto;
+}
+
+.main-nav__localization--institutional li {
+  margin-right: 0.5rem;
+}
+
 .main-nav__localization li:first-child {
+  display: block;
   padding-top: 0;
   margin-bottom: 0;
 }
@@ -1578,6 +1583,14 @@ html {
   width: 1.8rem;
   height: 0.9rem;
   background-size: contain;
+}
+
+@media screen and (min-width: 64em) {
+  .main-nav__localization a {
+    width: 1.8rem;
+    height: 1.5rem;
+    background-size: 100% 100%;
+  }
 }
 
 .main-nav__pt-flag {
@@ -2051,6 +2064,7 @@ html {
 @media screen and (min-width: 64em) {
   .sections__select select {
     height: 4rem;
+    padding-top: 2rem;
   }
 }
 
