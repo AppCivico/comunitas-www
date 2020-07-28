@@ -229,11 +229,10 @@
               <div class="sections__image">
                 <a href="{{ $related->slug }}">
                   <img
-                    src="{{ voyager::image($related->image) }}"
-                    srcset="{{ voyager::image($related->thumbnail('small')) }},
-                    {{ voyager::image($related->thumbnail('medium')) }} 1.5x,
-                    {{ voyager::image( $related->image ) }} 2x"
-                    sizes="(max-width: 400px) 480px, 800px"
+                      src="{{ Voyager::image(related->image) }}"
+                      srcset="{{ Voyager::image(related->thumbnail('medium')) }},
+                      {{ Voyager::image(related->image) }} 2x"
+                      sizes="(max-width: 400px) 480px, 800px"
                     alt="{{ $related->image_alt }}"
                   >
                 </a>
