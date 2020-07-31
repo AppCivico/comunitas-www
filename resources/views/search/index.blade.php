@@ -7,7 +7,10 @@
       @endisset
     >
       <h1 class="sections__title">
-        <span>{{ $page_name }}</span>
+        <span>
+          {{ $page_name }}:
+          <small>{{ request()->q }}</small>
+        </span>
       </h1>
     </header>
     <div class="container">
