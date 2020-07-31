@@ -18,7 +18,6 @@ class Trail extends Model
         'title',
         'body',
         'excerpt',
-        'image',
         'meta_description',
         'seo_title'
     ];

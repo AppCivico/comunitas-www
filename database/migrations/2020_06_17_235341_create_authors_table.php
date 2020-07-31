@@ -18,11 +18,11 @@ class CreateAuthorsTable extends Migration
             $table->string('name');
             $table->text('bio');
             $table->string('image')->nullable();
-            $table->string('facebook')->nollable();
-            $table->string('linkedin')->nollable();
-            $table->string('twitter')->nollable();
-            $table->string('youtube')->nollable();
-            $table->string('instagram')->nollable();
+            $table->string('facebook')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('instagram')->nullable();
             $table->timestamps();
         });
     }

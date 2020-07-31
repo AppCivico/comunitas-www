@@ -27,7 +27,7 @@
           @foreach($trails as $content)
             <article class="section__item">
               <div class="sections__image">
-                <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
+                <a href="{{ route('trail.show', ['trail' => $content->slug]) }}">
                   @if($content->picture)
                     <div class="sections__image-picture" style="background-image: url('{{ $content->picture }}')">
                     </div>
@@ -42,7 +42,7 @@
                   <a>{{ $category->name }}</a>
                 @endforeach
               </div>
-              <a href="{{ route('trail.show', ['trail' => $content->course_code]) }}">
+              <a href="{{ route('trail.show', ['trail' => $content->slug]) }}">
                 <h2 class="sections__list-title">
                   @isset($content->title)
                     {{ Str::limit($content->title, 55) }}

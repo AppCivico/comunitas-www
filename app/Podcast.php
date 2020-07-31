@@ -19,7 +19,6 @@ class Podcast extends Model
         'id',
         'title',
         'iframe',
-        'featured',
         'seo_title',
         'excerpt',
         'body',
