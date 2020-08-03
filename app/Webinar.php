@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 use TCG\Voyager\Traits\Resizable;
 use Laravel\Scout\Searchable;
+use App\Category;
 use App\Author;
 
 
@@ -28,7 +29,7 @@ class Webinar extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class, 'category_content', 'content_id');
     }
 
     public function author()

@@ -38,7 +38,7 @@ class ContentController extends Controller
             $contents = Webinar::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = WebinarContent::first();
-        $categories = Category::has('webinars')->get();
+        $categories = Category::has('contents')->get();
         $page_name  = 'Webinários';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
@@ -61,7 +61,7 @@ class ContentController extends Controller
             $contents = Podcast::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = PodcastContent::first();
-        $categories = Category::has('podcasts')->get();
+        $categories = Category::has('contents')->get();
         $page_name = 'Podcasts';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
