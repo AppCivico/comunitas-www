@@ -25,11 +25,21 @@ use App\NewContent;
 use App\Trail;
 use App\TrailContent;
 
+use App\Content;
+
 use App\Category;
 
 
 class ContentController extends Controller
 {
+    public function category(Category $category)
+    {
+        $contents = $category->contents()->simplePaginate(Config('app.pagination_limit'));
+        $page_name  = $category->name;
+
+        return view('contents.index', compact('contents', 'page_name', 'category'));
+    }
+
     public function webinars(Category $category = null)
     {
         if($category) {
@@ -38,7 +48,7 @@ class ContentController extends Controller
             $contents = Webinar::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = WebinarContent::first();
-        $categories = Category::has('contents')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name  = 'Webinários';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
@@ -61,7 +71,7 @@ class ContentController extends Controller
             $contents = Podcast::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = PodcastContent::first();
-        $categories = Category::has('contents')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name = 'Podcasts';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
@@ -84,7 +94,7 @@ class ContentController extends Controller
             $contents = Guideline::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = GuidelineContent::first();
-        $categories = Category::has('guidelines')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name = 'Boas Práticas';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
@@ -107,7 +117,7 @@ class ContentController extends Controller
             $contents   = Interview::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = InterviewContent::first();
-        $categories = Category::has('interviews')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name = 'Entrevistas';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
@@ -130,7 +140,7 @@ class ContentController extends Controller
             $contents = Article::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = ArticleContent::first();
-        $categories = Category::has('articles')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name  = 'Biblioteca';
         $has_obs    = true;
 
@@ -145,7 +155,7 @@ class ContentController extends Controller
             $contents = News::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = NewContent::first();
-        $categories = Category::has('news')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name = 'Notícias';
 
         return view('contents.index', compact('contents', 'page_info', 'categories', 'page_name', 'category'));
@@ -159,7 +169,7 @@ class ContentController extends Controller
             $contents   = Trail::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = TrailContent::first();
-        $categories = Category::has('trails')->get();
+        $categories = $contents->pluck('categories')->unique('id')->flatten();
         $page_name = 'Trilhas';
         $type = 'trails';
 

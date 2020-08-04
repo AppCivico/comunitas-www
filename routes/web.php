@@ -23,6 +23,8 @@ Route::get('/en', 'LanguageController@en')->name('language.en');
 
 Route::get('/busca', 'SearchController@index')->name('search.index');
 
+Route::get('/categoria/{category:slug}', 'ContentController@category')->name('category.index');
+
 Route::get('/webinarios', 'ContentController@webinars')->name('webinars.index');
 Route::get('/webinarios/categoria/{category:slug}', 'ContentController@webinars');
 Route::get('/webinarios/{webinar:slug}', 'ContentController@showWebinar')->name('webinar');

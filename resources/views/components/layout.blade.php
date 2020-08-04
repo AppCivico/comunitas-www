@@ -118,13 +118,13 @@
           <h1>@lang('search.find')</h1>
           <form action="{{ route('search.index') }}" method="GET">
             <input type="text" name="q" placeholder="@lang('search.placeholder')" required>
-            <select name="area">
+            <select name="type">
               <option value="">@lang('search.all')</option>
-              {{--
-                @foreach($search_categories as $category)
-                   <option value="{{ $category->slug }}">{{ $category->name }}</option>
-                 @endforeach
-               --}}
+              @foreach($types as $category)
+                <option value="{{ $category->type }}">
+                  @lang('types.' . $category->type)
+                </option>
+              @endforeach
             </select>
             <button type="submit" class="button button--big">@lang('search.search')</button>
           </form>

@@ -26,6 +26,16 @@ class Content extends Model
 			'image_alt',
     ];
 
+    public function toSearchableArray()
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            // 'body' => $this->body,
+            'category' => $this->categories->implode('name', ''),
+        ];
+    }
+
     public function categories()
     {
         return $this->belongsToMany(Category::class);

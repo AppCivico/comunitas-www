@@ -37,7 +37,7 @@
 
       <div class="section-intern__tags">
         @foreach($content->categories as $category)
-          <a href="categories/{{ $category->slug }}">
+          <a href="{{ route('category.index', ['category' => $category->slug]) }}">
             {{ $category->getTranslatedAttribute('name', app()->getLocale()) }}
           </a>
         @endforeach

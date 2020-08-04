@@ -134,9 +134,8 @@
       </div>
 
       @if($contents->links())
-        {{ $contents->links() }}
+        {{ $contents->appends(['q' => request()->q, 'type' => request()->type])->links() }}
       @endif
-      <!-- <button class="button button&#45;&#45;big sections__load&#45;more">Carregar mais</button> -->
 
       @isset($page_info)
         <article class="sections__text">

@@ -38,8 +38,9 @@
               </div>
               <div class="section__tags">
                 @foreach($content->categories as $category)
-                  <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
-                  <a>{{ $category->name }}</a>
+                  <a href="{{ route('category.index', ['slug' => $category->slug]) }}">
+                    {{ $category->name }}
+                  </a>
                 @endforeach
               </div>
               <a href="{{ route('trail.show', ['trail' => $content->slug]) }}">
@@ -59,59 +60,63 @@
       <div class="sections__list sections__list--home sections__list--small">
         @if(isset($contents) && $contents[0])
           @foreach($contents as $content)
-            <article class="section__item">
-              <div class="sections__image">
-                <a
-                  @if($content->external_link)
-                    href="{{ $content->external_link }}" target="blank"
-                  @elseif($content->slug)
-                    href="{{ route($content->type, [$content->type => $content->slug]) }}"
-                  @endif
-                >
-                  @if($content->image)
-                    <img
-                      src="{{ Voyager::image($content->image) }}"
-                      srcset="{{ Voyager::image($content->thumbnail('medium')) }},
-                      {{ Voyager::image($content->image) }} 2x"
-                      sizes="(max-width: 400px) 480px, 800px"
-                      alt="{{ $content->image_alt }}"
-                    >
-                  @else
-                    @svg('no-picture')
-                  @endif
-                </a>
-                <div class="section__image-text-over">
-                  <div class="section__tags">
-                    @foreach($content->categories as $category)
-                      <a>{{ $category->name }}</a>
-                    @endforeach
-                  </div>
+            @if($content)
+              <article class="section__item">
+                <div class="sections__image">
                   <a
                     @if($content->external_link)
                       href="{{ $content->external_link }}" target="blank"
                     @elseif($content->slug)
                       href="{{ route($content->type, [$content->type => $content->slug]) }}"
                     @endif
-                    class="section__small-section-title"
                   >
-
-                    @if(isset($has_obs))
-                      <span class="section__download-info">
-                        Clique para fazer o download
-                      </span>
+                    @if($content->image)
+                      <img
+                        src="{{ Voyager::image($content->image) }}"
+                        srcset="{{ Voyager::image($content->thumbnail('medium')) }},
+                        {{ Voyager::image($content->image) }} 2x"
+                        sizes="(max-width: 400px) 480px, 800px"
+                        alt="{{ $content->image_alt }}"
+                      >
+                    @else
+                      @svg('no-picture')
                     @endif
-
-                    <h2>
-                      @isset($content->title)
-                        {{ Str::limit($content->title, 55) }}
-                      @elseif($content->name)
-                        {{ Str::limit($content->name, 55) }}
-                      @endisset
-                    </h2>
                   </a>
+                  <div class="section__image-text-over">
+                    <div class="section__tags">
+                      @foreach($content->categories as $category)
+                        <a href="{{ route('category.index', ['category' => $category->slug]) }}">
+                          {{ $category->name }}
+                        </a>
+                      @endforeach
+                    </div>
+                    <a
+                      @if($content->external_link)
+                        href="{{ $content->external_link }}" target="blank"
+                      @elseif($content->slug)
+                        href="{{ route($content->type, [$content->type => $content->slug]) }}"
+                      @endif
+                      class="section__small-section-title"
+                    >
+
+                      @if(isset($has_obs))
+                        <span class="section__download-info">
+                          Clique para fazer o download
+                        </span>
+                      @endif
+
+                      <h2>
+                        @isset($content->title)
+                          {{ Str::limit($content->title, 55) }}
+                        @elseif($content->name)
+                          {{ Str::limit($content->name, 55) }}
+                        @endisset
+                      </h2>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            @endif
           @endforeach
         @endif
       </div>

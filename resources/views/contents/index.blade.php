@@ -30,7 +30,7 @@
         </form>
       @endif
       <div class="sections__list">
-        @isset($contents)
+        @if($contents->count() > 0)
           @foreach($contents as $content)
             <article class="section__item section__item--small">
               <div class="sections__image">
@@ -67,8 +67,9 @@
                 @if(!empty($content->categories[0]))
                   <div class="section__tags">
                     @foreach($content->categories as $category)
-                      <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
-                      <a>{{ $category->getTranslatedAttribute('name', app()->getLocale()) }}</a>
+                      <a href="{{ route('category.index', ['category' => $category->slug]) }}">
+                        {{ $category->getTranslatedAttribute('name', app()->getLocale()) }}
+                      </a>
                     @endforeach
                   </div>
                 @endif
@@ -142,9 +143,7 @@
             </article>
           @endforeach
         @else
-          <h1>
-            @lang('content.no-entries')
-          </h1>
+          <h1>@lang('content.no-entries')</h1>
         @endisset
       </div>
 

@@ -5,14 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Content;
-use App\Webinar;
-use App\Podcast;
-use App\Guideline;
-use App\Interview;
-use App\Article;
-use App\News;
-use App\Trail;
-use App\Category;
 
 class CustomContent {
     public $name;
@@ -35,9 +27,13 @@ class SearchController extends Controller
         $page_info  = null;
         $page_name  = 'Busca';
 
-        $contents = Content::search($request->q)->paginate($limit);
+        $content = new Content;
 
-        // dd($contents);
+        if($request->type) {
+            $contents = Content::search($request->q)->where('type', $request->type)->paginate($limit);
+        } else {
+            $contents = Content::search($request->q)->paginate($limit);
+        }
 
         return view('search.index', compact('contents', 'page_info', 'page_name'));
         // $contents->trails->data = Trail::search($request->q)->paginate($limit);
