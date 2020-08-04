@@ -153,7 +153,7 @@ body > * {
 
 @media screen and (min-width: 64em) {
   body {
-    padding-top: 6.6rem;
+    padding-top: 9.8rem;
   }
 }
 
@@ -1922,6 +1922,10 @@ html {
 
 .search option {
   color: black;
+}
+
+.search button {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 64em) {

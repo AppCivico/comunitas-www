@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Content;
+use App\Event;
 use App\View;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,5 +27,22 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->share('types', Content::select('type')->distinct()->get());
+
+        \Event::listen(\TCG\Voyager\Events\BreadDataChanged::class, function($event){
+
+            $indexableContents = array(
+                'trails',
+                'podcasts',
+                'webinars',
+                'guidelines',
+                'interviews',
+                'articles',
+                'news'
+            );
+
+            if(in_array($event->dataType->name, $indexableContents)){
+                Content::all()->searchable();
+            }
+        });
     }
 }

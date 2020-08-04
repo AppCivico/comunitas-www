@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'trail' => 'Trilha',
     'podcast' => 'Podcast',
     'webinar' => 'Webinário',

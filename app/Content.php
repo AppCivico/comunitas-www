@@ -2,10 +2,12 @@
 
 namespace App;
 
+use TeamTNT\TNTSearch\Indexer\TNTIndexer;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 use TCG\Voyager\Traits\Resizable;
 use Laravel\Scout\Searchable;
+
 
 class Content extends Model
 {
@@ -31,8 +33,9 @@ class Content extends Model
         return [
             'id' => $this->id,
             'title' => $this->title,
-            // 'body' => $this->body,
+            'body' => $this->body,
             'category' => $this->categories->implode('name', ''),
+            'nameNgrams' => utf8_encode((new TNTIndexer)->buildTrigrams($this->title))
         ];
     }
 

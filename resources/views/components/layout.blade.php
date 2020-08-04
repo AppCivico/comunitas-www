@@ -117,7 +117,7 @@
         <div class="container search__container">
           <h1>@lang('search.find')</h1>
           <form action="{{ route('search.index') }}" method="GET">
-            <input type="text" name="q" placeholder="@lang('search.placeholder')" required>
+            <input type="text" name="q" class="js-search-input" placeholder="@lang('search.placeholder')" required>
             <select name="type">
               <option value="">@lang('search.all')</option>
               @foreach($types as $category)

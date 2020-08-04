@@ -1,21 +1,11 @@
 <x-layout>
   <main class="sections">
-    <header
-      class="sections__header sections__header--categories"
-      @isset($page_info->image)
-        style="background-image: url('{{ Voyager::image($page_info->image) }}')"
-      @endisset
-    >
-      <h1 class="sections__title">
-        <span>
-          {{ $page_name }}:
-          <small>{{ request()->q }}</small>
-        </span>
-      </h1>
-    </header>
     <div class="container">
+      <header>
+        <h2>{{ $page_name }}: <small>{{ request()->q }}</small></h2>
+      </header>
       <div class="sections__list">
-        @isset($contents)
+        @if(count($contents) > 0)
           @foreach($contents as $content)
             <article class="section__item section__item--small">
               <div class="sections__image">
@@ -25,7 +15,7 @@
                     @elseif($content->external_link)
                       href="{{ $content->getTranslatedAttribute('external_link', app()->getLocale()) }}" target="blank"
                     @elseif($content->type === 'trail')
-                      href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
+                      href="{{ route('trail.show', ['trail' => $content->slug]) }}"
                     @elseif($content->slug)
                       href="{{ route($content->type, [$content->type => $content->slug]) }}"
                     @endif
@@ -52,8 +42,9 @@
                 @if(!empty($content->categories[0]))
                   <div class="section__tags">
                     @foreach($content->categories as $category)
-                      <!-- <a href="categories/{{ $category->slug }}">{{ $category->name }}</a> -->
-                      <a>{{ $category->getTranslatedAttribute('name', app()->getLocale()) }}</a>
+                      <a href="{{ route('category.index', ['category' => $category->slug]) }}">
+                        {{ $category->name }}
+                      </a>
                     @endforeach
                   </div>
                 @endif
@@ -65,7 +56,7 @@
                 @elseif($content->external_link)
                   href="{{ $content->external_link }}" target="blank"
                 @elseif($content->type === 'trail')
-                  href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
+                  href="{{ route('trail.show', ['trail' => $content->slug]) }}"
                 @elseif($content->slug)
                   href="{{ route($content->type, [$content->type => $content->slug]) }}"
                 @endif
@@ -127,10 +118,12 @@
             </article>
           @endforeach
         @else
-          <h1>
-            @lang('content.no-entries')
-          </h1>
-        @endisset
+          <div class="container">
+            <h3>
+              @lang('search.no-results')
+            </h3>
+          </div>
+        @endif
       </div>
 
       @if($contents->links())

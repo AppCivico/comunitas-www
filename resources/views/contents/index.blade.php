@@ -40,7 +40,7 @@
                     @elseif($content->external_link)
                       href="{{ $content->getTranslatedAttribute('external_link', app()->getLocale()) }}" target="blank"
                     @elseif($content->type === 'trail')
-                      href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
+                      href="{{ route('trail.show', ['trail' => $content->slug]) }}"
                     @elseif($content->slug)
                       href="{{ route($content->type, [$content->type => $content->slug]) }}"
                     @endif
@@ -81,7 +81,7 @@
                 @elseif($content->external_link)
                   href="{{ $content->external_link }}" target="blank"
                 @elseif($content->type === 'trail')
-                  href="{{ route('trail.show', ['trail' => $content->course_code]) }}"
+                  href="{{ route('trail.show', ['trail' => $content->slug]) }}"
                 @elseif($content->slug)
                   href="{{ route($content->type, [$content->type => $content->slug]) }}"
                 @endif
@@ -100,7 +100,7 @@
                   @endisset
                 </h2>
 
-                @if($type ?? '' ?? '' === 'trails')
+                @if($type ?? '' === 'trails')
                   <p class="section__excerpt">
                     {{ Str::words($content->getTranslatedAttribute('excerpt', app()->getLocale()), 30) }}
                   </p>
@@ -143,7 +143,9 @@
             </article>
           @endforeach
         @else
-          <h1>@lang('content.no-entries')</h1>
+          <div class="conteinr">
+            <h1>@lang('content.no-entries')</h1>
+          </div>
         @endisset
       </div>
 

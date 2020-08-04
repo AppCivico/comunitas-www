@@ -201,6 +201,7 @@ function initSearchToggle() {
       search.classList.toggle('search--active');
 
       if (search.classList.contains('search--active')) {
+        search.querySelector('.js-search-input').focus();
         window.scrollTo(0, 0);
       }
     });
