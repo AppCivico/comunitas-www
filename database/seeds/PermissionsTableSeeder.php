@@ -307,53 +307,13 @@ class PermissionsTableSeeder extends Seeder
             ),
             36 => 
             array (
-                'id' => 42,
-                'key' => 'browse_contents',
-                'table_name' => 'contents',
-                'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-11 17:58:24',
-            ),
-            37 => 
-            array (
-                'id' => 43,
-                'key' => 'read_contents',
-                'table_name' => 'contents',
-                'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-11 17:58:24',
-            ),
-            38 => 
-            array (
-                'id' => 44,
-                'key' => 'edit_contents',
-                'table_name' => 'contents',
-                'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-11 17:58:24',
-            ),
-            39 => 
-            array (
-                'id' => 45,
-                'key' => 'add_contents',
-                'table_name' => 'contents',
-                'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-11 17:58:24',
-            ),
-            40 => 
-            array (
-                'id' => 46,
-                'key' => 'delete_contents',
-                'table_name' => 'contents',
-                'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-06-11 17:58:24',
-            ),
-            41 => 
-            array (
                 'id' => 47,
                 'key' => 'browse_types',
                 'table_name' => 'types',
                 'created_at' => '2020-06-11 18:33:23',
                 'updated_at' => '2020-06-11 18:33:23',
             ),
-            42 => 
+            37 => 
             array (
                 'id' => 48,
                 'key' => 'read_types',
@@ -361,7 +321,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-11 18:33:23',
                 'updated_at' => '2020-06-11 18:33:23',
             ),
-            43 => 
+            38 => 
             array (
                 'id' => 49,
                 'key' => 'edit_types',
@@ -369,7 +329,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-11 18:33:23',
                 'updated_at' => '2020-06-11 18:33:23',
             ),
-            44 => 
+            39 => 
             array (
                 'id' => 50,
                 'key' => 'add_types',
@@ -377,7 +337,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-11 18:33:23',
                 'updated_at' => '2020-06-11 18:33:23',
             ),
-            45 => 
+            40 => 
             array (
                 'id' => 51,
                 'key' => 'delete_types',
@@ -385,7 +345,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-11 18:33:23',
                 'updated_at' => '2020-06-11 18:33:23',
             ),
-            46 => 
+            41 => 
             array (
                 'id' => 52,
                 'key' => 'browse_webinars',
@@ -393,7 +353,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-12 22:34:35',
                 'updated_at' => '2020-06-12 22:34:35',
             ),
-            47 => 
+            42 => 
             array (
                 'id' => 53,
                 'key' => 'read_webinars',
@@ -401,7 +361,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-12 22:34:35',
                 'updated_at' => '2020-06-12 22:34:35',
             ),
-            48 => 
+            43 => 
             array (
                 'id' => 54,
                 'key' => 'edit_webinars',
@@ -409,7 +369,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-12 22:34:35',
                 'updated_at' => '2020-06-12 22:34:35',
             ),
-            49 => 
+            44 => 
             array (
                 'id' => 55,
                 'key' => 'add_webinars',
@@ -417,7 +377,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-12 22:34:35',
                 'updated_at' => '2020-06-12 22:34:35',
             ),
-            50 => 
+            45 => 
             array (
                 'id' => 56,
                 'key' => 'delete_webinars',
@@ -425,7 +385,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-12 22:34:35',
                 'updated_at' => '2020-06-12 22:34:35',
             ),
-            51 => 
+            46 => 
             array (
                 'id' => 57,
                 'key' => 'browse_podcasts',
@@ -433,7 +393,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:06:07',
                 'updated_at' => '2020-06-19 21:06:07',
             ),
-            52 => 
+            47 => 
             array (
                 'id' => 58,
                 'key' => 'read_podcasts',
@@ -441,7 +401,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:06:07',
                 'updated_at' => '2020-06-19 21:06:07',
             ),
-            53 => 
+            48 => 
             array (
                 'id' => 59,
                 'key' => 'edit_podcasts',
@@ -449,7 +409,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:06:07',
                 'updated_at' => '2020-06-19 21:06:07',
             ),
-            54 => 
+            49 => 
             array (
                 'id' => 60,
                 'key' => 'add_podcasts',
@@ -457,7 +417,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:06:07',
                 'updated_at' => '2020-06-19 21:06:07',
             ),
-            55 => 
+            50 => 
             array (
                 'id' => 61,
                 'key' => 'delete_podcasts',
@@ -465,7 +425,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:06:07',
                 'updated_at' => '2020-06-19 21:06:07',
             ),
-            56 => 
+            51 => 
             array (
                 'id' => 62,
                 'key' => 'browse_categories',
@@ -473,7 +433,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:14:17',
                 'updated_at' => '2020-06-19 21:14:17',
             ),
-            57 => 
+            52 => 
             array (
                 'id' => 63,
                 'key' => 'read_categories',
@@ -481,7 +441,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:14:17',
                 'updated_at' => '2020-06-19 21:14:17',
             ),
-            58 => 
+            53 => 
             array (
                 'id' => 64,
                 'key' => 'edit_categories',
@@ -489,7 +449,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:14:17',
                 'updated_at' => '2020-06-19 21:14:17',
             ),
-            59 => 
+            54 => 
             array (
                 'id' => 65,
                 'key' => 'add_categories',
@@ -497,7 +457,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:14:17',
                 'updated_at' => '2020-06-19 21:14:17',
             ),
-            60 => 
+            55 => 
             array (
                 'id' => 66,
                 'key' => 'delete_categories',
@@ -505,7 +465,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:14:17',
                 'updated_at' => '2020-06-19 21:14:17',
             ),
-            61 => 
+            56 => 
             array (
                 'id' => 67,
                 'key' => 'browse_podcast_contents',
@@ -513,7 +473,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:20:12',
                 'updated_at' => '2020-06-19 21:20:12',
             ),
-            62 => 
+            57 => 
             array (
                 'id' => 68,
                 'key' => 'read_podcast_contents',
@@ -521,7 +481,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:20:12',
                 'updated_at' => '2020-06-19 21:20:12',
             ),
-            63 => 
+            58 => 
             array (
                 'id' => 69,
                 'key' => 'edit_podcast_contents',
@@ -529,7 +489,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:20:12',
                 'updated_at' => '2020-06-19 21:20:12',
             ),
-            64 => 
+            59 => 
             array (
                 'id' => 70,
                 'key' => 'add_podcast_contents',
@@ -537,7 +497,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:20:12',
                 'updated_at' => '2020-06-19 21:20:12',
             ),
-            65 => 
+            60 => 
             array (
                 'id' => 71,
                 'key' => 'delete_podcast_contents',
@@ -545,7 +505,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:20:12',
                 'updated_at' => '2020-06-19 21:20:12',
             ),
-            66 => 
+            61 => 
             array (
                 'id' => 72,
                 'key' => 'browse_webinar_contents',
@@ -553,7 +513,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:53:59',
                 'updated_at' => '2020-06-19 21:53:59',
             ),
-            67 => 
+            62 => 
             array (
                 'id' => 73,
                 'key' => 'read_webinar_contents',
@@ -561,7 +521,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:53:59',
                 'updated_at' => '2020-06-19 21:53:59',
             ),
-            68 => 
+            63 => 
             array (
                 'id' => 74,
                 'key' => 'edit_webinar_contents',
@@ -569,7 +529,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:53:59',
                 'updated_at' => '2020-06-19 21:53:59',
             ),
-            69 => 
+            64 => 
             array (
                 'id' => 75,
                 'key' => 'add_webinar_contents',
@@ -577,7 +537,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:53:59',
                 'updated_at' => '2020-06-19 21:53:59',
             ),
-            70 => 
+            65 => 
             array (
                 'id' => 76,
                 'key' => 'delete_webinar_contents',
@@ -585,7 +545,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-19 21:53:59',
                 'updated_at' => '2020-06-19 21:53:59',
             ),
-            71 => 
+            66 => 
             array (
                 'id' => 77,
                 'key' => 'browse_guidelines',
@@ -593,7 +553,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:05:28',
                 'updated_at' => '2020-06-22 18:05:28',
             ),
-            72 => 
+            67 => 
             array (
                 'id' => 78,
                 'key' => 'read_guidelines',
@@ -601,7 +561,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:05:28',
                 'updated_at' => '2020-06-22 18:05:28',
             ),
-            73 => 
+            68 => 
             array (
                 'id' => 79,
                 'key' => 'edit_guidelines',
@@ -609,7 +569,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:05:28',
                 'updated_at' => '2020-06-22 18:05:28',
             ),
-            74 => 
+            69 => 
             array (
                 'id' => 80,
                 'key' => 'add_guidelines',
@@ -617,7 +577,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:05:28',
                 'updated_at' => '2020-06-22 18:05:28',
             ),
-            75 => 
+            70 => 
             array (
                 'id' => 81,
                 'key' => 'delete_guidelines',
@@ -625,7 +585,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:05:28',
                 'updated_at' => '2020-06-22 18:05:28',
             ),
-            76 => 
+            71 => 
             array (
                 'id' => 82,
                 'key' => 'browse_guideline_contents',
@@ -633,7 +593,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:27:47',
                 'updated_at' => '2020-06-22 18:27:47',
             ),
-            77 => 
+            72 => 
             array (
                 'id' => 83,
                 'key' => 'read_guideline_contents',
@@ -641,7 +601,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:27:47',
                 'updated_at' => '2020-06-22 18:27:47',
             ),
-            78 => 
+            73 => 
             array (
                 'id' => 84,
                 'key' => 'edit_guideline_contents',
@@ -649,7 +609,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:27:47',
                 'updated_at' => '2020-06-22 18:27:47',
             ),
-            79 => 
+            74 => 
             array (
                 'id' => 85,
                 'key' => 'add_guideline_contents',
@@ -657,7 +617,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:27:47',
                 'updated_at' => '2020-06-22 18:27:47',
             ),
-            80 => 
+            75 => 
             array (
                 'id' => 86,
                 'key' => 'delete_guideline_contents',
@@ -665,7 +625,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:27:47',
                 'updated_at' => '2020-06-22 18:27:47',
             ),
-            81 => 
+            76 => 
             array (
                 'id' => 87,
                 'key' => 'browse_authors',
@@ -673,7 +633,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:52:02',
                 'updated_at' => '2020-06-22 18:52:02',
             ),
-            82 => 
+            77 => 
             array (
                 'id' => 88,
                 'key' => 'read_authors',
@@ -681,7 +641,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:52:02',
                 'updated_at' => '2020-06-22 18:52:02',
             ),
-            83 => 
+            78 => 
             array (
                 'id' => 89,
                 'key' => 'edit_authors',
@@ -689,7 +649,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:52:02',
                 'updated_at' => '2020-06-22 18:52:02',
             ),
-            84 => 
+            79 => 
             array (
                 'id' => 90,
                 'key' => 'add_authors',
@@ -697,7 +657,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:52:02',
                 'updated_at' => '2020-06-22 18:52:02',
             ),
-            85 => 
+            80 => 
             array (
                 'id' => 91,
                 'key' => 'delete_authors',
@@ -705,7 +665,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 18:52:02',
                 'updated_at' => '2020-06-22 18:52:02',
             ),
-            86 => 
+            81 => 
             array (
                 'id' => 92,
                 'key' => 'browse_interviews',
@@ -713,7 +673,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:03:09',
                 'updated_at' => '2020-06-22 20:03:09',
             ),
-            87 => 
+            82 => 
             array (
                 'id' => 93,
                 'key' => 'read_interviews',
@@ -721,7 +681,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:03:09',
                 'updated_at' => '2020-06-22 20:03:09',
             ),
-            88 => 
+            83 => 
             array (
                 'id' => 94,
                 'key' => 'edit_interviews',
@@ -729,7 +689,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:03:09',
                 'updated_at' => '2020-06-22 20:03:09',
             ),
-            89 => 
+            84 => 
             array (
                 'id' => 95,
                 'key' => 'add_interviews',
@@ -737,7 +697,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:03:09',
                 'updated_at' => '2020-06-22 20:03:09',
             ),
-            90 => 
+            85 => 
             array (
                 'id' => 96,
                 'key' => 'delete_interviews',
@@ -745,7 +705,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:03:09',
                 'updated_at' => '2020-06-22 20:03:09',
             ),
-            91 => 
+            86 => 
             array (
                 'id' => 97,
                 'key' => 'browse_interview_contents',
@@ -753,7 +713,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:58:34',
                 'updated_at' => '2020-06-22 20:58:34',
             ),
-            92 => 
+            87 => 
             array (
                 'id' => 98,
                 'key' => 'read_interview_contents',
@@ -761,7 +721,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:58:34',
                 'updated_at' => '2020-06-22 20:58:34',
             ),
-            93 => 
+            88 => 
             array (
                 'id' => 99,
                 'key' => 'edit_interview_contents',
@@ -769,7 +729,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:58:34',
                 'updated_at' => '2020-06-22 20:58:34',
             ),
-            94 => 
+            89 => 
             array (
                 'id' => 100,
                 'key' => 'add_interview_contents',
@@ -777,7 +737,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:58:34',
                 'updated_at' => '2020-06-22 20:58:34',
             ),
-            95 => 
+            90 => 
             array (
                 'id' => 101,
                 'key' => 'delete_interview_contents',
@@ -785,7 +745,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 20:58:34',
                 'updated_at' => '2020-06-22 20:58:34',
             ),
-            96 => 
+            91 => 
             array (
                 'id' => 102,
                 'key' => 'browse_articles',
@@ -793,7 +753,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 21:57:09',
                 'updated_at' => '2020-06-22 21:57:09',
             ),
-            97 => 
+            92 => 
             array (
                 'id' => 103,
                 'key' => 'read_articles',
@@ -801,7 +761,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 21:57:09',
                 'updated_at' => '2020-06-22 21:57:09',
             ),
-            98 => 
+            93 => 
             array (
                 'id' => 104,
                 'key' => 'edit_articles',
@@ -809,7 +769,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 21:57:09',
                 'updated_at' => '2020-06-22 21:57:09',
             ),
-            99 => 
+            94 => 
             array (
                 'id' => 105,
                 'key' => 'add_articles',
@@ -817,7 +777,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 21:57:09',
                 'updated_at' => '2020-06-22 21:57:09',
             ),
-            100 => 
+            95 => 
             array (
                 'id' => 106,
                 'key' => 'delete_articles',
@@ -825,7 +785,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 21:57:09',
                 'updated_at' => '2020-06-22 21:57:09',
             ),
-            101 => 
+            96 => 
             array (
                 'id' => 107,
                 'key' => 'browse_article_contents',
@@ -833,7 +793,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:12:59',
                 'updated_at' => '2020-06-22 22:12:59',
             ),
-            102 => 
+            97 => 
             array (
                 'id' => 108,
                 'key' => 'read_article_contents',
@@ -841,7 +801,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:12:59',
                 'updated_at' => '2020-06-22 22:12:59',
             ),
-            103 => 
+            98 => 
             array (
                 'id' => 109,
                 'key' => 'edit_article_contents',
@@ -849,7 +809,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:12:59',
                 'updated_at' => '2020-06-22 22:12:59',
             ),
-            104 => 
+            99 => 
             array (
                 'id' => 110,
                 'key' => 'add_article_contents',
@@ -857,7 +817,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:12:59',
                 'updated_at' => '2020-06-22 22:12:59',
             ),
-            105 => 
+            100 => 
             array (
                 'id' => 111,
                 'key' => 'delete_article_contents',
@@ -865,7 +825,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:12:59',
                 'updated_at' => '2020-06-22 22:12:59',
             ),
-            106 => 
+            101 => 
             array (
                 'id' => 112,
                 'key' => 'browse_news',
@@ -873,7 +833,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:51:11',
                 'updated_at' => '2020-06-22 22:51:11',
             ),
-            107 => 
+            102 => 
             array (
                 'id' => 113,
                 'key' => 'read_news',
@@ -881,7 +841,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:51:11',
                 'updated_at' => '2020-06-22 22:51:11',
             ),
-            108 => 
+            103 => 
             array (
                 'id' => 114,
                 'key' => 'edit_news',
@@ -889,7 +849,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:51:11',
                 'updated_at' => '2020-06-22 22:51:11',
             ),
-            109 => 
+            104 => 
             array (
                 'id' => 115,
                 'key' => 'add_news',
@@ -897,7 +857,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:51:11',
                 'updated_at' => '2020-06-22 22:51:11',
             ),
-            110 => 
+            105 => 
             array (
                 'id' => 116,
                 'key' => 'delete_news',
@@ -905,7 +865,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 22:51:11',
                 'updated_at' => '2020-06-22 22:51:11',
             ),
-            111 => 
+            106 => 
             array (
                 'id' => 117,
                 'key' => 'browse_new_contents',
@@ -913,7 +873,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 23:01:27',
                 'updated_at' => '2020-06-22 23:01:27',
             ),
-            112 => 
+            107 => 
             array (
                 'id' => 118,
                 'key' => 'read_new_contents',
@@ -921,7 +881,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 23:01:27',
                 'updated_at' => '2020-06-22 23:01:27',
             ),
-            113 => 
+            108 => 
             array (
                 'id' => 119,
                 'key' => 'edit_new_contents',
@@ -929,7 +889,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 23:01:27',
                 'updated_at' => '2020-06-22 23:01:27',
             ),
-            114 => 
+            109 => 
             array (
                 'id' => 120,
                 'key' => 'add_new_contents',
@@ -937,7 +897,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 23:01:27',
                 'updated_at' => '2020-06-22 23:01:27',
             ),
-            115 => 
+            110 => 
             array (
                 'id' => 121,
                 'key' => 'delete_new_contents',
@@ -945,7 +905,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-06-22 23:01:27',
                 'updated_at' => '2020-06-22 23:01:27',
             ),
-            116 => 
+            111 => 
             array (
                 'id' => 122,
                 'key' => 'browse_trail_contents',
@@ -953,7 +913,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:29:57',
                 'updated_at' => '2020-07-08 23:29:57',
             ),
-            117 => 
+            112 => 
             array (
                 'id' => 123,
                 'key' => 'read_trail_contents',
@@ -961,7 +921,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:29:57',
                 'updated_at' => '2020-07-08 23:29:57',
             ),
-            118 => 
+            113 => 
             array (
                 'id' => 124,
                 'key' => 'edit_trail_contents',
@@ -969,7 +929,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:29:57',
                 'updated_at' => '2020-07-08 23:29:57',
             ),
-            119 => 
+            114 => 
             array (
                 'id' => 125,
                 'key' => 'add_trail_contents',
@@ -977,7 +937,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:29:57',
                 'updated_at' => '2020-07-08 23:29:57',
             ),
-            120 => 
+            115 => 
             array (
                 'id' => 126,
                 'key' => 'delete_trail_contents',
@@ -985,7 +945,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:29:57',
                 'updated_at' => '2020-07-08 23:29:57',
             ),
-            121 => 
+            116 => 
             array (
                 'id' => 127,
                 'key' => 'browse_trails',
@@ -993,7 +953,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:31:26',
                 'updated_at' => '2020-07-08 23:31:26',
             ),
-            122 => 
+            117 => 
             array (
                 'id' => 128,
                 'key' => 'read_trails',
@@ -1001,7 +961,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:31:26',
                 'updated_at' => '2020-07-08 23:31:26',
             ),
-            123 => 
+            118 => 
             array (
                 'id' => 129,
                 'key' => 'edit_trails',
@@ -1009,7 +969,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:31:26',
                 'updated_at' => '2020-07-08 23:31:26',
             ),
-            124 => 
+            119 => 
             array (
                 'id' => 130,
                 'key' => 'add_trails',
@@ -1017,7 +977,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:31:26',
                 'updated_at' => '2020-07-08 23:31:26',
             ),
-            125 => 
+            120 => 
             array (
                 'id' => 131,
                 'key' => 'delete_trails',
@@ -1025,7 +985,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-08 23:31:26',
                 'updated_at' => '2020-07-08 23:31:26',
             ),
-            126 => 
+            121 => 
             array (
                 'id' => 132,
                 'key' => 'browse_banners',
@@ -1033,7 +993,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:31:21',
                 'updated_at' => '2020-07-17 19:31:21',
             ),
-            127 => 
+            122 => 
             array (
                 'id' => 133,
                 'key' => 'read_banners',
@@ -1041,7 +1001,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:31:21',
                 'updated_at' => '2020-07-17 19:31:21',
             ),
-            128 => 
+            123 => 
             array (
                 'id' => 134,
                 'key' => 'edit_banners',
@@ -1049,7 +1009,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:31:21',
                 'updated_at' => '2020-07-17 19:31:21',
             ),
-            129 => 
+            124 => 
             array (
                 'id' => 135,
                 'key' => 'add_banners',
@@ -1057,7 +1017,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:31:21',
                 'updated_at' => '2020-07-17 19:31:21',
             ),
-            130 => 
+            125 => 
             array (
                 'id' => 136,
                 'key' => 'delete_banners',
@@ -1065,7 +1025,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:31:21',
                 'updated_at' => '2020-07-17 19:31:21',
             ),
-            131 => 
+            126 => 
             array (
                 'id' => 137,
                 'key' => 'browse_testimonials',
@@ -1073,7 +1033,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:44:36',
                 'updated_at' => '2020-07-17 19:44:36',
             ),
-            132 => 
+            127 => 
             array (
                 'id' => 138,
                 'key' => 'read_testimonials',
@@ -1081,7 +1041,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:44:36',
                 'updated_at' => '2020-07-17 19:44:36',
             ),
-            133 => 
+            128 => 
             array (
                 'id' => 139,
                 'key' => 'edit_testimonials',
@@ -1089,7 +1049,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:44:36',
                 'updated_at' => '2020-07-17 19:44:36',
             ),
-            134 => 
+            129 => 
             array (
                 'id' => 140,
                 'key' => 'add_testimonials',
@@ -1097,7 +1057,7 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:44:36',
                 'updated_at' => '2020-07-17 19:44:36',
             ),
-            135 => 
+            130 => 
             array (
                 'id' => 141,
                 'key' => 'delete_testimonials',
