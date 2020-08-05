@@ -5,7 +5,6 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 use TCG\Voyager\Traits\Resizable;
-use Laravel\Scout\Searchable;
 use App\Category;
 use App\Author;
 
@@ -13,7 +12,6 @@ use App\Author;
 class Webinar extends Model
 {
     use Resizable;
-    use Searchable;
     use Translatable;
 
     protected $translatable = [
@@ -26,16 +24,6 @@ class Webinar extends Model
         'meta_keywords',
         'image_alt',
     ];
-
-    public function toSearchableArray()
-    {
-        return [
-            'id' => $this->id,
-            'title' => $this->title,
-            'body' => $this->body,
-            'category' => $this->categories->implode('name', ''),
-        ];
-    }
 
     public function categories()
     {
