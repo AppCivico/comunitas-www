@@ -10,6 +10,7 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
+        $content = Content::first();
         $limit = 10;
 
         $page_info  = null;

@@ -81,8 +81,7 @@
   font-family: $orkney-font-stack;
   text-align: right;
   list-style: none;
-  // terporarily hide this menus
-  // border-top: 1px solid palette('red', 'violet');
+  border-top: 1px solid palette('red', 'violet');
 
   @media screen and (min-width: breakpoint('desktop')) {
     flex-direction: row;

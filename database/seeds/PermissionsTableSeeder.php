@@ -1065,6 +1065,286 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-07-17 19:44:36',
                 'updated_at' => '2020-07-17 19:44:36',
             ),
+            131 => 
+            array (
+                'id' => 142,
+                'key' => 'browse_about',
+                'table_name' => 'about',
+                'created_at' => '2020-08-07 22:29:41',
+                'updated_at' => '2020-08-07 22:29:41',
+            ),
+            132 => 
+            array (
+                'id' => 143,
+                'key' => 'read_about',
+                'table_name' => 'about',
+                'created_at' => '2020-08-07 22:29:41',
+                'updated_at' => '2020-08-07 22:29:41',
+            ),
+            133 => 
+            array (
+                'id' => 144,
+                'key' => 'edit_about',
+                'table_name' => 'about',
+                'created_at' => '2020-08-07 22:29:41',
+                'updated_at' => '2020-08-07 22:29:41',
+            ),
+            134 => 
+            array (
+                'id' => 145,
+                'key' => 'add_about',
+                'table_name' => 'about',
+                'created_at' => '2020-08-07 22:29:41',
+                'updated_at' => '2020-08-07 22:29:41',
+            ),
+            135 => 
+            array (
+                'id' => 146,
+                'key' => 'delete_about',
+                'table_name' => 'about',
+                'created_at' => '2020-08-07 22:29:41',
+                'updated_at' => '2020-08-07 22:29:41',
+            ),
+            136 => 
+            array (
+                'id' => 147,
+                'key' => 'browse_initiative',
+                'table_name' => 'initiative',
+                'created_at' => '2020-08-07 22:34:17',
+                'updated_at' => '2020-08-07 22:34:17',
+            ),
+            137 => 
+            array (
+                'id' => 148,
+                'key' => 'read_initiative',
+                'table_name' => 'initiative',
+                'created_at' => '2020-08-07 22:34:17',
+                'updated_at' => '2020-08-07 22:34:17',
+            ),
+            138 => 
+            array (
+                'id' => 149,
+                'key' => 'edit_initiative',
+                'table_name' => 'initiative',
+                'created_at' => '2020-08-07 22:34:17',
+                'updated_at' => '2020-08-07 22:34:17',
+            ),
+            139 => 
+            array (
+                'id' => 150,
+                'key' => 'add_initiative',
+                'table_name' => 'initiative',
+                'created_at' => '2020-08-07 22:34:17',
+                'updated_at' => '2020-08-07 22:34:17',
+            ),
+            140 => 
+            array (
+                'id' => 151,
+                'key' => 'delete_initiative',
+                'table_name' => 'initiative',
+                'created_at' => '2020-08-07 22:34:17',
+                'updated_at' => '2020-08-07 22:34:17',
+            ),
+            141 => 
+            array (
+                'id' => 152,
+                'key' => 'browse_collaborators',
+                'table_name' => 'collaborators',
+                'created_at' => '2020-08-07 22:37:11',
+                'updated_at' => '2020-08-07 22:37:11',
+            ),
+            142 => 
+            array (
+                'id' => 153,
+                'key' => 'read_collaborators',
+                'table_name' => 'collaborators',
+                'created_at' => '2020-08-07 22:37:11',
+                'updated_at' => '2020-08-07 22:37:11',
+            ),
+            143 => 
+            array (
+                'id' => 154,
+                'key' => 'edit_collaborators',
+                'table_name' => 'collaborators',
+                'created_at' => '2020-08-07 22:37:11',
+                'updated_at' => '2020-08-07 22:37:11',
+            ),
+            144 => 
+            array (
+                'id' => 155,
+                'key' => 'add_collaborators',
+                'table_name' => 'collaborators',
+                'created_at' => '2020-08-07 22:37:11',
+                'updated_at' => '2020-08-07 22:37:11',
+            ),
+            145 => 
+            array (
+                'id' => 156,
+                'key' => 'delete_collaborators',
+                'table_name' => 'collaborators',
+                'created_at' => '2020-08-07 22:37:11',
+                'updated_at' => '2020-08-07 22:37:11',
+            ),
+            146 => 
+            array (
+                'id' => 157,
+                'key' => 'browse_support',
+                'table_name' => 'support',
+                'created_at' => '2020-08-07 22:39:50',
+                'updated_at' => '2020-08-07 22:39:50',
+            ),
+            147 => 
+            array (
+                'id' => 158,
+                'key' => 'read_support',
+                'table_name' => 'support',
+                'created_at' => '2020-08-07 22:39:50',
+                'updated_at' => '2020-08-07 22:39:50',
+            ),
+            148 => 
+            array (
+                'id' => 159,
+                'key' => 'edit_support',
+                'table_name' => 'support',
+                'created_at' => '2020-08-07 22:39:50',
+                'updated_at' => '2020-08-07 22:39:50',
+            ),
+            149 => 
+            array (
+                'id' => 160,
+                'key' => 'add_support',
+                'table_name' => 'support',
+                'created_at' => '2020-08-07 22:39:50',
+                'updated_at' => '2020-08-07 22:39:50',
+            ),
+            150 => 
+            array (
+                'id' => 161,
+                'key' => 'delete_support',
+                'table_name' => 'support',
+                'created_at' => '2020-08-07 22:39:50',
+                'updated_at' => '2020-08-07 22:39:50',
+            ),
+            151 => 
+            array (
+                'id' => 162,
+                'key' => 'browse_abouts',
+                'table_name' => 'abouts',
+                'created_at' => '2020-08-07 22:48:23',
+                'updated_at' => '2020-08-07 22:48:23',
+            ),
+            152 => 
+            array (
+                'id' => 163,
+                'key' => 'read_abouts',
+                'table_name' => 'abouts',
+                'created_at' => '2020-08-07 22:48:23',
+                'updated_at' => '2020-08-07 22:48:23',
+            ),
+            153 => 
+            array (
+                'id' => 164,
+                'key' => 'edit_abouts',
+                'table_name' => 'abouts',
+                'created_at' => '2020-08-07 22:48:23',
+                'updated_at' => '2020-08-07 22:48:23',
+            ),
+            154 => 
+            array (
+                'id' => 165,
+                'key' => 'add_abouts',
+                'table_name' => 'abouts',
+                'created_at' => '2020-08-07 22:48:23',
+                'updated_at' => '2020-08-07 22:48:23',
+            ),
+            155 => 
+            array (
+                'id' => 166,
+                'key' => 'delete_abouts',
+                'table_name' => 'abouts',
+                'created_at' => '2020-08-07 22:48:23',
+                'updated_at' => '2020-08-07 22:48:23',
+            ),
+            156 => 
+            array (
+                'id' => 167,
+                'key' => 'browse_initiatives',
+                'table_name' => 'initiatives',
+                'created_at' => '2020-08-07 23:02:32',
+                'updated_at' => '2020-08-07 23:02:32',
+            ),
+            157 => 
+            array (
+                'id' => 168,
+                'key' => 'read_initiatives',
+                'table_name' => 'initiatives',
+                'created_at' => '2020-08-07 23:02:32',
+                'updated_at' => '2020-08-07 23:02:32',
+            ),
+            158 => 
+            array (
+                'id' => 169,
+                'key' => 'edit_initiatives',
+                'table_name' => 'initiatives',
+                'created_at' => '2020-08-07 23:02:32',
+                'updated_at' => '2020-08-07 23:02:32',
+            ),
+            159 => 
+            array (
+                'id' => 170,
+                'key' => 'add_initiatives',
+                'table_name' => 'initiatives',
+                'created_at' => '2020-08-07 23:02:32',
+                'updated_at' => '2020-08-07 23:02:32',
+            ),
+            160 => 
+            array (
+                'id' => 171,
+                'key' => 'delete_initiatives',
+                'table_name' => 'initiatives',
+                'created_at' => '2020-08-07 23:02:32',
+                'updated_at' => '2020-08-07 23:02:32',
+            ),
+            161 => 
+            array (
+                'id' => 172,
+                'key' => 'browse_supports',
+                'table_name' => 'supports',
+                'created_at' => '2020-08-07 23:12:40',
+                'updated_at' => '2020-08-07 23:12:40',
+            ),
+            162 => 
+            array (
+                'id' => 173,
+                'key' => 'read_supports',
+                'table_name' => 'supports',
+                'created_at' => '2020-08-07 23:12:40',
+                'updated_at' => '2020-08-07 23:12:40',
+            ),
+            163 => 
+            array (
+                'id' => 174,
+                'key' => 'edit_supports',
+                'table_name' => 'supports',
+                'created_at' => '2020-08-07 23:12:40',
+                'updated_at' => '2020-08-07 23:12:40',
+            ),
+            164 => 
+            array (
+                'id' => 175,
+                'key' => 'add_supports',
+                'table_name' => 'supports',
+                'created_at' => '2020-08-07 23:12:40',
+                'updated_at' => '2020-08-07 23:12:40',
+            ),
+            165 => 
+            array (
+                'id' => 176,
+                'key' => 'delete_supports',
+                'table_name' => 'supports',
+                'created_at' => '2020-08-07 23:12:40',
+                'updated_at' => '2020-08-07 23:12:40',
+            ),
         ));
         
         

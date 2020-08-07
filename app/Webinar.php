@@ -25,6 +25,12 @@ class Webinar extends Model
         'image_alt',
     ];
 
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'PUBLISHED');
+    }
+
+
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'category_content', 'content_id');

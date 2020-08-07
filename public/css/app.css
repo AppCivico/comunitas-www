@@ -905,6 +905,10 @@ blockquote.verse p {
   color: #05d7bd;
 }
 
+.text--small {
+  font-size: 0.8888888889em;
+}
+
 /* CLASSES
 ============================================================================ */
 
@@ -1335,6 +1339,7 @@ html {
   font-family: "orkneyregular", sans-serif;
   text-align: right;
   list-style: none;
+  border-top: 1px solid #f43e7f;
 }
 
 @media screen and (min-width: 64em) {
@@ -1606,12 +1611,6 @@ html {
 }
 
 @media screen and (min-width: 64em) {
-  .site-footer {
-    margin-top: 2rem;
-  }
-}
-
-@media screen and (min-width: 64em) {
   .site-footer .container {
     display: flex;
     flex-wrap: wrap;
@@ -1619,7 +1618,6 @@ html {
 }
 
 .footer-nav {
-  display: none;
   padding-top: 1.5rem;
   padding-right: 0;
   padding-bottom: 1.5rem;
@@ -1635,7 +1633,7 @@ html {
 
 @media screen and (min-width: 30em) {
   .footer-nav {
-    display: none;
+    display: flex;
     flex-direction: row;
     justify-content: center;
   }
@@ -2262,7 +2260,7 @@ html {
 
 @media screen and (min-width: 64em) {
   .sections__list-title {
-    height: 2.75rem;
+    height: 2.45rem;
     overflow: hidden;
   }
 }
@@ -3020,5 +3018,228 @@ html {
   font-style: normal;
   font-size: 0.8888888889em;
   font-family: "orkneybold", sans-serif;
+}
+
+@media screen and (min-width: 48em) {
+  .about {
+    padding-top: 2rem;
+  }
+}
+
+.about h1 {
+  font-size: 1.6018066406em;
+  color: #7654a3;
+}
+
+@media screen and (min-width: 64em) {
+  .about h1 {
+    margin-bottom: 2.5rem;
+    font-size: 2.0272865295em;
+  }
+}
+
+.about h2 {
+  font-size: 1.6018066406em;
+  color: #7654a3;
+}
+
+@media screen and (min-width: 64em) {
+  .about h2 {
+    font-size: 2.0272865295em;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .about__main {
+    display: flex;
+  }
+}
+
+.about__text {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  .about__text {
+    max-width: 70%;
+    padding-right: 5rem;
+  }
+}
+
+.about__image {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .about__image {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about__collaborators {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+  background-color: #7654a3;
+}
+
+.about__collaborators .splide {
+  width: 12.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 30em) {
+  .about__collaborators .splide {
+    width: 100%;
+  }
+}
+
+.about__collaborators h2 {
+  margin-top: 0;
+  color: #05d7bd;
+}
+
+.about__collaborators-box {
+  width: 12.5rem;
+  height: 19rem;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.about__collaborators-box p {
+  padding: 0.5rem;
+  font-style: normal;
+  font-size: 0.8888888889em;
+  line-height: 1.3;
+  text-align: center;
+  color: #7654a3;
+}
+
+.about__collaborators-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.125em;
+  color: #7654a3;
+}
+
+.about__collaborators-box span {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.about__support {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+  background: #05d7bd;
+}
+
+.about__initiative-images,
+.about__support-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.about__support img {
+  margin-bottom: 2rem;
+}
+
+.about__address {
+  max-width: 48rem;
+  margin-top: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about__address-form {
+  margin-top: 2rem;
+}
+
+.about__address form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about__address-form label {
+  width: 100%;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  color: #7654a3;
+}
+
+.about__address-form input,
+.about__address-form select {
+  width: 100%;
+  height: 2.68rem;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: 1px solid #7654a3;
+  border-radius: 3px;
+}
+
+.about__address-form textarea {
+  width: 100%;
+  height: 9rem;
+  margin-bottom: 1rem;
+  border-color: #7654a3;
+  border-radius: 3px;
+}
+
+.about__address button {
+  width: 100%;
+  max-width: 18.125rem;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.125em;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #7654a3;
+  border: 0;
+  border-radius: 3px;
+}
+
+.about__address-form address {
+  margin-top: 2rem;
+  font-style: normal;
+}
+
+@media screen and (min-width: 64em) {
+  .about__address-form address {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+}
+
+.about__address-form address p {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 64em) {
+  .about__address-form address p {
+    width: 47%;
+  }
+}
+
+.about__address-form address strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.125em;
+  color: #05d7bd;
+}
+
+.about__address-form address a {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #05d7bd;
 }
 

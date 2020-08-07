@@ -6,19 +6,6 @@ use Illuminate\View\Component;
 
 class layout extends Component
 {
-    public $testimonials;
-
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->test = 'test';
-    }
-
-
     /**
      * Get the view / contents that represent the component.
      *

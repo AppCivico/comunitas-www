@@ -31,6 +31,7 @@ class Content extends Model
     public function toSearchableArray()
     {
         return [
+            // 'title_pt' => $this::getTranslatedAttribute('title', 'pt_br'),
             'id' => $this->id,
             'title' => $this->title,
             'body' => $this->body,

@@ -45,7 +45,7 @@ class ContentController extends Controller
         if($category) {
             $contents = Category::findOrFail($category->id)->webinars()->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents = Webinar::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents = Webinar::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = WebinarContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
