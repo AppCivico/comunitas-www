@@ -129,8 +129,7 @@
 
       <footer class="site-footer">
           <ul class="footer-nav">
-            <li><a href="">@lang('header.about-plataform')</a></li>
-            <li><a href="">@lang('header.contact')</a></li>
+            <li><a href="{{ route('about.index') }}">@lang('header.about')</a></li>
           </ul>
         <div class="container">
           <div class="footer__blocks">
