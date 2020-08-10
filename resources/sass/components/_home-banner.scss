@@ -13,8 +13,18 @@
   }
 }
 
+.home-banner__text {
+  padding-right: 4rem;
+}
+
+.home-banner__text small {
+  font-size: ms(-3);
+  line-height: 1.3;
+}
+
 .home-banner__title {
-  margin-bottom: 4rem;
+  width: 100%;
+  margin-bottom: 1rem;
   line-height: 1.3;
   letter-spacing: 1px;
   color: palette('white');
@@ -43,7 +53,12 @@
   }
 }
 
+.home-banner__sub-title {
+  margin-bottom: 4rem;
+  color: palette('white');
+}
+
 .home-banner__image img {
   display: block;
-  max-width: none;
+  max-width: 62.5rem;
 }

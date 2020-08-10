@@ -3,10 +3,16 @@
 
     <header class="home-banner">
       <div class="home-banner__container">
-        <h1 class="home-banner__title">
-          VAMOS JUNTOS CONSTRUIR A <span class="text-destak">MAIOR PLATAFORMA</span> DE CONHECIMENTO EM
-          <span class="text-destak">GESTÃO PÚBLICA</span>
-        </h1>
+        <div class="home-banner__text">
+          <h1 class="home-banner__title">
+            JORNADA PARA <span class="text-destak">FUTUROS PREFEITOS</span>
+            <br>
+          </h1>
+          <h2 class="home-banner__sub-title">
+            Como criar programas de Governo para Candidatos após a Crise da Covid-19
+          </h2>
+          <a href="" class="button button--secondary">Acesse a trilha e matricule-se</a>
+        </div>
         <div class="home-banner__image">
           <img src="{{ url('images/temp/home-banner.jpg') }}" alt="Título">
         </div>
