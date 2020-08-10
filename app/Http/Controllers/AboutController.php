@@ -14,7 +14,7 @@ class AboutController extends Controller
         $content = About::first();
         $initiatives = Initiative::all();
         $supports = Support::all();
-        $collaborators = Collaborator::all();
+        $collaborators = Collaborator::all()->shuffle();
 
         return view('about.index', compact('content', 'initiatives', 'supports', 'collaborators'));
     }
