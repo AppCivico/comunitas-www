@@ -7,15 +7,17 @@ use Illuminate\View\Component;
 class testimonials extends Component
 {
     public $testimonials;
+    public $image;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($testimonials)
+    public function __construct($testimonials, $image)
     {
         $this->testimonials = $testimonials;
+        $this->image = $image;
     }
 
 

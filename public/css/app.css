@@ -2908,7 +2908,6 @@ html {
 @media screen and (min-width: 64em) {
   .testimonials {
     min-height: 30rem;
-    background-image: url("http://www.placecage.com/585/498");
     background-size: 50%;
   }
 }

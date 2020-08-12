@@ -521,6 +521,24 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2020-08-07 22:39:50',
                 'updated_at' => '2020-08-07 23:12:40',
             ),
+            28 => 
+            array (
+                'id' => 49,
+                'name' => 'home',
+                'slug' => 'home',
+                'display_name_singular' => 'Home',
+                'display_name_plural' => 'Homes',
+                'icon' => NULL,
+                'model_name' => 'App\\Home',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-12 22:25:54',
+                'updated_at' => '2020-08-12 22:51:18',
+            ),
         ));
         
         

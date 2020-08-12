@@ -1,5 +1,7 @@
 @if(count($testimonials))
-  <div class="testimonials">
+  <div class="testimonials"
+       style="background-image: url('{{ voyager::image($image) }}');"
+    >
     <div class="container container--flex">
       <div class="testimonials__text">
         <span class="testimonials__tiny-text">
