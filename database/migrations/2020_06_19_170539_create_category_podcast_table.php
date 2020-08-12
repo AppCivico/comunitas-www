@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNewsView extends Migration
+class CreateCategoryPodcastTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateNewsView extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW news AS SELECT * FROM contents WHERE type = 'new'");
+        Schema::create('category_podcast', function (Blueprint $table) {
+			$table->increments('id');
+			$table->integer('category_id');
+			$table->integer('podcast_id');
+			$table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateNewsView extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW news");
+        Schema::dropIfExists('category_podcast');
     }
 }

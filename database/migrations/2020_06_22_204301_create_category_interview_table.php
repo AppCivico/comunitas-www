@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArticlesView extends Migration
+class CreateCategoryInterviewTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateArticlesView extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW articles AS SELECT * FROM contents WHERE type = 'article'");
+        Schema::create('category_interview', function (Blueprint $table) {
+			$table->increments('id');
+			$table->integer('category_id');
+			$table->integer('interview_id');
+			$table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateArticlesView extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW articles");
+        Schema::dropIfExists('category_interview');
     }
 }

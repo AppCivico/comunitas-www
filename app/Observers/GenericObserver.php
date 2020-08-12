@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Observers;
-use App\Webinar;
+// use App\Translation;
 use App\Content;
 
 class GenericObserver
 {
-    public function saving(Webinar $webinar)
+    public function saving(Content $content)
     {
-        foreach ($webinar->translations as $translation) {
-            $translation->table_name = 'contents';
-        }
+        // dd($content);
+        // foreach ($translation->translations as $translation) {
+        //     $translation['table_name'] = 'contents';
+            // dd($translation);
+        // }
     }
 }

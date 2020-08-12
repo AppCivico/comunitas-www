@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Webinar;
 use App\Podcast;
 use App\Guideline;
@@ -12,7 +11,6 @@ use App\News;
 use App\Trail;
 use App\Banner;
 use App\Testimonial;
-use App;
 
 class HomeController extends Controller
 {
@@ -31,7 +29,6 @@ class HomeController extends Controller
         $banner = Banner::first();
 
         $testimonials = Testimonial::orderBy('order')->get();
-        // $testimonials = $testimonials->translate('en');
 
         return view('welcome', compact('trails', 'contents', 'banner', 'testimonials'));
     }

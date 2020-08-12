@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWebinarsView extends Migration
+class CreateCategoryGuidelineTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateWebinarsView extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW webinars AS SELECT * FROM contents WHERE type = 'webinar'");
+        Schema::create('category_guideline', function (Blueprint $table) {
+			$table->increments('id');
+			$table->integer('category_id');
+			$table->integer('guideline_id');
+			$table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateWebinarsView extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW webinars");
+        Schema::dropIfExists('category_guideline');
     }
 }

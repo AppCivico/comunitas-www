@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTrailsView extends Migration
+class CreateCategoryTrailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateTrailsView extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW trails AS SELECT * FROM contents WHERE type = 'trail'");
+        Schema::create('category_trail', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('category_id');
+            $table->integer('trail_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateTrailsView extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW trails");
+        Schema::dropIfExists('category_trail');
     }
 }
