@@ -18,6 +18,9 @@ class CreateCategoriesTable extends Migration {
 			$table->integer('order')->nullable()->default(1);
 			$table->string('name');
 			$table->string('slug')->unique();
+            $table->string('image')->nullable();
+            $table->text('meta_description', 16777215)->nullable();
+            $table->string('seo_title')->nullable();
 			$table->timestamps();
 		});
 	}

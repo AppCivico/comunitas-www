@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Webinar;
 use App\WebinarContent;
 
@@ -25,8 +23,6 @@ use App\NewContent;
 use App\Trail;
 use App\TrailContent;
 
-use App\Content;
-
 use App\Category;
 
 
@@ -34,10 +30,29 @@ class ContentController extends Controller
 {
     public function category(Category $category)
     {
-        $contents = $category->contents()->simplePaginate(Config('app.pagination_limit'));
         $page_name  = $category->name;
+        $contents = collect();
+        $page_info = collect();
+        $page_info->image = $category->image;
 
-        return view('contents.index', compact('contents', 'page_name', 'category'));
+        $trails     = Category::find($category->id)->trails()->get();
+        $webinars   = Category::find($category->id)->webinars()->get();
+        $podcasts   = Category::find($category->id)->podcasts()->get();
+        $guidelines = Category::find($category->id)->guidelines()->get();
+        $interviews = Category::find($category->id)->interviews()->get();
+        $articles   = Category::find($category->id)->articles()->get();
+        $news       = Category::find($category->id)->news()->get();
+
+        $contents = $contents->merge($trails);
+        $contents = $contents->merge($webinars);
+        $contents = $contents->merge($podcasts);
+        $contents = $contents->merge($guidelines);
+        $contents = $contents->merge($interviews);
+        $contents = $contents->merge($articles);
+        $contents = $contents->merge($news);
+        $contents = $contents->paginate(Config('app.pagination_limit'));
+
+        return view('contents.index', compact('contents', 'page_name', 'category', 'page_info'));
     }
 
     public function webinars(Category $category = null)

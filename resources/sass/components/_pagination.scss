@@ -15,14 +15,10 @@
 }
 
 .page-item {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 
   &:first-child {
     margin-left: 0;
-  }
-
-  @media screen and (min-width: breakpoint('phablet')) {
-    margin-left: 2rem;
   }
 }
 
@@ -30,6 +26,11 @@
   @extend %button;
   width: 5rem;
 }
+
+.active .page-link {
+  box-shadow: 0 0 0 2px inset palette('green');
+}
+
 
 .page-item.disabled .page-link {
   color: palette('disabled', 'foreground');

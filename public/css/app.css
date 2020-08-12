@@ -1954,6 +1954,10 @@ html {
   }
 }
 
+.sections-header--no-image {
+  height: auto;
+}
+
 .sections__title {
   width: 100%;
   padding-top: 1rem;
@@ -2690,21 +2694,19 @@ html {
 }
 
 .page-item {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .page-item:first-child {
   margin-left: 0;
 }
 
-@media screen and (min-width: 30em) {
-  .page-item {
-    margin-left: 2rem;
-  }
-}
-
 .page-link {
   width: 5rem;
+}
+
+.active .page-link {
+  box-shadow: 0 0 0 2px inset #05d7bd;
 }
 
 .page-item.disabled .page-link {

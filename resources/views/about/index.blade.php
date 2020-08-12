@@ -14,7 +14,7 @@
       @endif
     </div>
 
-    @if($collaborators)
+    @if(count($collaborators))
       <div class="about__collaborators">
         <div class="container">
           <h2>@lang('about.collaborators')</h2>
@@ -45,7 +45,7 @@
       </div>
     @endif
 
-    @if($initiatives)
+    @if(count($initiatives))
       <div class="about__initiative">
         <div class="container">
           <h2>@lang('about.initiative')</h2>
@@ -63,7 +63,7 @@
       </div>
     @endif
 
-    @if($supports)
+    @if(count($supports))
       <div class="about__support">
         <div class="container">
           <h2>@lang('about.support')</h2>
@@ -89,6 +89,7 @@
           @lang('about.wanna-help-text')
         </p>
 
+        <!--
         <div class="about__address-form">
           <form action="">
             <label for="name">@lang('about.name')</label>
@@ -126,6 +127,7 @@
           </address>
 
         </div>
+        -->
       </div>
     </div>
   </main>
