@@ -35,10 +35,7 @@
           <div class="container">
             <ul>
               <li>@lang('header.institutional')</li>
-              <li><a href="">@lang('header.hub')</a></li>
-              <li><a href="">@lang('header.about')</a></li>
-              <li><a href="">@lang('header.about-plataform')</a></li>
-              <li><a href="">@lang('header.contact')</a></li>
+              <li><a href="{{ route('about.index') }}">@lang('header.about')</a></li>
             </ul>
             <ul class="main-nav__localization main-nav__localization--institutional">
               <li><a class="main-nav__pt-flag" href="{{ route('language.pt') }}">@lang('header.portugues')</a></li>
@@ -55,10 +52,7 @@
             <ul class="main-nav__links" id="js-menu">
               <ul class="main-nav__institutional-mobile">
                 <li>@lang('header.institutional')</li>
-                <li><a href="">@lang('header.hub')</a></li>
-                <li><a href="">@lang('header.about')</a></li>
-                <li><a href="">@lang('header.about-plataform')</a></li>
-                <li><a href="">@lang('header.contact')</a></li>
+                <li><a href="{{ route('about.index') }}">@lang('header.about')</a></li>
               </ul>
               <ul>
                 <li>@lang('header.sections')</li>
@@ -120,11 +114,11 @@
             <input type="text" name="q" class="js-search-input" placeholder="@lang('search.placeholder')" required>
             <select name="type">
               <option value="">@lang('search.all')</option>
-              @foreach($types as $category)
-                <option value="{{ $category->type }}">
-                  @lang('types.' . $category->type)
-                </option>
-              @endforeach
+              {{-- @foreach($types as $category) --}}
+              {{--   <option value="{{ $category->type }}"> --}}
+              {{--     @lang('types.' . $category->type) --}}
+              {{--   </option> --}}
+              {{-- @endforeach --}}
             </select>
             <button type="submit" class="button button--big">@lang('search.search')</button>
           </form>
@@ -134,11 +128,10 @@
       {{ $slot }}
 
       <footer class="site-footer">
-        <div class="container">
           <ul class="footer-nav">
-            <li><a href="">@lang('header.about-plataform')</a></li>
-            <li><a href="">@lang('header.contact')</a></li>
+            <li><a href="{{ route('about.index') }}">@lang('header.about')</a></li>
           </ul>
+        <div class="container">
           <div class="footer__blocks">
             <div class="footer__last-block">
               <article class="footer__about">

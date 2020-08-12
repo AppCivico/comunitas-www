@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNewsView extends Migration
+class CreateCollaboratorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,13 @@ class CreateNewsView extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW news AS SELECT * FROM contents WHERE type = 'new'");
+        Schema::create('collaborators', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->text('bio');
+            $table->string('image');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreateNewsView extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW news");
+        Schema::dropIfExists('collaborators');
     }
 }

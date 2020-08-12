@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModulesTable extends Migration
+class CreateAboutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateModulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->integer('trail_id')->foreignId('trails')->constrained()->onDelete('cascade');
-            $table->integer('canvas_id')->unique('canvas_id');
-            $table->text('name');
-            $table->integer('position');
+			$table->text('body', 65535)->nullable();
+			$table->string('seo_title')->nullable();
+			$table->text('meta_description', 65535)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateModulesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('abouts');
     }
 }

@@ -123,7 +123,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-11 17:58:24',
-                'updated_at' => '2020-08-05 00:15:10',
+                'updated_at' => '2020-08-12 00:16:01',
             ),
             6 => 
             array (
@@ -177,7 +177,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-19 20:46:14',
-                'updated_at' => '2020-08-05 00:15:35',
+                'updated_at' => '2020-08-11 22:15:28',
             ),
             9 => 
             array (
@@ -231,7 +231,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-22 18:05:28',
-                'updated_at' => '2020-08-04 22:47:43',
+                'updated_at' => '2020-08-11 23:14:47',
             ),
             12 => 
             array (
@@ -285,7 +285,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-22 20:03:09',
-                'updated_at' => '2020-08-04 22:50:44',
+                'updated_at' => '2020-08-11 23:17:55',
             ),
             15 => 
             array (
@@ -321,7 +321,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-22 21:57:09',
-                'updated_at' => '2020-08-04 22:51:27',
+                'updated_at' => '2020-08-11 23:22:24',
             ),
             17 => 
             array (
@@ -375,7 +375,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":"title","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-06-22 23:55:05',
-                'updated_at' => '2020-08-04 22:51:53',
+                'updated_at' => '2020-08-11 23:19:28',
             ),
             20 => 
             array (
@@ -393,7 +393,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-07-02 21:53:18',
-                'updated_at' => '2020-08-04 15:18:35',
+                'updated_at' => '2020-08-12 00:17:56',
             ),
             21 => 
             array (
@@ -448,6 +448,78 @@ class DataTypesTableSeeder extends Seeder
                 'details' => '{"order_column":"order","order_display_column":"author","order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-07-17 19:44:36',
                 'updated_at' => '2020-07-17 20:56:16',
+            ),
+            24 => 
+            array (
+                'id' => 43,
+                'name' => 'abouts',
+                'slug' => 'abouts',
+                'display_name_singular' => 'Sobre',
+                'display_name_plural' => 'Sobre',
+                'icon' => NULL,
+                'model_name' => 'App\\About',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-07 22:29:41',
+                'updated_at' => '2020-08-07 22:53:45',
+            ),
+            25 => 
+            array (
+                'id' => 45,
+                'name' => 'initiatives',
+                'slug' => 'initiatives',
+                'display_name_singular' => 'Iniciativa',
+                'display_name_plural' => 'Iniciativas',
+                'icon' => NULL,
+                'model_name' => 'App\\Initiative',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-07 22:34:17',
+                'updated_at' => '2020-08-07 23:07:21',
+            ),
+            26 => 
+            array (
+                'id' => 46,
+                'name' => 'collaborators',
+                'slug' => 'collaborators',
+            'display_name_singular' => 'Colaborador(a)',
+            'display_name_plural' => 'Colaboradores(as)',
+                'icon' => NULL,
+                'model_name' => 'App\\Collaborator',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-07 22:37:11',
+                'updated_at' => '2020-08-07 23:32:28',
+            ),
+            27 => 
+            array (
+                'id' => 47,
+                'name' => 'supports',
+                'slug' => 'supports',
+                'display_name_singular' => 'Apoio',
+                'display_name_plural' => 'Apoio',
+                'icon' => NULL,
+                'model_name' => 'App\\Support',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-08-07 22:39:50',
+                'updated_at' => '2020-08-07 23:12:40',
             ),
         ));
         

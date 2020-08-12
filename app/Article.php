@@ -1,16 +1,10 @@
 <?php
 
 namespace App;
+use App\Content;
 
-use Illuminate\Database\Eloquent\Model;
-use TCG\Voyager\Traits\Translatable;
-use TCG\Voyager\Traits\Resizable;
-// use Laravel\Scout\Searchable;
-
-class Article extends Model
+class Article extends Content
 {
-    use Resizable;
-    use Translatable;
 
     protected $translatable = [
         'title',
@@ -18,8 +12,11 @@ class Article extends Model
         'image_alt',
     ];
 
-    public function categories()
+    public function relatedWebinarsByTag()
     {
-        return $this->belongsToMany(Category::class);
+        return Article::whereHas('categories', function ($query) {
+            $categoryIds = $this->categories()->pluck('categories.id')->all();
+            $query->whereIn('categories.id', $categoryIds);
+        })->where('id', '<>', $this->id)->get();
     }
 }

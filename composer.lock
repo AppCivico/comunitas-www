@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1c5b9a4514fdd44f66d9c7bde2ad4db",
+    "content-hash": "44cd2c3c06c6dc6a16a269e2e5306f24",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1077,6 +1077,46 @@
                 "validator"
             ],
             "time": "2020-02-13T22:36:52+00:00"
+        },
+        {
+            "name": "ext-bread-fields-fix",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/captainkie/ext-bread-fields-fix.git",
+                "reference": "master"
+            },
+            "require": {
+                "larapack/hooks": "^1.0.5"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "ExtendedBreadFormFieldsFix\\ExtendedBreadFormFieldsFixServiceProvider"
+                    ],
+                    "views": [
+                        "resources/views"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ExtendedBreadFormFieldsFix\\": "src/"
+                }
+            },
+            "notification-url": "https://larapack.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "captainkiez",
+                    "email": "ibanez_kie@hotmail.com"
+                }
+            ],
+            "description": "Fix Issue Delete, Multiple fields Extended FormFields",
+            "time": "2020-05-08T19:54:33+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -7558,11 +7598,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ext-bread-fields-fix": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.5"
+        "php": "^7.2.5",
+        "ext-bread-fields-fix": "dev-master"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

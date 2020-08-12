@@ -19,7 +19,8 @@ Route::get('/pt', 'LanguageController@pt')->name('language.pt');
 Route::get('/es', 'LanguageController@es')->name('language.es');
 Route::get('/en', 'LanguageController@en')->name('language.en');
 
-// Route::get('/', function () { return redirect()->route('webinars.index'); });
+
+Route::get('/quem-somos', 'AboutController@index')->name('about.index');
 
 Route::get('/busca', 'SearchController@index')->name('search.index');
 

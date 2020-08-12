@@ -446,3 +446,7 @@ blockquote.verse p { // sass-lint:disable-line no-qualifying-elements
 .text-destak {
   color: palette('green');
 }
+
+.text--small {
+  font-size: ms(-1);
+}

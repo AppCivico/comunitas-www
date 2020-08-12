@@ -15,15 +15,15 @@ class Content extends Model
     use Translatable;
     use Resizable;
 
+
     protected $translatable = [
             'duration',
 			'title',
             'iframe',
 			'seo_title',
 			'excerpt',
-			'external_link',
+			// 'external_link',
 			'body',
-			'slug',
 			'meta_description',
 			'image_alt',
     ];
@@ -32,11 +32,24 @@ class Content extends Model
     {
         return [
             'id' => $this->id,
+
             'title' => $this->title,
+            'titleNgrams' => utf8_encode((new TNTIndexer)->buildTrigrams($this->title)),
+            'title_es' => $this::getTranslatedAttribute('title', 'es'),
+            'title_en' => $this::getTranslatedAttribute('title', 'en'),
+
             'body' => $this->body,
-            'category' => $this->categories->implode('name', ''),
-            'nameNgrams' => utf8_encode((new TNTIndexer)->buildTrigrams($this->title))
+            'body_es' => $this::getTranslatedAttribute('body', 'es'),
+            'body_en' => $this::getTranslatedAttribute('body', 'en'),
+
+            'category' => $this->categories->implode('name', '')
+
         ];
+    }
+
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'PUBLISHED');
     }
 
     public function categories()
