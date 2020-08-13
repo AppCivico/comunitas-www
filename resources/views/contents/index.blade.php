@@ -1,7 +1,11 @@
-<x-layout>
+<x-layout :page_info="$page_info">
   <main class="sections">
     <header
-      class="sections__header sections__header--categories"
+      class="
+        sections__header
+        sections__header--categories
+        @if(!isset($page_info->image)) sections-header--no-image @endif
+      "
       @isset($page_info->image)
         style="background-image: url('{{ Voyager::image($page_info->image) }}')"
       @endisset
@@ -154,7 +158,7 @@
       @endif
       <!-- <button class="button button&#45;&#45;big sections__load&#45;more">Carregar mais</button> -->
 
-      @isset($page_info)
+      @if(isset($page_info->title) || isset($page_info->body))
         <article class="sections__text">
           <h1>{{ $page_info->getTranslatedAttribute('title', app()->getLocale()) }}</h1>
           <div class="sections__text-description">

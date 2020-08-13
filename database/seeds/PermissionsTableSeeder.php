@@ -1345,6 +1345,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-08-07 23:12:40',
                 'updated_at' => '2020-08-07 23:12:40',
             ),
+            166 => 
+            array (
+                'id' => 177,
+                'key' => 'browse_home',
+                'table_name' => 'home',
+                'created_at' => '2020-08-12 22:25:54',
+                'updated_at' => '2020-08-12 22:25:54',
+            ),
+            167 => 
+            array (
+                'id' => 178,
+                'key' => 'read_home',
+                'table_name' => 'home',
+                'created_at' => '2020-08-12 22:25:54',
+                'updated_at' => '2020-08-12 22:25:54',
+            ),
+            168 => 
+            array (
+                'id' => 179,
+                'key' => 'edit_home',
+                'table_name' => 'home',
+                'created_at' => '2020-08-12 22:25:54',
+                'updated_at' => '2020-08-12 22:25:54',
+            ),
+            169 => 
+            array (
+                'id' => 180,
+                'key' => 'add_home',
+                'table_name' => 'home',
+                'created_at' => '2020-08-12 22:25:54',
+                'updated_at' => '2020-08-12 22:25:54',
+            ),
+            170 => 
+            array (
+                'id' => 181,
+                'key' => 'delete_home',
+                'table_name' => 'home',
+                'created_at' => '2020-08-12 22:25:54',
+                'updated_at' => '2020-08-12 22:25:54',
+            ),
         ));
         
         

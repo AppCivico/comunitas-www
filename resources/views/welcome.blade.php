@@ -1,6 +1,6 @@
-<x-layout>
-  <main class="sections">
+<x-layout :page_info="$home">
 
+  <main class="sections">
     @if($banner)
       <header class="home-banner">
         <div class="home-banner__container">
@@ -126,39 +126,64 @@
       <div class="home-main">
           <div class="home-main__text">
             <strong class="home-main__tiny-text">AS VANTAGENS DA PLATAFORMA REDE JUNTOS</strong>
-            <h1 class="home-main__title">A plataforma é <span>aberta</span> e <span>gratuita</span> para acesso a todo o conteúdo disponível</h1>
+            <h1 class="home-main__title">{{ $home->title }}</h1>
             <div class="home-main__rows">
-              <div class="home-main__row">
-                <img src="{{ url('images/icons/speedometer.svg') }}" alt="Progresso">
-                <div class="home-main__intern-text">
-                  <h2>Progresso</h2>
-                  <p>Área onde o usuário pode ver todos as trilhas e seu progresso</p>
+              @if($home->first_title)
+                <div class="home-main__row">
+                  <img
+                    src="{{ voyager::image($home->first_image) }}"
+                    alt="{{ $home->first_title }}"
+                  >
+                  <div class="home-main__intern-text">
+                    <h2>{{ $home->first_title }}</h2>
+                    <p>{{ $home->first_body }}</p>
+                  </div>
                 </div>
-              </div>
-              <div class="home-main__row">
-                <img src="{{ url('images/icons/book.svg') }}" alt="Trilhas">
-                <div class="home-main__intern-text">
-                  <h2>Trilhas</h2>
-                  <p>As melhores trilhas para melhorias dos serviços prestados à população</p>
+              @endif
+
+              @if($home->second_title)
+                <div class="home-main__row">
+                  <img
+                    src="{{ voyager::image($home->second_image) }}"
+                    alt="{{ $home->second_title }}"
+                  >
+                  <div class="home-main__intern-text">
+                    <h2>{{ $home->second_title }}</h2>
+                    <p>{{ $home->second_body }}</p>
+                  </div>
                 </div>
-              </div>
-              <div class="home-main__row">
-                <img src="{{ url('images/icons/dialog.svg') }}" alt="Progresso">
-                <div class="home-main__intern-text">
-                  <h2>Forúm</h2>
-                  <p>Tirar dúvidas, conhecer pessoas e replicar seu conhecimento com pessoas engajadas</p>
+              @endif
+
+              @if($home->third_title)
+                <div class="home-main__row">
+                  <img
+                    src="{{ voyager::image($home->third_image) }}"
+                    alt="{{ $home->third_title }}"
+                  >
+                  <div class="home-main__intern-text">
+                    <h2>{{ $home->third_title }}</h2>
+                    <p>{{ $home->third_body }}</p>
+                  </div>
                 </div>
-              </div>
+              @endif
+
             </div>
           </div>
           <div class="home-main__image">
-            <img src="{{ url('images/temp/home-main.jpg') }}" alt="AS VANTAGENS DA PLATAFORMA REDE JUNTOS">
+            <img
+              src="{{ voyager::image($home->image) }}"
+              srcset="{{ voyager::image($home->image) }} 2x,
+              {{ voyager::image($home->thumbnail('medium', 'image')) }} 1x"
+              alt="{{ $home->title }}"
+            >
           </div>
         </div>
     </div>
 
     @if(isset($testimonials))
-      <x-testimonials :testimonials="$testimonials"/>
+      <x-testimonials
+        :testimonials="$testimonials"
+        :image="$home->image_testimonial" />
     @endif
 
   </main>

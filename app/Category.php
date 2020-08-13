@@ -15,8 +15,38 @@ class Category extends Model
         'name'
     ];
 
-    public function contents()
+    public function webinars()
     {
-        return $this->belongsToMany(Content::class);
+        return $this->belongsToMany(Webinar::class);
+    }
+
+    public function podcasts()
+    {
+        return $this->belongsToMany(Podcast::class);
+    }
+
+    public function guidelines()
+    {
+        return $this->belongsToMany(Guideline::class);
+    }
+
+    public function interviews()
+    {
+        return $this->belongsToMany(Interview::class);
+    }
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class);
+    }
+
+    public function news()
+    {
+        return $this->belongsToMany(News::class);
+    }
+
+    public function trails()
+    {
+        return $this->belongsToMany(Trail::class);
     }
 }

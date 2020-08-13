@@ -41,7 +41,7 @@ class SearchController extends Controller
         $contents = $contents->merge($interviews);
         $contents = $contents->merge($articles);
         $contents = $contents->merge($news);
-        $contents = $contents->paginate(1);
+        $contents = $contents->paginate(Config('app.pagination_limit'));
 
 
         return view('search.index', compact('contents', 'page_info', 'page_name'));

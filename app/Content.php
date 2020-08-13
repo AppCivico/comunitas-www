@@ -22,7 +22,7 @@ class Content extends Model
             'iframe',
 			'seo_title',
 			'excerpt',
-			// 'external_link',
+			'external_link',
 			'body',
 			'meta_description',
 			'image_alt',
