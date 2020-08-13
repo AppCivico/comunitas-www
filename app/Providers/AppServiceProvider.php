@@ -2,29 +2,23 @@
 
 namespace App\Providers;
 
-use TCG\Voyager\Facades\Voyager;
-use Illuminate\Events\Dispatcher;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 use Illuminate\Support\ServiceProvider;
-use App\Observers\GenericObserver;
-use App\Translation;
-use App\Content;
-use App\Event;
-use App\View;
+
+use Illuminate\Support\Facades\Event;
+
+use App\Trail;
+use App\Webinar;
+use App\Podcast;
+use App\Guideline;
+use App\Interview;
+use App\Article;
+use App\News;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        Voyager::useModel('Translation', \App\Translation::class);
-    }
 
     /**
      * Bootstrap any application services.
@@ -33,10 +27,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Content::observe(GenericObserver::class);
-
         // view()->share('types', Content::select('type')->distinct()->get());
-        view()->share('types', ['lolo', 'lele', 'lili']);
+        $indexableContents = array(
+            'trail',
+            'podcast',
+            'webinar',
+            'guideline',
+            'interview',
+            'article',
+            'new'
+        );
+
+        view()->share('types', $indexableContents);
+
+
 
         /**
          * Paginate a standard Laravel Collection.
@@ -61,20 +65,34 @@ class AppServiceProvider extends ServiceProvider
             );
         });
 
-        // \Event::listen(\TCG\Voyager\Events\BreadDataChanged::class, function($event){
-        //     $indexableContents = array(
-        //         'trails',
-        //         'podcasts',
-        //         'webinars',
-        //         'guidelines',
-        //         'interviews',
-        //         'articles',
-        //         'news'
-        //     );
-        //
-        //     if(in_array($event->dataType->name, $indexableContents)){
-        //         Content::all()->searchable();
-        //     }
-        // });
+        Event::listen(\TCG\Voyager\Events\BreadDataChanged::class, function($event){
+            if($event->dataType->name === 'trails'){
+                Trail::published()->searchable();
+            }
+
+            if($event->dataType->name === 'podcasts'){
+                Podcast::published()->searchable();
+            }
+
+            if($event->dataType->name === 'webinars'){
+                Webinar::published()->searchable();
+            }
+
+            if($event->dataType->name === 'guidelines'){
+                Guideline::published()->searchable();
+            }
+
+            if($event->dataType->name === 'interviews'){
+                Interview::published()->searchable();
+            }
+
+            if($event->dataType->name === 'articles'){
+                Article::published()->searchable();
+            }
+
+            if($event->dataType->name === 'news'){
+                News::published()->searchable();
+            }
+        });
     }
 }

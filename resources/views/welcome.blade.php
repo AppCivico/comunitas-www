@@ -184,7 +184,7 @@
                   {{ voyager::image($home->thumbnail('medium', 'image')) }} 1x"
                   alt="{{ $home->title }}"
                 >
-            </div>
+              </div>
             @endif
           </div>
       </div>
