@@ -17,12 +17,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $trails = Trail::orderBy('order')->take(4)->get();
+        $trails = Trail::published()->orderBy('order')->take(4)->get();
         $contents = [
-            Webinar::first(),
-            Podcast::first(),
-            Guideline::first(),
-            Interview::first(),
+            Webinar::published()->first(),
+            Podcast::published()->first(),
+            Guideline::published()->first(),
+            Interview::published()->first(),
             // Article::first(),
             // News::first(),
         ];
