@@ -122,68 +122,76 @@
       </div>
     </div> <!-- container -->
 
-    <div class="container">
-      <div class="home-main">
-          <div class="home-main__text">
-            <strong class="home-main__tiny-text">AS VANTAGENS DA PLATAFORMA REDE JUNTOS</strong>
-            <h1 class="home-main__title">{{ $home->title }}</h1>
-            <div class="home-main__rows">
-              @if($home->first_title)
-                <div class="home-main__row">
-                  <img
-                    src="{{ voyager::image($home->first_image) }}"
-                    alt="{{ $home->first_title }}"
-                  >
-                  <div class="home-main__intern-text">
-                    <h2>{{ $home->first_title }}</h2>
-                    <p>{{ $home->first_body }}</p>
+    @if(isset($home))
+      <div class="container">
+        <div class="home-main">
+            <div class="home-main__text">
+              <strong class="home-main__tiny-text">AS VANTAGENS DA PLATAFORMA REDE JUNTOS</strong>
+              <h1 class="home-main__title">{{ $home->title }}</h1>
+              <div class="home-main__rows">
+                @if($home->first_title)
+                  <div class="home-main__row">
+                    @if(voyager::image($home->first_image))
+                      <img
+                        src="{{ voyager::image($home->first_image) }}"
+                        alt="{{ $home->first_title }}"
+                      >
+                    @endif
+                    <div class="home-main__intern-text">
+                      <h2>{{ $home->first_title }}</h2>
+                      <p>{{ $home->first_body }}</p>
+                    </div>
                   </div>
-                </div>
-              @endif
+                @endif
 
-              @if($home->second_title)
-                <div class="home-main__row">
-                  <img
-                    src="{{ voyager::image($home->second_image) }}"
-                    alt="{{ $home->second_title }}"
-                  >
-                  <div class="home-main__intern-text">
-                    <h2>{{ $home->second_title }}</h2>
-                    <p>{{ $home->second_body }}</p>
+                @if($home->second_title)
+                  <div class="home-main__row">
+                    @if(voyager::image($home->second_image))
+                      <img
+                        src="{{ voyager::image($home->second_image) }}"
+                        alt="{{ $home->second_title }}"
+                      >
+                    @endif
+                    <div class="home-main__intern-text">
+                      <h2>{{ $home->second_title }}</h2>
+                      <p>{{ $home->second_body }}</p>
+                    </div>
                   </div>
-                </div>
-              @endif
+                @endif
 
-              @if($home->third_title)
-                <div class="home-main__row">
-                  <img
-                    src="{{ voyager::image($home->third_image) }}"
-                    alt="{{ $home->third_title }}"
-                  >
-                  <div class="home-main__intern-text">
-                    <h2>{{ $home->third_title }}</h2>
-                    <p>{{ $home->third_body }}</p>
+                @if($home->third_title)
+                  <div class="home-main__row">
+                    @if(voyager::image($home->third_image))
+                      <img
+                        src="{{ voyager::image($home->third_image) }}"
+                        alt="{{ $home->third_title }}"
+                      >
+                    @endif
+                    <div class="home-main__intern-text">
+                      <h2>{{ $home->third_title }}</h2>
+                      <p>{{ $home->third_body }}</p>
+                    </div>
                   </div>
-                </div>
-              @endif
+                @endif
 
+              </div>
             </div>
+            @if(voyager::image($home->image))
+              <div class="home-main__image">
+                <img
+                  src="{{ voyager::image($home->image) }}"
+                  srcset="{{ voyager::image($home->image) }} 2x,
+                  {{ voyager::image($home->thumbnail('medium', 'image')) }} 1x"
+                  alt="{{ $home->title }}"
+                >
+            </div>
+            @endif
           </div>
-          <div class="home-main__image">
-            <img
-              src="{{ voyager::image($home->image) }}"
-              srcset="{{ voyager::image($home->image) }} 2x,
-              {{ voyager::image($home->thumbnail('medium', 'image')) }} 1x"
-              alt="{{ $home->title }}"
-            >
-          </div>
-        </div>
-    </div>
+      </div>
+    @endif
 
     @if(isset($testimonials))
-      <x-testimonials
-        :testimonials="$testimonials"
-        :image="$home->image_testimonial" />
+      <x-testimonials :testimonials="$testimonials" :image="$home->image_testimonial ?? ''" />
     @endif
 
   </main>
