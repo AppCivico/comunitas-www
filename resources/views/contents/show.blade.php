@@ -18,7 +18,7 @@
         @endisset
         @isset($content->created_at)
           <time pubdate datetime="{{ $content->created_at }}">
-            @lang('published') {{ $content->created_at->diffforhumans() }}
+            @lang('content.published') {{ $content->created_at->diffforhumans() }}
           </time>
         @endisset
       </address>
