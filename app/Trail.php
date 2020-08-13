@@ -22,6 +22,11 @@ class Trail extends Model
         'seo_title'
     ];
 
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'PUBLISHED');
+    }
+
     public function toSearchableArray()
     {
         return [

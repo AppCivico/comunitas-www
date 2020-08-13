@@ -125,11 +125,11 @@
             <input type="text" name="q" class="js-search-input" placeholder="@lang('search.placeholder')" required>
             <select name="type">
               <option value="">@lang('search.all')</option>
-              {{-- @foreach($types as $category) --}}
-              {{--   <option value="{{ $category->type }}"> --}}
-              {{--     @lang('types.' . $category->type) --}}
-              {{--   </option> --}}
-              {{-- @endforeach --}}
+              @foreach($types as $category)
+                <option value="{{ $category }}">
+                  @lang('types.' . $category)
+                </option>
+              @endforeach
             </select>
             <button type="submit" class="button button--big">@lang('search.search')</button>
           </form>

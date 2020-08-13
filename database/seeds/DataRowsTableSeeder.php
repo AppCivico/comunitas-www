@@ -1272,7 +1272,7 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'author_id',
                 'type' => 'text',
                 'display_name' => 'Autor',
-                'required' => 1,
+                'required' => 0,
                 'browse' => 0,
                 'read' => 1,
                 'edit' => 1,
@@ -4478,7 +4478,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"model":"App\\\\Category","table":"categories","type":"belongsToMany","column":"id","key":"id","label":"name","pivot_table":"category_podcast","pivot":"1","taggable":null}',
+                'details' => '{"model":"App\\\\Category","table":"categories","type":"belongsToMany","column":"id","key":"id","label":"name","pivot_table":"category_podcast","pivot":"1","taggable":"0"}',
                 'order' => 21,
             ),
             279 => 

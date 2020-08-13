@@ -26,13 +26,29 @@ class SearchController extends Controller
         $searchTerm = $request->q;
         $contents = collect();
 
-        $trails = Trail::search($request->q)->get();
-        $webinars = Webinar::search($request->q)->get();
-        $podcasts = Podcast::search($request->q)->get();
-        $guidelines = Guideline::search($request->q)->get();
-        $interviews = Interview::search($request->q)->get();
-        $articles = Article::search($request->q)->get();
-        $news = News::search($request->q)->get();
+        if($request->type) {
+            $type = $request->type;
+        }
+
+        if(isset($type)) {
+            $trails = Trail::search($request->q)->where('type', $type)->where('status', 'published')->get();
+            $webinars = Webinar::search($request->q)->where('type', $type)->where('status', 'published')->get();
+            $podcasts = Podcast::search($request->q)->where('type', $type)->where('status', 'published')->get();
+            $guidelines = Guideline::search($request->q)->where('type', $type)->where('status', 'published')->get();
+            $interviews = Interview::search($request->q)->where('type', $type)->where('status', 'published')->get();
+            $articles = Article::search($request->q)->where('type', $type)->where('status', 'published')->get();
+            $news = News::search($request->q)->where('type', $type)->where('status', 'published')->get();
+        } else {
+            $trails = Trail::search($request->q)->where('status', 'published')->get();
+            $webinars = Webinar::search($request->q)->where('status', 'published')->get();
+            $podcasts = Podcast::search($request->q)->where('status', 'PUBLISHED')->get();
+            $guidelines = Guideline::search($request->q)->where('status', 'PUBLISHED')->get();
+            $interviews = Interview::search($request->q)->where('status', 'PUBLISHED')->get();
+            $articles = Article::search($request->q)->where('status', 'PUBLISHED')->get();
+            $news = News::search($request->q)->where('status', 'PUBLISHED')->get();
+
+        }
+
 
         $contents = $contents->merge($trails);
         $contents = $contents->merge($webinars);
@@ -41,7 +57,7 @@ class SearchController extends Controller
         $contents = $contents->merge($interviews);
         $contents = $contents->merge($articles);
         $contents = $contents->merge($news);
-        $contents = $contents->paginate(Config('app.pagination_limit'));
+        $contents = $contents->paginate(Config('app.search_pagination_limit'));
 
 
         return view('search.index', compact('contents', 'page_info', 'page_name'));

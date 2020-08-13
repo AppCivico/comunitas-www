@@ -35,13 +35,13 @@ class ContentController extends Controller
         $page_info = collect();
         $page_info->image = $category->image;
 
-        $trails     = Category::find($category->id)->trails()->get();
-        $webinars   = Category::find($category->id)->webinars()->get();
-        $podcasts   = Category::find($category->id)->podcasts()->get();
-        $guidelines = Category::find($category->id)->guidelines()->get();
-        $interviews = Category::find($category->id)->interviews()->get();
-        $articles   = Category::find($category->id)->articles()->get();
-        $news       = Category::find($category->id)->news()->get();
+        $trails     = Category::find($category->id)->trails()->published()->get();
+        $webinars   = Category::find($category->id)->webinars()->published()->get();
+        $podcasts   = Category::find($category->id)->podcasts()->published()->get();
+        $guidelines = Category::find($category->id)->guidelines()->published()->get();
+        $interviews = Category::find($category->id)->interviews()->published()->get();
+        $articles   = Category::find($category->id)->articles()->published()->get();
+        $news       = Category::find($category->id)->news()->published()->get();
 
         $contents = $contents->merge($trails);
         $contents = $contents->merge($webinars);
@@ -58,7 +58,10 @@ class ContentController extends Controller
     public function webinars(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->webinars()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->webinars()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
             $contents = Webinar::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
@@ -81,9 +84,12 @@ class ContentController extends Controller
     public function podcasts(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->podcasts()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->podcasts()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents = Podcast::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents = Podcast::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = PodcastContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
@@ -104,9 +110,12 @@ class ContentController extends Controller
     public function guidelines(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->guidelines()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->guidelines()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents = Guideline::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents = Guideline::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = GuidelineContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
@@ -127,9 +136,12 @@ class ContentController extends Controller
     public function interviews(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->interviews()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->interviews()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents   = Interview::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents   = Interview::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = InterviewContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
@@ -150,9 +162,12 @@ class ContentController extends Controller
     public function articles(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->articles()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->articles()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents = Article::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents = Article::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = ArticleContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
@@ -165,9 +180,12 @@ class ContentController extends Controller
     public function news(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->news()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->news()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents = News::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents = News::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = NewContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
@@ -179,9 +197,12 @@ class ContentController extends Controller
     public function trails(Category $category = null)
     {
         if($category) {
-            $contents = Category::findOrFail($category->id)->trails()->simplePaginate(Config('app.pagination_limit'));
+            $contents = Category::findOrFail($category->id)
+                ->trails()
+                ->published()
+                ->simplePaginate(Config('app.pagination_limit'));
         } else {
-            $contents   = Trail::orderBy('order')->simplePaginate(Config('app.pagination_limit'));
+            $contents   = Trail::published()->orderBy('order')->simplePaginate(Config('app.pagination_limit'));
         }
         $page_info  = TrailContent::first();
         $categories = $contents->pluck('categories')->unique('id')->flatten();
