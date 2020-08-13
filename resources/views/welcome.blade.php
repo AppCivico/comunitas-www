@@ -1,6 +1,6 @@
-<x-layout>
-  <main class="sections">
+<x-layout :page_info="$home">
 
+  <main class="sections">
     @if($banner)
       <header class="home-banner">
         <div class="home-banner__container">

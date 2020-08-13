@@ -23,6 +23,17 @@
       <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=00BWXRa5zw">
       <meta name="theme-color" content="#7654a3">
 
+      <meta itemprop="name" content="{{ config('app.name') }}">
+      @if(isset($pageInfo->meta_description))
+        <meta itemprop="description" content="{{ $pageInfo->meta_description }}">
+        <meta name="twitter:description" property="og:description" content="{{ $pageInfo->meta_description }}">
+      @endif
+
+      @if(isset($pageInfo->title))
+        <meta name="twitter:title" property="og:title" content="{{ $pageInfo->title }}">
+      @endif
+      <meta name="twitter:url" property="og:url" content="{{ URL::full() }}">
+      <meta name="twitter:card" content="summary_large_image">
 
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">

@@ -1,8 +1,8 @@
-<x-layout>
+<x-layout :page_info="$content">
   <main class="about">
     <div class="container">
       <h1>@lang('about.page-title')</h1>
-      @if($content)
+      @if($content->body)
         <div class="about__main">
           <div class="about__text">
             {!! $content->getTranslatedAttribute('body', app()->getLocale()) !!}

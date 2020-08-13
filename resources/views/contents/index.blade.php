@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :page_info="$page_info">
   <main class="sections">
     <header
       class="
