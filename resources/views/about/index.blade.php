@@ -135,7 +135,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script>
     new Splide('.splide', {
-      type: 'loop',
+      type: 'slide',
       perPage: 4,
       arrows: false,
       pagination: false,
