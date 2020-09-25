@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
 use TCG\Voyager\Traits\Resizable;
 use Laravel\Scout\Searchable;
+use Carbon\Carbon;
 
 
 class Content extends Model
@@ -27,6 +28,10 @@ class Content extends Model
 			'meta_description',
 			'image_alt',
     ];
+
+    public function formatDate($date) {
+        return Carbon::parse($date)->isoFormat('LL');
+    }
 
     public function toSearchableArray()
     {
