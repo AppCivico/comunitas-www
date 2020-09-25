@@ -149,7 +149,7 @@
             </article>
           @endforeach
         @else
-          <div class="conteinr">
+          <div class="container">
             <h1>@lang('content.no-entries')</h1>
           </div>
         @endisset
