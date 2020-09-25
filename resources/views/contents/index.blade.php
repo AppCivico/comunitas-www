@@ -68,6 +68,9 @@
                   @endif
                 </a>
 
+                <time class="section__date" pubdate datetime="{{ $content->created_at }}">
+                  {{ $content->formatDate($content->created_at) }}
+                </time>
                 @if(!empty($content->categories[0]))
                   <div class="section__tags">
                     @foreach($content->categories as $category)
@@ -95,7 +98,6 @@
                     @lang('content.click-to-download')
                   </span>
                 @endif
-
                 <h2 class="sections__list-title">
                   @isset($content->title)
                     {{ $content->getTranslatedAttribute('title', app()->getLocale()) }}
@@ -147,7 +149,7 @@
             </article>
           @endforeach
         @else
-          <div class="conteinr">
+          <div class="container">
             <h1>@lang('content.no-entries')</h1>
           </div>
         @endisset
